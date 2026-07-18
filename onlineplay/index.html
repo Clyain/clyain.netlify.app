@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <link rel="stylesheet" href="../styles/Global.css">
+    <link rel="stylesheet" href="../styles/Content.css">
+    <link rel="stylesheet" href="../styles/Card.css">
+    <link rel="stylesheet" href="../styles/HeadBtn.css">
+    <link rel="stylesheet" href="../styles/Lable.css">
+    <link rel="stylesheet" href="../styles/BasicBtn.css">
+
+    <title>Clyain 的在线游玩</title>
+    <style>
+        .onlineplay-btn {
+            background: #eef2ff;
+            color: #166534;
+        }
+
+        img {
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <a class="head-btn" href="../"><span class="no-select">首页</span></a>
+        <div style="flex:1; text-align:center;">
+            <h1 style="margin:0;">在线游玩</h1>
+            <p style="margin:0;">Clyain</p>
+        </div>
+        <hr>
+        <div class="cards-container">
+            <div class="card" data-card="1">
+                <div class="card-content">
+                    <img src="epnc3/cover.png" alt="EPNC-超强数值计算器 Ver.3.0.0" style="width:100%; border-radius: 10px;"
+                        draggable="false">
+                    <p class="title">
+                        EPNC-超强数值计算器 Ver.3.0.0
+                    </p>
+                    <div class="label-group">
+                        <div class="label" style="border: 1px solid #e54646; background-color: #e99f9f;">不进行维护</div>
+                        <div class="label" style="border: 1px solid #e54646; background-color: #e99f9f;">可能含有bug！</div>
+                    </div>
+                    <p class="desc">
+                        一款功能强大的数值计算器，支持复杂数学运算。<br>更新日期：2025-12-27。
+                    </p>
+                    <div class="basic-btn-group">
+                        <button class="basic-btn onlineplay-btn" onclick="window.location.href='epnc3/'">
+                            <span class="no-select">游玩</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-card="2">
+                <div class="card-content">
+                    <img src="eptex/cover.png" alt="EPTeX Ver.0.6.7" style="width:100%; border-radius: 10px;"
+                        draggable="false">
+                    <p class="title">
+                        EPTeX Ver.0.6.7
+                    </p>
+                    <div class="label-group">
+                        <div class="label"
+                            style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);">最新！
+                        </div>
+                    </div>
+                    <p class="desc">
+                        一款强大的TeX编辑器，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07。
+                    </p>
+                    <div class="basic-btn-group">
+                        <button class="basic-btn onlineplay-btn" onclick="window.location.href='eptex/'">
+                            <span class="no-select">游玩</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

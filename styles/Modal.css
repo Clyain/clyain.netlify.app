@@ -1,0 +1,204 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: rgba(255, 255, 255, 0.72);
+    /* 半透明白色底 */
+    color: #1e293b;
+    /* 深色文字，适配亮背景 */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 960px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12),
+        /* 柔和阴影 */
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    font-family: inherit;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.8rem 0.8rem 1.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+    /* 头部不压缩 */
+}
+
+.modal-title {
+    font-weight: 650;
+    color: #111111;
+    letter-spacing: 0.5px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.2rem 0.8rem;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+.modal-close-btn {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    color: #334155;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    border-radius: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+    letter-spacing: 1px;
+    width: 35px;
+    height: 35px;
+}
+
+.modal-close-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    color: #0f172a;
+}
+
+
+.modal-body {
+    padding: 1.2rem 1.8rem 1.2rem 1.8rem;
+    overflow-y: auto;
+    /* 内容超出时纵向滚动 */
+    flex: 1 1 auto;
+    /* 自动撑满剩余空间 */
+    /* 滚动条美化 (webkit) */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal-desc {
+    background: #f8fafc;
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+    font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    word-break: break-word;
+}
+
+.modal-features h4,
+h5 {
+    font-weight: 600;
+    color: #006dff;
+}
+
+.modal-features ul,
+.modal-features li {
+    color: #2c3e50;
+    font-size: clamp(0.75rem, 3.5vw, 0.85rem);
+    margin-left: 1.2rem;
+    word-break: break-word;
+}
+
+.modal-features li {
+    margin-bottom: 4px;
+}
+
+.modal-footer {
+    padding: 12px;
+    margin: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #e9eef3;
+    flex-shrink: 0;
+}
+
+
+/* ===== 弹窗页脚 ===== */
+.modal-footer {
+    padding: 0.9rem 1.8rem 1.4rem 1.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+/* 页脚按钮 (沿用 .glass-btn 但调整尺寸) */
+.modal-footer .glass-btn {
+    max-width: 200px;
+    padding: 0.55rem 1.5rem;
+    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+    width: auto;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.modal-footer .glass-btn:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.modal-footer .glass-btn.primary {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.modal-footer .glass-btn.primary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 移动端微调 */
+@media (max-width: 500px) {
+    .modal-card {
+        border-radius: 32px;
+        max-height: 80vh;
+    }
+
+    .modal-header {
+        padding: 1rem 1.2rem 0.6rem 1.2rem;
+    }
+
+    .modal-body {
+        padding: 1rem 1.2rem 1rem 1.2rem;
+    }
+
+    .modal-footer {
+        padding: 0.7rem 1.2rem 1.2rem 1.2rem;
+    }
+
+    .modal-footer .glass-btn {
+        max-width: 120px;
+        padding: 0.5rem 1rem;
+    }
+}

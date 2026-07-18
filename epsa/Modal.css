@@ -1,0 +1,111 @@
+.modal-features details {
+    margin: 8px 0 12px 0;
+    padding: 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(66, 126, 206, 0.15);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.modal-features details:hover {
+    border-color: rgba(66, 126, 206, 0.35);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.modal-features details summary {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px 10px 14px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+    font-weight: 600;
+    color: #2c3e50;
+    transition: all 0.25s ease;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* 隐藏默认三角 */
+.modal-features details summary::-webkit-details-marker {
+    display: none;
+}
+
+.modal-features details summary::marker {
+    display: none;
+}
+
+/* ===== 使用自定义箭头图片 ===== */
+.modal-features details summary::after {
+    content: "";
+    margin-left: auto;
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    background: url("DropdownBlue.svg") no-repeat center/contain;
+    transition: transform 0.3s ease;
+}
+
+/*  */
+.modal-features details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* 展开时 summary 底部边框 */
+.modal-features details[open] summary {
+    border-bottom: 1px solid rgba(66, 126, 206, 0.15);
+    border-radius: 12px 12px 0 0;
+    background: rgba(66, 126, 206, 0.05);
+}
+
+.modal-features details summary:hover {
+    background: rgba(66, 126, 206, 0.06);
+}
+
+.modal-features details summary h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: inherit;
+    font-weight: 600;
+    color: #427ece;
+}
+
+/* details 内容区域 */
+.modal-features details > *:not(summary) {
+    padding: 5px 16px;
+    animation: detailsFadeIn 0.25s ease;
+}
+
+@keyframes detailsFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* 内部设置项间距优化 */
+.modal-features details .settingLabel {
+    margin: 4px 0 4px 0;
+    padding: 4px 10px;
+}
+
+
+@media (max-width: 640px) {
+    .modal {
+        width: 95%;
+        max-height: 85vh;
+    }
+
+    .modal-header,
+    .modal-body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

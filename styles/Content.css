@@ -1,0 +1,49 @@
+.content {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: clamp(1rem, 5vw, 2rem) clamp(0.8rem, 4vw, 1.5rem);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: rgba(127, 127, 127, 0.2);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    margin: 2rem 0 1rem 0;
+    color: var(--text-white);
+    width: 100%;
+    word-break: break-word;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .content {
+        padding: 24px 16px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 20px 12px;
+    }
+}

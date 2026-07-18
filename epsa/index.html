@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>超强 Scratch 3 作品分析器 (EPSA)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <link rel="stylesheet" href="../styles/Content.css">
+    <link rel="stylesheet" href="../styles/Global.css">
+    <link rel="stylesheet" href="../styles/HeadBtn.css">
+    <link rel="stylesheet" href="../styles/Modal.css">
+    <link rel="stylesheet" href="../styles/MainBtn.css">
+    <link rel="stylesheet" href="ResultRendering.css">
+    <link rel="stylesheet" href="ExportMenu.css">
+    <link rel="stylesheet" href="Settings.css">
+    <link rel="stylesheet" href="Modal.css">
+
+    <script src="../lib/jszip.min.js"></script>
+
+    <style>
+        h5,
+        h3 {
+            user-select: none;
+            -webkit-user-drag: none;
+            pointer-events: none;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0 0.5rem;
+            align-items: stretch;
+            min-height: 500px;
+        }
+
+        .card {
+            width: 100%;
+            background: linear-gradient(to bottom right, #e6e8ff, #e6eeff);
+            backdrop-filter: blur(12px);
+            border-radius: 17px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            overflow: hidden;
+            transition: transform 0.2s, background 0.2s;
+            padding: clamp(1rem, 4vw, 1.5rem) clamp(1rem, 3vw, 1.5rem) clamp(1.2rem, 4vw, 1.8rem);
+        }
+
+        .export-composite,
+        .view-error {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .view-error {
+            background: rgba(255, 255, 255, 0.06);
+            color: #e2e8f0;
+            font-weight: 500;
+            font-size: clamp(0.9rem, 4vw, 1.2rem);
+            padding: 0.85rem 1.8rem;
+            border-radius: 48px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
+            letter-spacing: 1px;
+            width: 25%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .view-error:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-1px);
+            color: #ffffff;
+        }
+
+        .view-error:active {
+            transform: translateY(1px);
+        }
+
+        @media (max-width: 480px) {
+            .view-error {
+                padding: 0.7rem 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <a class="head-btn" href="../"><span class="no-select">首页</span></a>
+        <a class="head-btn" id="openModalBtn"><span class="no-select">设置</span></a>
+        <a class="head-btn" href="https://github.com/Clyain/EP-Scratch-3-Project-Analyzer_EPSA"><span class="no-select">在 GitHub 上查看主要源码</span></a>
+        <div style="flex:1; text-align:center;">
+            <h1 style="margin:0;">超强 Scratch 3 作品分析器 (EPSA)</h1>
+            <p style="margin:0;">Clyain</p>
+        </div>
+        <hr>
+        <div style="gap: 1.2rem; display: flex; flex-direction: column; align-items: center;">
+            <div style="position: relative; width: 100%; max-width: 320px;">
+                <input type="file" id="fileInput" style="display:none" accept=".sb3">
+                <button onclick="document.getElementById('fileInput').click()" class="main-btn">
+                    <span class="no-select">选择 .sb3 文件</span>
+                </button>
+            </div>
+            <div style="width: 100%; max-width: 320px; display: flex; gap: 10px; align-items: center;">
+                <div class="export-composite" id="exportComposite" style="width: 100%; max-width: 320px;">
+                    <button class="main-btn" style="pointer-events: none;">
+                        <span class="no-select">导出报告为……</span>
+                    </button>
+                    <div class="toggle-icon" id="toggleIcon" role="button" tabindex="0" aria-label="导出菜单选择">
+                        <img src="Dropdown.svg" width="15px" class="arrow no-select">
+                    </div>
+                    <div class="popup-menu" id="popupMenu">
+                        <button class="menu-item" onclick="exportCardAsSVG()" style="-webkit-user-drag: none;">
+                            <span class="no-select">SVG 格式</span></button>
+                        <button class="menu-item" onclick="exportCardAsPNG()" style="-webkit-user-drag: none;">
+                            <span class="no-select">PNG 格式（不建议）</span></button>
+                        <button class="menu-item" onclick="exportCardAsJPG()" style="-webkit-user-drag: none;">
+                            <span class="no-select">JPG 格式（不建议）</span></button>
+                        <button class="menu-item" onclick="exportCardAsBase64()" style="-webkit-user-drag: none;">
+                            <span class="no-select">Markdown 格式 （Base64 编码）</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <div style="text-align: center;">
+                    <img src="assets/Title.svg" width="300px" class="no-select">
+                </div>
+                <div style="height:10px"></div>
+                <div id="projectInfo">
+                    <!-- 动态渲染的内容将会放在这里 -->
+                    <div style="text-align:center; color:#64748b;"><span class="no-select">请先选择一个 .sb3 文件</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title">超强 Scratch 3 作品分析器 (EPSA) 设置</h3>
+                <button class="modal-close-btn" id="closeModalBtn" aria-label="关闭弹窗"><span
+                        class="no-select">✕</span></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <p class="modal-desc">
+                    备注：
+                    <br>
+                    1. “有效积木” 是指一块积木的最顶上是否有帽子积木（<a href="https://en.scratch-wiki.info/wiki/Hat_Block">Hat Block</a>）。
+                    <br>
+                    2. “积木段” 是指由多块栈积木组成的连续积木段落。
+                    <br>
+                    3.建议在导出文件前先刷新一遍网页，因为在拓展显示的文本换行有一些不可预知的bug（雾），尽管有时候不会发生。
+                    <br>
+                    4.统计项中的“角色”包含“舞台”。
+                </p>
+                <div class="modal-features">
+                    <h5>点击下列选项可查看详细设置</h5>
+                    <br>
+                    <details open>
+                        <summary>
+                            <h3>文件名显示</h3>
+                        </summary>
+                        <div style="margin:10px 0px">
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showFileName" class="settingCheckbox">
+                                <span>显示文件名</span>
+                            </label>
+                        </div>
+                    </details>
+                    <details open>
+                        <summary>
+                            <h3>统计项显示</h3>
+                        </summary>
+
+                        <div style="margin:10px 0px">
+                            <h5>文件信息</h5>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showFileSize" class="settingCheckbox">
+                                <span>显示文件大小</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showExtensionsNum" class="settingCheckbox">
+                                <span>显示加载的扩展个数</span>
+                            </label>
+
+                            <h5>资源</h5>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showSpriteCount" class="settingCheckbox">
+                                <span>显示角色数量</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showCostumeCount" class="settingCheckbox">
+                                <span>显示造型数量</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showSoundCount" class="settingCheckbox">
+                                <span>显示声音数量</span>
+                            </label>
+
+                            <h5>积木数量</h5>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showBlocksNum" class="settingCheckbox">
+                                <span>显示总积木数量</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showTrueBlocksNum" class="settingCheckbox">
+                                <span>显示有效积木数量</span>
+                            </label>
+
+                            <h5>积木段数</h5>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showPilesNum" class="settingCheckbox">
+                                <span>显示总积木段数</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showTruePilesNum" class="settingCheckbox">
+                                <span>显示有效积木段数</span>
+                            </label>
+
+                            <h5>定义</h5>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showVarDefinitionsNum" class="settingCheckbox">
+                                <span>显示定义的变量个数</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showListDefinitionsNum" class="settingCheckbox">
+                                <span>显示定义的列表个数</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showFuncDefinitionsNum" class="settingCheckbox">
+                                <span>显示定义的函数个数</span>
+                            </label>
+                            <div>
+                    </details>
+                    <details open>
+
+                        <summary>
+                            <h3>积木分类占比条相关</h3>
+                        </summary>
+                        <div style="margin:10px 0px">
+                            <h5>排列顺序</h5>
+                            <label class="settingLabel">
+                                <input type="radio" name="order" id="orderOriginal" class="settingRadio"
+                                    value="original" checked>
+                                <span>按照编辑器内原始顺序和加载拓展的顺序</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="radio" name="order" id="orderByCount" class="settingRadio" value="byCount">
+                                <span>按照积木类别对应积木数由高到低的顺序</span>
+                            </label>
+
+                            <h5>"变量"与"列表"</h5>
+                            <label class="settingLabel">
+                                <input type="radio" name="datadisplayway" id="onlydata" class="settingRadio"
+                                    value="onlydata" checked>
+                                <span>只显示"变量"</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="radio" name="datadisplayway" id="separated" class="settingRadio"
+                                    value="separated">
+                                <span>区分"变量"与"列表"</span>
+                            </label>
+
+                            <h5>其他</h5>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="betterProgressBar" class="settingCheckbox">
+                                <span>更好的积木分类占比条</span>
+                            </label>
+                            <i
+                                style="font-size: small; color:#427ece;user-select: none;-webkit-user-drag: none;pointer-events: none;">将占比最大的积木类别作为单位"1"，使得积木多的作品可以获得更好的展示效果</i><br>
+                            <i
+                                style="font-size: small; color:#427ece;user-select: none;-webkit-user-drag: none;pointer-events: none;">可以理解为将积木分类条整体拉得更宽</i>
+                        </div>
+                    </details>
+                    <details open>
+                        <summary>
+                            <h3>拓展显示</h3>
+                        </summary>
+                        <div style="margin:10px 0px">
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showExtensionsInfo" class="settingCheckbox">
+                                <span>显示扩展名称</span>
+                            </label>
+                            <label class="settingLabel">
+                                <input type="checkbox" id="showSpecificExtensions" class="settingCheckbox">
+                                <span>将"其他"积木分类改为具体的拓展分类显示</span>
+                            </label>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>
+                            <h3>恢复默认设置</h3>
+                        </summary>
+                        <div style="display: flex; justify-content: flex-start; margin: 6px 0 2px 6px;">
+                            <a class="head-btn" style="background-color: #3070d080;" onclick="resetToDefault()"><span
+                                    class="no-select">点击恢复默认设置</span></a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="errorModalOverlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title">错误列表</h3>
+                <button class="modal-close-btn" id="closeErrorModalBtn" aria-label="关闭弹窗"><span
+                        class="no-select">✕</span></button>
+            </div>
+            <div class="modal-body" id="errorModalBody">
+                <h5>
+                    很抱歉让您看到了这些，但这些我们猜测应该不是您的原因，而是您的编辑器在处理逻辑上有一些问题，导致编辑器往您的文件中添加了一些不应有的错误数据。在这种情况下，如果您在使用编辑器打开时某个部分出现报错界面，或作品并不能正常运行，我们不保证所有的统计项与积木分类计数结果完全准确，会有完全准确的可能；如果您的作品运行正常且并没有报错，则这些错误无关紧要。
+                </h5>
+                <br>
+                <h5>以下是程序在分析过程中发现的错误：</h5>
+
+                <div id="errorListContent" style="margin-top: 16px;">
+                    <!-- 错误列表会动态渲染到这里 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Settings.js"></script>
+
+    <script src="src/main.js"></script>
+    <script src="src/LoadExtensionsSource.js"></script>
+    <script src="src/GetExtensionsInfo.js"></script>
+    <script src="src/Stats.js"></script>
+    <script src="src/ResultRendering.js"></script>
+    <script src="src/Export.js"></script>
+
+    <script src="Modal.js"></script>
+    <script src="ExportMenu.js"></script>
+</body>
+
+</html>

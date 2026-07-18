@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/docxsvg.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="../styles/HeadBtn.css">
+
+    <script src="../lib/scratchblocks-v3.6.4-min.js"></script>
+    <script src="../lib/translations-all-v3.6.4.js"></script>
+    <script src="../lib/_ScratchBlocksRendering.js"></script>
+    <title>关于我是如何显示Scratch积木的</title>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <main class="main-content">
+            <a class="head-btn" href="./"><span class="no-select">返回</span></a>
+            <a class="head-btn" href="../"><span class="no-select">首页</span></a>
+            <div class="content-wrapper">
+                <h1>关于我是如何显示Scratch积木的</h1>
+                <p>在这个部分，我将介绍我如何在网页中显示Scratch积木的。</p>
+                <p>有些人可能会使用TurboWarp之类的编辑器将积木转换为SVG或PNG格式的图片，并直接在HTML中引入文件以显示，可是它不易于修改。</p>
+                <p>而我使用了一个名为Scratchblocks的JavaScript库来渲染积木。这个库允许我直接在HTML中编写积木的文本表示，并将其转换为可视化的积木图像。这种方法使得修改和更新积木变得非常方便，因为我只需要更改HTML内的文本内容，而不需要重新生成图片。
+                </p>
+                <p>这里也有一个可视化的网站链接：<a href="https://scratchblocks.github.io/#?style=scratch3&lang=zh_cn" target="_blank"
+                        rel="noopener noreferrer">scratchblocks.github.io</a>，可以结合着下方的Scratchblocks语法来使用并尝试搞懂它。</p>
+                <hr style="margin: 20px auto; border: none; border-top: 1px solid #e5e7eb;">
+                <h2><b>调用Scratchblocks</b></h2>
+                <p>
+                    点击下载所需要的文件：<a href="../scratchblocks-v3.6.4-min.js" download>scratchblocks-v3.6.4-min.js</a> 和
+                    <a href="../translations-all-v3.6.4.js" download>translations-all-v3.6.4.js</a><br>
+                    下载之后需要在HTML的head标签中添加以下代码：
+                <pre>
+&ltscript src="scratchblocks-v3.6.4-min.js"&gt&lt/script&gt
+&ltscript src="translations-all-v3.6.4.js"&gt&lt/script&gt
+</pre>
+                </p>
+                <br>
+                <p>
+                    并在body标签的末尾添加以下代码：
+                <pre>
+&ltscript&gt
+    scratchblocks.renderMatching("pre.normal", {
+        style: "scratch3",
+        languages: ["zh_cn", "en"],
+        scale: 0.675
+    });
+    scratchblocks.renderMatching("code.inline", {
+        inline: true,
+        style: "scratch3",
+        languages: ["zh_cn", "en"],
+        scale: 0.675
+    });
+&lt/script&gt
+</pre>
+                之后你就可以在HTML中使用Scratchblocks了。
+                </p>
+                <p>注：
+                    <br>在上述的这个代码中，参数style接受的值有（三选一）："scratch2"、"scratch3"、"scratch3-high-contrast"（即高对比度样式），默认为"scratch2"。
+                    <br>参数languages接受一个语言代码数组，支持的语言包括："en"（英文）、"zh_cn"（简体中文）等。
+                    <br>参数scale用于设置积木的缩放比例，默认为1。
+                </p>
+
+
+                <br>
+                <p>
+                    如果你需要渲染一整块积木栈，可以使用以下代码（省略号应被填入你的代码）：
+                <pre>&ltpre class="normal"&gt
+...
+&lt/pre&gt
+</pre>
+                </p>
+                <br>
+                <p>
+                    而如果你需要在行内渲染积木，则可以使用以下代码（省略号应被填入你的代码）：
+                <pre>
+&ltcode class="inline"&gt
+...
+&lt/code&gt
+</pre>
+                </p>
+                <hr style="margin: 20px auto; border: none; border-top: 1px solid #e5e7eb;">
+                <h2><b>Scratchblocks语法</b></h2>
+                <p>详情见引用<a href="#1">[1]</a>、<a href="#2">[2]</a>。（此处以及引用的Scratch维基链接中的语法介绍都是使用英文为例子）</p>
+                <br>
+                <p><b>基础语法</b></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>代码</th>
+                            <th>使用</th>
+                            <th>示例</th>
+                            <th>结果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <pre>block name</pre>
+                            </td>
+                            <td>积木的名称（见引用<a href="#3">[3]</a>）</td>
+                            <td>
+                                <pre>erase all</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">erase all</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>end</pre>
+                            </td>
+                            <td>结束 C 型积木（仅在 C 型积木后还有其他积木时才需要）</td>
+                            <td>
+                                <pre>repeat (5)
+ move (10) steps
+end
+say [Done!]</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">repeat (5)
+ move (10) steps
+end
+say [Done!]</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>[text]</pre>
+                            </td>
+                            <td>文本输入</td>
+                            <td>
+                                <pre>say [Hello World!]</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">say [Hello World!]</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>(var)</pre>
+                            </td>
+                            <td>变量或报告器积木</td>
+                            <td>
+                                <pre>(x position)</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">(x position)</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>(12.34)</pre>
+                            </td>
+                            <td>数字输入</td>
+                            <td>
+                                <pre>wait (0.5) seconds</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">wait (0.5) seconds</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>(item v)</pre>
+                            </td>
+                            <td>可插入的下拉菜单输入</td>
+                            <td>
+                                <pre>broadcast (You Win v)</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">broadcast (You Win v)</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>[item v]</pre>
+                            </td>
+                            <td>不可插入的下拉菜单输入</td>
+                            <td>
+                                <pre>set [my variable v] to (0)</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">set [my variable v] to (0)</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>&lt;bool&gt;</pre>
+                            </td>
+                            <td>布尔值积木</td>
+                            <td>
+                                <pre>&lt;mouse down?&gt;</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">&lt;mouse down?&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>[#ABCDEF]</pre>
+                            </td>
+                            <td>颜色输入</td>
+                            <td>
+                                <pre>&lt;touching color [#0000FF]?&gt;</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">&lt;touching color [#0000FF]?&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>define</pre>
+                            </td>
+                            <td>自定义积木帽子</td>
+                            <td>
+                                <pre>define jump (height)</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">define jump (height)</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>// comment</pre>
+                            </td>
+                            <td>注释</td>
+                            <td>
+                                <pre>show // now you see me</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">show // now you see me</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre>...</pre>
+                            </td>
+                            <td>表示任意脚本的占位符积木</td>
+                            <td>
+                                <pre>if &lt;(var) = [this]&gt; then
+ ...
+end</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">if &lt;(var) = [this]&gt; then
+ ...
+end</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p><b>高级语法</b></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>代码</th>
+                            <th>使用</th>
+                            <th>示例</th>
+                            <th>结果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <pre>block {
+more blocks
+} optional text</pre>
+                            </td>
+                            <td>自定义 C 型积木</td>
+                            <td>
+                                <pre>do {
+...
+} in the stage::control</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">do {
+...
+} in the stage::control</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>{Stack block as reporter}</pre>
+                            </td>
+                            <td>使一个积木作为另一个输入</td>
+                            <td>
+                                <pre>decorate {show}:: custom blocks</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">decorate {show}:: custom blocks</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>:: [category or #color] [shape]</pre>
+                            </td>
+                            <td>
+                                强制积木以特定方式显示。可能的类别包括：motion, looks, sound, pen, variables, list, events,
+                                control, sensing, operators, custom, custom-arg, extension, grey, obsolete。<br><br>
+                                另一种设置颜色的方法是通过扩展形状设置，但这不与其他颜色兼容。<br><br>
+                                可能的扩展颜色包括：music, pen, video, tts OR text2speech, translate, wedo
+                                OR wedo2, ev3, microbit, makeymakey, gdxfor, boost。<br><br>
+                                #color 可以是任何十六进制 RGB 颜色，例如 #ff0000 会产生纯红色。<br><br>
+                                可能的形状包括：hat, stack, ring, boolean, reporter, cap, cat。
+                            </td>
+                            <td>
+                                <pre>a cool block:: #ff00ff cap</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">a cool block:: #ff00ff cap</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>::ring</pre>
+                            </td>
+                            <td>复制 Snap! 的“ringify”特性。可与上面的冒号语法结合使用。它看起来像一个报告器，但略有不同。</td>
+                            <td>
+                                <pre>run ({say [Hello!]}@addInput::ring)@addInput::control</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">run ({say [Hello!]}@addInput::ring)@addInput::control</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>((::ring)text(::ring)::ring)</pre>
+                            </td>
+                            <td>制作一个方形积木</td>
+                            <td>
+                                <pre>(::ring)get array (array v)(::ring)::ring list</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">(::ring)get array (array v)(::ring)::ring list</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>-block</pre>
+                            </td>
+                            <td>在积木前加连字符 (-) 以显示一条水平线穿过积木，就像它被划掉了一样。</td>
+                            <td>
+                                <pre>-say [This is striked-through!] for (2) seconds</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">-say [This is striked-through!] for (2) seconds</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>+block</pre>
+                            </td>
+                            <td>在积木前加加号 (+) 以显示积木轮廓或选中积木。</td>
+                            <td>
+                                <pre>+say [This is selected!] for (2) seconds</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">+say [This is selected!] for (2) seconds</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>\canceling the next character [[example\]]</pre>
+                            </td>
+                            <td>在特殊字符前加反斜杠 (\) 将取消其特殊含义，如果你不想过早关闭文本输入，可以使用此功能。这允许你在文本输入内部放置闭合括号。</td>
+                            <td>
+                                <pre>say [[example\]]</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">say [[example\]]</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>@greenFlag @stopSign @turnLeft @turnRight</pre>
+                            </td>
+                            <td>这些是Scratch中积木使用的特殊标志。</td>
+                            <td>
+                                <pre>Scratch @greenFlag @stopSign @turnLeft @turnRight</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">Scratch @greenFlag @stopSign @turnLeft @turnRight</pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <pre>@delInput @addInput @list</pre>
+                            </td>
+                            <td>这些是Snap!中积木使用的特殊标志。</td>
+                            <td>
+                                <pre>Snap! @delInput @addInput @list</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">Snap! @delInput @addInput @list</pre>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <pre>@loopArrow</pre>
+                            </td>
+                            <td>这是Scratch中的循环箭头标志。</td>
+                            <td>
+                                <pre>if &lt[1]=[1]&gt then repeat{ 
+. . . 
+} @loopArrow::control</pre>
+                            </td>
+                            <td>
+                                <pre class="normal">if &lt[1]=[1]&gt then repeat{ 
+. . . 
+} @loopArrow::control</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr style="margin: 20px auto; border: none; border-top: 1px solid #e5e7eb;">
+                <div class="note">
+                    <p>引用：<br>[1]<a href="https://en.scratch-wiki.info/wiki/Block_Plugin" target="_blank"
+                            rel="noopener noreferrer" id="1">Scratch Wiki - Block Plugin</a>
+                        <br>[2]<a href="https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax" target="_blank"
+                            rel="noopener noreferrer" id="2">Scratch Wiki - Block Plugin Syntax</a>
+                        <br>[3]<a href="https://en.scratch-wiki.info/wiki/List_of_Block_Opcodes" target="_blank"
+                            rel="noopener noreferrer" id="3">Scratch Wiki - List of Block Opcodes</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script>
+        scratchblocks.renderMatching("pre.normal", {
+            style: "scratch3",
+            languages: ["zh_cn", "en"],
+            scale: 0.675
+        });
+        scratchblocks.renderMatching("code.inline", {
+            inline: true,
+            style: "scratch3",
+            languages: ["zh_cn", "en"],
+            scale: 0.675
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Clyain 的资源下载</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <link rel="stylesheet" href="../styles/Global.css">
+    <link rel="stylesheet" href="../styles/Modal.css">
+    <link rel="stylesheet" href="../styles/Card.css">
+    <link rel="stylesheet" href="../styles/Content.css">
+    <link rel="stylesheet" href="../styles/HeadBtn.css">
+    <link rel="stylesheet" href="../styles/Lable.css">
+    <link rel="stylesheet" href="../styles/BasicBtn.css">
+
+    <script src="../lib/scratchblocks-v3.6.4-min.js"></script>
+    <script src="../lib/translations-all-v3.6.4.js"></script>
+    <script src="../lib/_ScratchBlocksRendering.js"></script>
+
+    <style>
+        .download-btn {
+            background: #eef2ff;
+            color: #1e3a8a;
+        }
+
+        .skip-btn {
+            background: #eef2ff;
+            color: #1e748a;
+        }
+
+        .onlineplay-btn {
+            background: #eef2ff;
+            color: #166534;
+        }
+
+        .view-details-btn {
+            background: #eef2ff;
+            color: #3a3a3a;
+        }
+
+
+        /* =====  9. 响应式  ===== */
+
+        @media (max-width: 640px) {
+            .content {
+                border-radius: 20px;
+                padding: 1rem;
+            }
+
+            .modal {
+                width: 95%;
+                max-height: 85vh;
+            }
+
+            .modal-header,
+            .modal-body {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .label {
+                font-size: 10px;
+                padding: 3px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .basic-btn-group {
+                justify-content: center;
+            }
+
+            .action,
+            button.action,
+            .basic-btn {
+                flex: 1 0 auto;
+                justify-content: center;
+                min-width: 70px;
+            }
+
+            .modal-footer {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <a class="head-btn" href="../"><span class="no-select">首页</span></a>
+        <div style="flex:1; text-align:center;">
+            <h1 style="margin:0;">资源下载</h1>
+            <p style="margin:0;">Clyain</p>
+        </div>
+        <hr>
+
+        <div class="section-title">EPNC 超强数值计算器</div>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="title">EPNC 超强数值计算器 Ver.3.0.0</div>
+                    <div class="label-group">
+                        <div class="label" style="border: 1px solid #e54646; background-color: #e99f9f;">不进行维护</div>
+                        <div class="label" style="border: 1px solid #e54646; background-color: #e99f9f;">可能含有bug！</div>
+                    </div>
+                    <div class="desc">一款功能强大的数值计算器，支持复杂数学运算。<br>更新日期：2025-12-27</div>
+                    <div class="basic-btn-group">
+                        <button class="basic-btn view-details-btn" data-modal="modal-1"><span class="no-select">详情</span></button>
+                        <button class="basic-btn download-btn" data-file="EPNC-超强数值计算器 Ver.3.0.0.sb3"><span class="no-select">下载</span></button>
+                        <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/epnc3/'"><span class="no-select">在线游玩</span></button>
+                        <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/67a0b136e77d7c09f357fccd?inviteCode=yZdDWDdLlJrxDSVj', '_blank')"><span class="no-select">跳转至共创世界</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="title">EPNC-ENGINE Ver.2.1.0</div>
+                    <div class="label-group">
+                        <div class="label"
+                            style="border: 1px solid hsl(0, 75%, 59%); background-color: hsl(0, 63%, 77%);">不进行维护</div>
+                        <div class="label"
+                            style="border: 1px solid hsl(214, 75%, 59%); background-color: hsl(214, 63%, 77%);">引擎</div>
+                    </div>
+                    <div class="desc">EPNC 超强数值计算器的计算引擎，支持复杂数学运算。<br>更新日期：2025-12-27</div>
+                    <div class="basic-btn-group">
+                        <button class="basic-btn view-details-btn" data-modal="modal-2"><span class="no-select">详情</span></button>
+                        <button class="basic-btn download-btn" data-file="EPNC-ENGINE Ver.2.1.0.sb3"><span class="no-select">下载</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">EPTeX</div>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="title">EPTeX Ver.0.6.7</div>
+                    <div class="label-group">
+                        <div class="label"
+                            style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);">最新！
+                        </div>
+                    </div>
+                    <div class="desc">一款强大的TeX编辑器，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07</div>
+                    <div class="basic-btn-group">
+                        <button class="basic-btn view-details-btn" data-modal="modal-3"><span class="no-select">详情</span></button>
+                        <button class="basic-btn download-btn" data-file="EPTeX Ver.0.6.7.sb3"><span class="no-select">下载</span></button>
+                        <button class="basic-btn onlineplay-btn"
+                            onclick="window.location.href='../onlineplay/eptex/'"><span class="no-select">在线游玩</span></button>
+                        <button class="basic-btn skip-btn"
+                            onclick="window.open('https://www.ccw.site/detail/6989b65bf84f05669a033765?accessKey=6e9231&inviteCode=qlWZVEqDDhGCL9Cp', '_blank')"><span class="no-select">跳转至共创世界</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="title">EPTeX-ENGINE Ver.0.7.0</div>
+                    <div class="label-group">
+                        <div class="label" style="border: 1px solid hsl(214, 75%, 59%); background-color: hsl(214, 63%, 77%);">引擎</div>
+                        <div class="label" style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);">最新！</div>
+                    </div>
+                    <div class="desc">EPTeX的渲染引擎，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07</div>
+                    <div class="basic-btn-group">
+                        <button class="basic-btn view-details-btn" data-modal="modal-4"><span class="no-select">详情</span></button>
+                        <button class="basic-btn download-btn" data-file="EPTeX-ENGINE Ver.0.7.0.sb3"><span class="no-select">下载</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Undefined</h3>
+                <button class="modal-close-btn" id="closeModalBtn" aria-label="关闭弹窗"><span class="no-select">✕</span></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 动态内容会渲染到这里 -->
+                <div id="modalContent"></div>
+            </div>
+            <div class="modal-footer" id="modalFooter">
+                <!-- 动态页脚按钮会渲染到这里 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../Modal.js"></script>
+    <script src="ModalContent.js"></script>
+    <script src="Download.js"></script>
+</body>
+
+</html>

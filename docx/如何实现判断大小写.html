@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/docxsvg.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="../styles/HeadBtn.css">
+
+    <script src="../lib/scratchblocks-v3.6.4-min.js"></script>
+    <script src="../lib/translations-all-v3.6.4.js"></script>
+    <script src="../lib/_ScratchBlocksRendering.js"></script>
+    <title>如何实现判断大小写</title>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <main class="main-content">
+            <a class="head-btn" href="./"><span class="no-select">返回</span></a>
+            <a class="head-btn" href="../"><span class="no-select">首页</span></a>
+            <div class="content-wrapper">
+                <h1>如何实现判断大小写</h1>
+                <h2><b>距离法</b></h2>
+                <p><b>这是最简单的一个方法</b>，你只需要创建一个名为“ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜÀÂÆÇÉÈÊËÏÎÔŒÙÛŸАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ”的角色（这其中包含了英语、俄语、德语、法语、西班牙语、希腊语的大写字母），并在该角色中添加下面的代码：
+                </p>
+                <pre class="normal">
+定义 (字母) 是大写？
+将[i v]设为(1)
+将[字符串 v]设为()
+重复执行([ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜÀÂÆÇÉÈÊËÏÎÔŒÙÛŸАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ]的字符数)次
+    如果 &lt ([ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜÀÂÆÇÉÈÊËÏÎÔŒÙÛŸАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ]的第(i)个字符)=(字母) &gt 那么
+        将[字符串 v]设为(连接(字符串)和(字母))
+    否则
+        将[字符串 v]设为(连接(字符串)和([ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜÀÂÆÇÉÈÊËÏÎÔŒÙÛŸАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ]的第(i)个字符))
+    结束
+    将[i v]增加(1)
+结束
+将[是大写字母？ v]设为&lt(到(字符串)的距离)=(0)&gt
+                    </pre>
+                <p>当然，如果你只想判断英文字母或者更多字符，可以将角色的名称更改为相应的大写字符集，同时把这串脚本中的也改一下。</p>
+                <br>
+                <p>如果你想要在一段程序中经常或随时要调用，则做法稍微有点儿不同：</p>
+                <p>你同样需要创建一个名为“ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜÀÂÆÇÉÈÊËÏÎÔŒÙÛŸАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ”的角色，但是里面不用添加代码；<br>然后在你需要调用此脚本的角色中添加上面这段代码，并在判断<code
+                        class="inline">&lt(到(字符串)的距离)=(0)&gt</code>之前，添加<code
+                        class="inline">移到(ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜÀÂÆÇÉÈÊËÏÎÔŒÙÛŸАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ v)</code>的这一行积木就可以了。
+                </p>
+                <hr style="margin: 20px auto; border: none; border-top: 1px solid #e5e7eb;">
+                <h2><b>53个造型法</b></h2>
+                <p><b>这是相对复杂的一个方法</b>，因为它利用的是造型名称区分大小写，需要你创建很多的造型。例如，一个角色可以有一个名为“A”的造型和一个名称为“a”的造型。</p>
+                <p><code class="inline">换成( v)造型</code>可用于切换到给定名称的造型，<code
+                        class="inline">(造型 [编号 v])</code>可用来通过造型编号区分它们。</p>
+                <p>这种方法需要为每个要检测的字母创建成对的造型——一个大写字母和一个小写字母。当找不到字母时，还需要一个名为“null”的附加造型作为默认造型。对于这个例子，造型的顺序应该是：null、A、a、B、b、C、c……
+                </p>
+                <pre class="normal">
+
+定义 (字母) 是大写？
+换成(null v)造型
+换成 (字母)造型 // 尝试切换到给定角色的造型
+如果 &lt(造型 [名称 v]) = [null]&gt 那么
+  将 [是大写字母？ v] 设为 [] // 如果找不到字母，则返回空值
+否则
+    将 [是大写字母？ v] 设为 &lt((造型 [编号 v]) 除以(2)的余数) = [0]&gt // 造型编号 2, 4, 6, ... 是大写字母；造型编号 3, 5, 7, ... 是小写字母
+结束
+                    </pre>
+                <p>当然，如果你只想判断英文字母或者更多字符，可以将角色的名称更改为相应的大写字符集，同时把这串脚本中的也改一下。</p>
+                <hr style="margin: 20px auto; border: none; border-top: 1px solid #e5e7eb;">
+                <div class="note">
+                    <p>引用：<br><a href="https://en.scratch-wiki.info/wiki/Case_Sensing" target="_blank"
+                            rel="noopener noreferrer">Scratch Wiki - Case Sensing</a></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script>
+        scratchblocks.renderMatching("pre.normal", {
+            style: "scratch3",
+            languages: ["zh_cn", "en"],
+            scale: 0.675
+        });
+        scratchblocks.renderMatching("code.inline", {
+            inline: true,
+            style: "scratch3",
+            languages: ["zh_cn", "en"],
+            scale: 0.675
+        });
+    </script>
+</body>
+
+</html>

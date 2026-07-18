@@ -1,0 +1,28 @@
+.head-btn {
+    border: none;
+    background: #ffffffbb;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: inherit;
+    text-decoration: none;
+    margin: 0px 10px 5px 0px;
+}
+
+.head-btn:hover {
+    transform: scale(1.03);
+    text-decoration: none;
+}
+
+.head-btn:active {
+    transform: scale(0.97);
+    text-decoration: none;
+}

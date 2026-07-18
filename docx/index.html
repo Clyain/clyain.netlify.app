@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Clyain 的文档</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <link rel="stylesheet" href="../styles/Content.css">
+    <link rel="stylesheet" href="../styles/Global.css">
+    <link rel="stylesheet" href="../styles/HeadBtn.css">
+
+    <style>
+        .content {
+            text-align: left;
+            padding: 40px 24px;
+            width: 100%;
+            max-width: 800px;
+            height: 70vh;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .main-content {
+            flex: 1;
+            background: #ffffff;
+            padding: 40px;
+            overflow-y: auto;
+            min-width: 0;
+        }
+
+        /* ===== 文件列表 ===== */
+        #file-list {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        #file-list li {
+            padding: 12px 0;
+            cursor: pointer;
+            font-size: clamp(0.9rem, 4vw, 1.1em);
+            border-radius: 8px;
+            position: relative;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            word-break: break-word;
+            padding-left: 8px;
+        }
+
+        #file-list li .icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            display: inline-block;
+            user-select: none;
+            pointer-events: none;
+            margin-right: 8px;
+        }
+
+        #file-list li span {
+            user-select: none;
+            flex: 1;
+            word-break: break-word;
+        }
+
+        #file-list li:hover {
+            background: #f0f4fa2f;
+        }
+
+        /* ===== 路径显示 ===== */
+        #path {
+            font-size: 0.85rem;
+            font-weight: 450;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+            padding: 0.3rem 0;
+            letter-spacing: 0.2px;
+            color: #b9c7db;
+            text-align: left;
+            justify-content: flex-start;
+            margin-bottom: 1em;
+            user-select: none;
+            word-break: break-word;
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+
+        #path span {
+            white-space: nowrap;
+        }
+
+        .path-area {
+            margin-bottom: 1.4rem;
+            text-align: left;
+            width: 100%;
+        }
+
+        /* ===== 搜索框 ===== */
+        .search-wrapper {
+            margin-bottom: 1.6rem;
+        }
+
+        #search-box {
+            width: 100%;
+            padding: 0.85rem 1.2rem;
+            font-size: clamp(0.85rem, 4vw, 0.95rem);
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 60px;
+            color: var(--text-white);
+            outline: none;
+            transition: var(--transition);
+            font-weight: 400;
+        }
+
+        #search-box:focus {
+            border-color: var(--primary-color);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+        }
+
+        #search-box::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            user-select: none;
+            -webkit-user-drag: none;
+            pointer-events: none;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 640px) {
+            #file-list li {
+                padding: 10px 0 10px 30px;
+            }
+
+            #file-list li .icon {
+                width: 18px;
+                height: 18px;
+                margin-right: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #search-box {
+                padding: 0.7rem 1rem;
+            }
+        }
+
+        .folder,
+        .file {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <a class="head-btn" href="../"><span class="no-select">首页</span></a>
+        <div style="flex:1; text-align:center;">
+            <h1 style="margin:0">文档管理器</h1>
+            <p style="margin:0;">Clyain</p>
+        </div>
+        <hr>
+        <input id="search-box" type="text" placeholder="搜索文件或文件夹...">
+        <div style="display: flex; align-items: center; margin: 10px 0;"></div>
+        <div id="path"></div>
+        <ul id="file-list"></ul>
+    </div>
+    <script>
+        // 文件结构
+        const fileTree = {
+            "前言": {
+                "关于我是如何显示Scratch积木的.html": "file"
+            },
+            "技巧": {
+                "如何实现判断大小写.html": "file"
+            },
+        };
+
+        let currentPath = [];
+        let searchKeyword = '';
+
+        function renderList(tree, path) {
+            const fileList = document.getElementById('file-list');
+            fileList.innerHTML = '';
+            // 搜索过滤
+            const keys = Object.keys(tree).filter(key => key.toLowerCase().includes(searchKeyword.toLowerCase()));
+            for (const key of keys) {
+                const li = document.createElement('li');
+                const icon = document.createElement('img');
+                icon.className = 'icon';
+                if (tree[key] === 'file') {
+                    icon.src = './assets/docxsvg.svg';
+                    li.appendChild(icon);
+                    const span = document.createElement('span');
+                    // 去掉.html后缀
+                    span.textContent = key.replace(/\.html$/i, '');
+                    li.appendChild(span);
+                    li.className = 'file';
+                    li.onclick = () => {
+                        // 跳转到文档页面
+                        window.location.href = key;
+                    };
+                } else {
+                    icon.src = './assets/foldersvg.svg';
+                    li.appendChild(icon);
+                    const span = document.createElement('span');
+                    // 只显示文件夹名
+                    span.textContent = key;
+                    li.appendChild(span);
+                    li.className = 'folder';
+                    li.onclick = () => {
+                        currentPath.push(key);
+                        searchKeyword = '';
+                        document.getElementById('search-box').value = '';
+                        render();
+                    };
+                }
+                fileList.appendChild(li);
+            }
+            if (keys.length === 0) {
+                const emptyLi = document.createElement('li');
+                emptyLi.textContent = '没有找到文件或文件夹';
+                emptyLi.style.color = '#aaa';
+                emptyLi.style.paddingLeft = '0';
+                fileList.appendChild(emptyLi);
+            }
+        }
+
+        function getTreeByPath(tree, path) {
+            let t = tree;
+            for (const p of path) {
+                t = t[p];
+            }
+            return t;
+        }
+
+        function renderpath() {
+            const path = document.getElementById('path');
+            path.innerHTML = '';
+            let pathHtml = '<span style="cursor:pointer;color:#479cff;font-weight:700" onclick="goToPath(0)">根目录</span>';
+            for (let i = 0; i < currentPath.length; i++) {
+                pathHtml += ' / <span style="cursor:pointer;color:#479cff;font-weight:700" onclick="goToPath(' + (i + 1) + ')">' + currentPath[i] + '</span>';
+            }
+            path.innerHTML = pathHtml;
+        }
+
+        window.goToPath = function (idx) {
+            currentPath = currentPath.slice(0, idx);
+            searchKeyword = '';
+            document.getElementById('search-box').value = '';
+            render();
+        };
+
+        function render() {
+            renderpath();
+            renderList(getTreeByPath(fileTree, currentPath), currentPath);
+        }
+
+        // 搜索功能
+        document.getElementById('search-box').addEventListener('input', function () {
+            searchKeyword = this.value;
+            render();
+        });
+
+        render();
+    </script>
+</body>
+
+</html>

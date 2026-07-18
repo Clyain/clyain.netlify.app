@@ -1,0 +1,46 @@
+.basic-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 0.5rem;
+}
+
+.basic-btn {
+    border: none;
+    background: #ffffffcc;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: clamp(0.65rem, 3vw, 0.75rem);
+    padding: 0.5rem 0.8rem;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: inherit;
+    flex-shrink: 0;
+}
+
+.basic-btn:hover {
+    transform: scale(1.02);
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 640px) {
+    .basic-btn-group {
+        gap: 6px;
+    }
+
+    .basic-btn {
+        padding: 0.45rem 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .basic-btn-group {
+        justify-content: center;
+    }
+}

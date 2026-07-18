@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/Global.css">
+    <link rel="stylesheet" href="styles/Content.css">
+    <link rel="stylesheet" href="styles/MainBtn.css">
+
+    <title>Clyain 主页导航</title>
+    <style>
+        .content {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 8vw, 2.5rem);
+            margin-bottom: 1rem;
+            text-shadow: none;
+            word-break: break-word;
+        }
+
+        .subtext {
+            font-size: clamp(0.9rem, 4vw, 1.1rem);
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        #poem-container {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #poem-text {
+            font-size: clamp(0.85rem, 3.5vw, 1rem);
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        #poem-info {
+            font-size: clamp(0.75rem, 3vw, 0.9rem);
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="content">
+        <h1>Clyain 主页导航</h1>
+        <p class="subtitle">
+            欢迎来到我的主页！<br>你可以点击下方的按钮来获取你想要的资源 []~(￣▽￣)~*
+        </p>
+
+        <div class="btn-container">
+            <button onclick="window.location.href='./download'" class="main-btn">
+                <span class="no-select">资源下载</span>
+            </button>
+
+            <button onclick="window.location.href='./docx'" class="main-btn">
+                <span class="no-select">查看文档</span>
+            </button>
+
+            <button onclick="window.location.href='./onlineplay'" class="main-btn">
+                <span class="no-select">在线游玩</span>
+            </button>
+
+            <button onclick="window.location.href='./EPSA'" class="main-btn">
+                <span class="no-select">Scratch 作品分析器</span>
+            </button>
+            <div id="poem-container" class="subtext">
+                <p id="poem-text">诗词正在加载...</p>
+                <p id="poem-info">信息正在加载...</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        // 设置缓存变量
+        let cachedPoem = {
+            sentence: '',
+            info: ''
+        };
+
+        function displayPoem(sentence, info) {
+            document.getElementById('poem-text').innerHTML = sentence;
+            document.getElementById('poem-info').innerHTML = info;
+            // 显示成功后更新缓存
+            cachedPoem.sentence = sentence;
+            cachedPoem.info = info;
+        }
+
+        function loadPoemWithRetry(retryCount = 0) {
+            jinrishici.load(function (result) {
+                // 提取数据
+                let sentence = result.data.content;
+                let dynasty = result.data.origin.dynasty;
+                let author = result.data.origin.author;
+                let title = result.data.origin.title;
+                let info = `——${dynasty} · ${author}《${title}》`;
+                // 显示新内容
+                displayPoem(sentence, info);
+            });
+        }
+
+        // 开始加载诗词
+        loadPoemWithRetry();
+    </script>
+</body>
+
+</html>

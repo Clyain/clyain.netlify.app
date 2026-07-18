@@ -1,0 +1,70 @@
+.settingLabel {
+    color: #427ece;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 8px 8px 8px 0px;
+}
+
+.settingCheckbox,
+.settingRadio {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #307bd0;
+    background-color: rgba(48, 207, 208, 0.05);
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 8px rgba(48, 131, 208, 0.2);
+    flex-shrink: 0;
+    margin-right: 6px;
+}
+
+.settingCheckbox {
+    border-radius: 25%;
+}
+
+.settingRadio {
+    border-radius: 50%;
+}
+
+.settingCheckbox:checked,
+.settingRadio:checked {
+    border-color: #3070d0;
+    background-color: rgba(48, 104, 208, 0.05);
+}
+
+.settingCheckbox:before,
+.settingRadio:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(145deg, #7a94e9, #1f56a9);
+    box-shadow: 0 0 16px rgba(48, 77, 208, 0.7);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+}
+
+.settingCheckbox:before {
+    border-radius: 25%;
+}
+
+.settingRadio:before {
+    border-radius: 50%;
+}
+
+.settingCheckbox:checked:before,
+.settingRadio:checked:before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
