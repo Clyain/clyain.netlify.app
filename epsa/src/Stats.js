@@ -104,7 +104,8 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
         if (!blockData || typeof blockData !== 'object') return false;
         const opcode = blockData.opcode || 'unknown';
         const shadow = !!blockData.shadow;
-        if (opcode === "procedures_definition" || opcode === "procedures_prototype" || MenuOPs.includes(opcode) || ((opcode === "argument_reporter_string_number" || opcode === "argument_reporter_boolean") && shadow)) {
+        if (shadow) return true;
+        if (opcode === "procedures_prototype" || MenuOPs.includes(opcode)) {
             return true;
         }
         return false;
