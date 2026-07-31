@@ -24,16 +24,16 @@
             <div class="content-wrapper">
                 <h1>关于我是如何显示Scratch积木的</h1>
                 <p>在这个部分，我将介绍我如何在网页中显示Scratch积木的。</p>
-                <p>有些人可能会使用TurboWarp之类的编辑器将积木转换为SVG或PNG格式的图片，并直接在HTML中引入文件以显示，可是它不易于修改。</p>
-                <p>而我使用了一个名为Scratchblocks的JavaScript库来渲染积木。这个库允许我直接在HTML中编写积木的文本表示，并将其转换为可视化的积木图像。这种方法使得修改和更新积木变得非常方便，因为我只需要更改HTML内的文本内容，而不需要重新生成图片。
+                <p>有些人可能会使用TurboWarp之类的编辑器，或者通过ScratchAddons提供的插件将积木转换为SVG或PNG格式的图片，并直接在HTML中引入文件以显示，可是它不易于修改。</p>
+                <p>而我使用的是一个名为<b>Scratchblocks</b>的JavaScript库来渲染积木。这个库允许我直接在HTML中编写积木的文本表示，并将其转换为可视化的积木图像。这种方法使得修改和更新积木变得非常方便，因为我只需要更改HTML内的文本内容，而不需要重新生成图片。
                 </p>
                 <p>这里也有一个可视化的网站链接：<a href="https://scratchblocks.github.io/#?style=scratch3&lang=zh_cn" target="_blank"
                         rel="noopener noreferrer">scratchblocks.github.io</a>，可以结合着下方的Scratchblocks语法来使用并尝试搞懂它。</p>
                 <hr style="margin: 20px auto; border: none; border-top: 1px solid #e5e7eb;">
                 <h2><b>调用Scratchblocks</b></h2>
                 <p>
-                    点击下载所需要的文件：<a href="../scratchblocks-v3.6.4-min.js" download>scratchblocks-v3.6.4-min.js</a> 和
-                    <a href="../translations-all-v3.6.4.js" download>translations-all-v3.6.4.js</a><br>
+                    点击下载所需要的文件：<a href="../lib/scratchblocks-v3.6.4-min.js" download>scratchblocks-v3.6.4-min.js</a> 和
+                    <a href="../lib/translations-all-v3.6.4.js" download>translations-all-v3.6.4.js</a><br>
                     下载之后需要在HTML的head标签中添加以下代码：
                 <pre>
 &ltscript src="scratchblocks-v3.6.4-min.js"&gt&lt/script&gt
@@ -103,7 +103,7 @@
                             <td>
                                 <pre>block name</pre>
                             </td>
-                            <td>积木的名称（见引用<a href="#3">[3]</a>）</td>
+                            <td>积木的名称（你应该直接按照Scratch上面的写法，前提是你应该JavaScript中做好你的语言的设置）</td>
                             <td>
                                 <pre>erase all</pre>
                             </td>
@@ -169,7 +169,7 @@ say [Done!]</pre>
                             <td>
                                 <pre>(item v)</pre>
                             </td>
-                            <td>可插入的下拉菜单输入</td>
+                            <td>接受子积木的下拉菜单输入</td>
                             <td>
                                 <pre>broadcast (You Win v)</pre>
                             </td>
@@ -181,7 +181,7 @@ say [Done!]</pre>
                             <td>
                                 <pre>[item v]</pre>
                             </td>
-                            <td>不可插入的下拉菜单输入</td>
+                            <td>不接受子积木的下拉菜单输入</td>
                             <td>
                                 <pre>set [my variable v] to (0)</pre>
                             </td>
@@ -217,7 +217,7 @@ say [Done!]</pre>
                             <td>
                                 <pre>define</pre>
                             </td>
-                            <td>自定义积木帽子</td>
+                            <td>自制积木的帽子，后面的内容会直接作为帽子内的积木</td>
                             <td>
                                 <pre>define jump (height)</pre>
                             </td>
@@ -436,8 +436,6 @@ more blocks
                             rel="noopener noreferrer" id="1">Scratch Wiki - Block Plugin</a>
                         <br>[2]<a href="https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax" target="_blank"
                             rel="noopener noreferrer" id="2">Scratch Wiki - Block Plugin Syntax</a>
-                        <br>[3]<a href="https://en.scratch-wiki.info/wiki/List_of_Block_Opcodes" target="_blank"
-                            rel="noopener noreferrer" id="3">Scratch Wiki - List of Block Opcodes</a>
                     </p>
                 </div>
             </div>

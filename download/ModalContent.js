@@ -20,18 +20,18 @@ const modalConfigs = {
                 </ul>
                 <h4>致谢：</h4>
                 <ul>
-                    <li>odbopqo:B22四万字中文画笔字库PTE,纯画笔,汉字,韩语,日语,unicode</li>
-                    <li>MzCity:HpP圆角矩形实心</li>
-                    <li>?:快速圆角矩形填充(开源)</li>
-                    <li>爱编程的小陈同学:进制转换</li>
+                    <li>odbopqo：B22四万字中文画笔字库PTE,纯画笔,汉字,韩语,日语,unicode</li>
+                    <li>MzCity：HpP圆角矩形实心</li>
+                    <li>?：快速圆角矩形填充(开源)</li>
+                    <li>爱编程的小陈同学：进制转换</li>
                 </ul>
-                <h4>注意事项见"EPNC-ENGINE Ver.2.1.0"的详情页面</h4>
+                <h4>注意事项见"EPNC-ENGINE Ver.2.1.0"的详情页面。</h4>
             </div>
             `,
         footer: `
             <button class="basic-btn download-btn" data-file="EPNC-超强数值计算器 Ver.3.0.0.sb3"><span class="no-select">下载</span></button>
             <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/epnc3/'"><span class="no-select">在线游玩</span></button>
-            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/67a0b136e77d7c09f357fccd?inviteCode=yZdDWDdLlJrxDSVj', '_blank')"><span class="no-select">跳转至共创世界</span></button>
+            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/67a0b136e77d7c09f357fccd?inviteCode=yZdDWDdLlJrxDSVj', '_blank')"><span class="no-select">跳转至共创世界</span><svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></button>
         `
     },
     'modal-2': {
@@ -79,30 +79,34 @@ const modalConfigs = {
                 </ul>
             </div>
         `,
-        footer:`
+        footer: `
         <button class="basic-btn download-btn" data-file="EPNC-ENGINE Ver.2.1.0.sb3"><span class="no-select">下载</span></button>
         `
     },
-    'modal-3':{
-        title:'EPTeX Ver.0.6.7',
-        content:`
+    'modal-3': {
+        title: 'EPTeX Ver.0.6.7',
+        content: `
             <div class="label-group">
                 <div class="label" style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);">最新！</div>
             </div>
             <p class="modal-desc">一个TeX编辑器，正常人一般用它来写数学公式<br>虽然没啥用（<br>支持渲染超多LaTeX能显示的公式，共约15008积木。</p>
             <div class="modal-features">
-                <h4>直接使用即可。</h4>
+                <h4>致谢：</h4>
+                <ul>
+                    <li>odbopqo：B22四万字中文画笔字库PTE,纯画笔,汉字,韩语,日语,unicode</li>
+                </ul>
+                <h4>直接使用即可；调用请见"EPTeX-ENGINE Ver.0.7.0"的详情页面。</h4>
             </div>
         `,
-        footer:`
+        footer: `
             <button class="basic-btn download-btn" data-file="EPTeX Ver.0.6.7.sb3"><span class="no-select">下载</span></button>
             <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/eptex/'"><span class="no-select">在线游玩</span></button>
-            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/6989b65bf84f05669a033765?accessKey=6e9231&inviteCode=qlWZVEqDDhGCL9Cp', '_blank')"><span class="no-select">跳转至共创世界</span></button>
+            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/6989b65bf84f05669a033765?accessKey=6e9231&inviteCode=qlWZVEqDDhGCL9Cp', '_blank')"><span class="no-select">跳转至共创世界</span><svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></button>
         `
     },
-    "modal-4":{
-        title:'EPTeX-ENGINE Ver.0.7.0',
-        content:`
+    "modal-4": {
+        title: 'EPTeX-ENGINE Ver.0.7.0',
+        content: `
             <div class="label-group">
                 <div class="label" style="border: 1px solid hsl(214, 75%, 59%); background-color: hsl(214, 63%, 77%);">引擎</div>
                 <div class="label" style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);">最新！</div>
@@ -119,11 +123,14 @@ const modalConfigs = {
                     <li>调用方法二（推荐）：使用自制积木<code
                             class="inline">!!TeX渲染[1+1] [] [] [] [] &lt &lt  &gt不成立 &gt &lt &gt &lt &gt::custom blocks</code>来渲染公式，使用#bs渲染原来应在列表中的空项（方框，若第二个布尔值参数为true则不显示方框）；
                     </li>
-                    <li>大小写的字母可直接输入并允许正常识别；</li>
-                    <li>可以使用#{textcode}来代替在键盘上难以直接打出的符号（{textcode}应选取列表“#内容”中的列表项）</li><br>
-                    <li>注：此自制积木的最后一项“调试”为点1中前两个分号所对应行为的切换开关，false为文本控制公式内容，true为列表控制公式内容；<br>#sum表示求和符号，#prod表示求积符号，#int表示求积分符号
-                    </li>
                 </ul>
+                <br>
+                <li>大小写的字母可直接输入并允许正常识别；</li>
+                <li>可以使用#{textcode}来代替在键盘上难以直接打出的符号（{textcode}应选取列表“#内容”中的列表项），同时你也可以自己更改里面的内容来显示字符。</li><br>
+                <li>注：<br>
+                1. #sum表示求和符号，#prod表示求积符号，#int表示求积分符号；<br>
+                2. <b>由于使用到了obdopqo的PTE引擎，因此需要将<code class="inline">(font.mathit.字体::list)</code><code class="inline">(font.mathrm.字体::list)</code><code class="inline">(font.mathrm/mathit.字库索引::list)</code><code class="inline">(font.mathsf.字库索引::list)</code>这四个列表的内容提前导出并导入到你的项目中。</b>
+                </li>
                 <br>
                 <h4>支持以下命令：</h4>
                 <li>\\lsup \\rsup上标</li>
@@ -161,7 +168,7 @@ const modalConfigs = {
                 <li>上下标组合中多次嵌套上下标组合小部分情况会出现部分字符在竖直方向偏移的情况<br>【真是一个巨大的bug ／‵Д′)／~ ╧╧ 】</li>
             </div>
         `,
-        footer:`
+        footer: `
             <button class="basic-btn download-btn" data-file="EPTeX-ENGINE Ver.0.7.0.sb3"><span class="no-select">下载</span></button>
         
         `
