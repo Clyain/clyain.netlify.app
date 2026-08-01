@@ -50,8 +50,7 @@ h2 {
 
 h1 {
     margin-top: 30px;
-    border-left: 6px solid #3b82f6;
-    padding-left: 24px;
+    border-bottom: 3px solid #4c97ff;
 }
 
 p {
@@ -72,7 +71,7 @@ a:hover {
     height: 97%;
     text-align: left;
     backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -96,6 +95,7 @@ a:hover {
     padding: 15px;
     margin: 20px 0;
     border-radius: 4px;
+    font-size: small;
 }
 
 .background {
@@ -109,7 +109,7 @@ a:hover {
     background-position: center;
     background-attachment: fixed;
     z-index: -1;
-    opacity: 0.4;
+    opacity: 0.1;
 }
 
 
@@ -169,30 +169,40 @@ a:hover {
 }
 
 table {
-  border-collapse: collapse; /* 合并边框 */
-  width: 100%;
-  font-family: sans-serif;
-  font-size: 14px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
-  border-radius: 8px; /* 圆角 */
-  overflow: hidden; /* 确保圆角生效 */
+    border-collapse: collapse;
+    /* 合并边框 */
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* 轻微阴影 */
+    border-radius: 8px;
+    /* 圆角 */
+    overflow: hidden;
+    /* 确保圆角生效 */
 }
 
-th, td {
-  padding: 12px 15px; /* 内边距 */
-  text-align: left;
-  border-bottom: 1px solid #ddd; /* 底部边框 */
+th,
+td {
+    padding: 12px 15px;
+    /* 内边距 */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    /* 底部边框 */
 }
 
 th {
-  background-color: #4185dfd2;
-  backdrop-filter: blur(12px); /* 表头背景色 */
-  color: white; /* 表头文字颜色 */
+    background-color: #4185dfd2;
+    backdrop-filter: blur(12px);
+    /* 表头背景色 */
+    color: white;
+    /* 表头文字颜色 */
 }
 
 tr:nth-child(even) {
-  background-color: #fafafa1e;
-  backdrop-filter: blur(12px); /* 偶数行背景色（斑马纹） */
+    background-color: #fafafa1e;
+    backdrop-filter: blur(12px);
+    /* 偶数行背景色（斑马纹） */
 }
 
 .no-select {
@@ -201,4 +211,87 @@ tr:nth-child(even) {
     -ms-user-select: none;
     user-select: none;
     pointer-events: none;
+}
+
+code:not(.inline) {
+    background: #fafafa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #f0f6ff;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+tr:nth-child(even) {
+    background: #fafafa;
+}
+
+ul,
+ol {
+    padding-left: 1.8em;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+.toc {
+    background: #f5f8fc;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: 1px solid #e0e8f0;
+    margin: 1.2em 0;
+    display: inline-block;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 1.2em;
+}
+
+.toc > ul {
+    padding-left: 0;
+}
+
+.toc li {
+    margin-bottom: 2px;
+}
+
+.toc a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+dl {
+  margin: 5px 0;
+}
+
+dt {
+  font-weight: 600;
+  color: #181818;
+  padding: 10px 0 5px 0;
+  border-bottom: 2px solid #d8d8d8;
+}
+
+dd {
+  margin: 5px 0 5px 20px;
+  color: #181818;
+  line-height: 1.6;
 }

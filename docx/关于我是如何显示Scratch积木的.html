@@ -24,8 +24,8 @@
             <div class="content-wrapper">
                 <h1>关于我是如何显示Scratch积木的</h1>
                 <p>在这个部分，我将介绍我如何在网页中显示Scratch积木的。</p>
-                <p>有些人可能会使用TurboWarp之类的编辑器，或者通过ScratchAddons提供的插件将积木转换为SVG或PNG格式的图片，并直接在HTML中引入文件以显示，可是它不易于修改。</p>
-                <p>而我使用的是一个名为<b>Scratchblocks</b>的JavaScript库来渲染积木。这个库允许我直接在HTML中编写积木的文本表示，并将其转换为可视化的积木图像。这种方法使得修改和更新积木变得非常方便，因为我只需要更改HTML内的文本内容，而不需要重新生成图片。
+                <p>有些人可能会使用TurboWarp之类的编辑器，或者在官网通过 ScratchAddons 提供的插件将积木转换为SVG或PNG格式的图片，并直接在HTML中引入文件以显示，可是它不易于修改。</p>
+                <p>而我使用的是一个名为 <b>Scratchblocks</b> 的JavaScript库来渲染积木。这个库允许我直接在HTML中编写积木的文本表示，并将其转换为可视化的积木图像。这种方法使得修改和更新积木变得非常方便，因为我只需要更改HTML内的文本内容，而不需要重新生成图片。
                 </p>
                 <p>这里也有一个可视化的网站链接：<a href="https://scratchblocks.github.io/#?style=scratch3&lang=zh_cn" target="_blank"
                         rel="noopener noreferrer">scratchblocks.github.io</a>，可以结合着下方的Scratchblocks语法来使用并尝试搞懂它。</p>
@@ -34,17 +34,17 @@
                 <p>
                     点击下载所需要的文件：<a href="../lib/scratchblocks-v3.6.4-min.js" download>scratchblocks-v3.6.4-min.js</a> 和
                     <a href="../lib/translations-all-v3.6.4.js" download>translations-all-v3.6.4.js</a><br>
-                    下载之后需要在HTML的head标签中添加以下代码：
+                    下载之后需要在HTML的&lt;head&gt;标签中添加以下代码：
                 <pre>
-&ltscript src="scratchblocks-v3.6.4-min.js"&gt&lt/script&gt
-&ltscript src="translations-all-v3.6.4.js"&gt&lt/script&gt
+&lt;script src="scratchblocks-v3.6.4-min.js"&gt;&lt;/script&gt;
+&lt;script src="translations-all-v3.6.4.js"&gt;&lt;/script&gt;
 </pre>
                 </p>
                 <br>
                 <p>
-                    并在body标签的末尾添加以下代码：
+                    并在&lt;body&gt;标签的末尾添加以下代码：
                 <pre>
-&ltscript&gt
+&lt;script&gt;
     scratchblocks.renderMatching("pre.normal", {
         style: "scratch3",
         languages: ["zh_cn", "en"],
@@ -56,36 +56,38 @@
         languages: ["zh_cn", "en"],
         scale: 0.675
     });
-&lt/script&gt
+&lt;/script&gt;
 </pre>
                 之后你就可以在HTML中使用Scratchblocks了。
                 </p>
-                <p>注：
-                    <br>在上述的这个代码中，参数style接受的值有（三选一）："scratch2"、"scratch3"、"scratch3-high-contrast"（即高对比度样式），默认为"scratch2"。
-                    <br>参数languages接受一个语言代码数组，支持的语言包括："en"（英文）、"zh_cn"（简体中文）等。
-                    <br>参数scale用于设置积木的缩放比例，默认为1。
+                <p>在上述的这个代码中，<br>
+                <ul>
+                    <li>参数style接受的值有（三选一）："scratch2"、"scratch3"、"scratch3-high-contrast"（即高对比度样式），默认为"scratch2"。</li>
+                    <li>参数languages接受一个语言代码数组，支持的语言包括："en"（英文）、"zh_cn"（简体中文）等。</li>
+                    <li>参数scale用于设置积木的缩放比例，默认为1。</li>
+                </ul>
                 </p>
 
 
                 <br>
                 <p>
                     如果你需要渲染一整块积木栈，可以使用以下代码（省略号应被填入你的代码）：
-                <pre>&ltpre class="normal"&gt
+                <pre>&lt;pre class="normal"&gt;
 ...
-&lt/pre&gt
+&lt;/pre&gt;
 </pre>
                 </p>
                 <br>
                 <p>
                     而如果你需要在行内渲染积木，则可以使用以下代码（省略号应被填入你的代码）：
                 <pre>
-&ltcode class="inline"&gt
+&lt;code class="inline"&gt;
 ...
-&lt/code&gt
+&lt;/code&gt;
 </pre>
                 </p>
                 <hr style="margin: 20px auto; border: none; border-top: 1px solid #e5e7eb;">
-                <h2><b>Scratchblocks语法</b></h2>
+                <h2><b>Scratchblocks 语法</b></h2>
                 <p>详情见引用<a href="#1">[1]</a>、<a href="#2">[2]</a>。（此处以及引用的Scratch维基链接中的语法介绍都是使用英文为例子）</p>
                 <br>
                 <p><b>基础语法</b></p>
@@ -432,11 +434,14 @@ more blocks
                 </table>
                 <hr style="margin: 20px auto; border: none; border-top: 1px solid #e5e7eb;">
                 <div class="note">
-                    <p>引用：<br>[1]<a href="https://en.scratch-wiki.info/wiki/Block_Plugin" target="_blank"
+                    <ol>
+                        <li><a href="https://en.scratch-wiki.info/wiki/Block_Plugin" target="_blank"
                             rel="noopener noreferrer" id="1">Scratch Wiki - Block Plugin</a>
-                        <br>[2]<a href="https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax" target="_blank"
+                        </li>
+                        <li><a href="https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax" target="_blank"
                             rel="noopener noreferrer" id="2">Scratch Wiki - Block Plugin Syntax</a>
-                    </p>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </main>

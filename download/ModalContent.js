@@ -30,8 +30,14 @@ const modalConfigs = {
             `,
         footer: `
             <button class="basic-btn download-btn" data-file="EPNC-超强数值计算器 Ver.3.0.0.sb3"><span class="no-select">下载</span></button>
-            <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/epnc3/'"><span class="no-select">在线游玩</span></button>
-            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/67a0b136e77d7c09f357fccd?inviteCode=yZdDWDdLlJrxDSVj', '_blank')"><span class="no-select">跳转至共创世界</span><svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></button>
+            <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/eptex/'">
+                <span class="no-select">在线游玩</span>
+                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+            </button>
+            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/67a0b136e77d7c09f357fccd?inviteCode=yZdDWDdLlJrxDSVj', '_blank')">
+                <span class="no-select">跳转至共创世界</span>
+                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+            </button>
         `
     },
     'modal-2': {
@@ -100,8 +106,14 @@ const modalConfigs = {
         `,
         footer: `
             <button class="basic-btn download-btn" data-file="EPTeX Ver.0.6.7.sb3"><span class="no-select">下载</span></button>
-            <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/eptex/'"><span class="no-select">在线游玩</span></button>
-            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/6989b65bf84f05669a033765?accessKey=6e9231&inviteCode=qlWZVEqDDhGCL9Cp', '_blank')"><span class="no-select">跳转至共创世界</span><svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></button>
+            <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/eptex/'">
+                <span class="no-select">在线游玩</span>
+                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+            </button>
+            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/6989b65bf84f05669a033765?accessKey=6e9231&inviteCode=qlWZVEqDDhGCL9Cp', '_blank')">
+                <span class="no-select">跳转至共创世界</span>
+                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+            </button>
         `
     },
     "modal-4": {

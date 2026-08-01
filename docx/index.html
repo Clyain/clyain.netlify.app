@@ -48,7 +48,7 @@
             display: flex;
             align-items: center;
             word-break: break-word;
-            padding-left: 8px;
+            padding-left: 15px;
         }
 
         #file-list li .icon {
@@ -58,7 +58,7 @@
             display: inline-block;
             user-select: none;
             pointer-events: none;
-            margin-right: 8px;
+            margin-right: 10px;
         }
 
         #file-list li span {
@@ -121,6 +121,8 @@
 
         #search-box:focus {
             border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(71, 156, 255, 0.5);
+            /* 向外扩展的边框效果 */
             background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(4px);
         }
@@ -176,7 +178,8 @@
         // 文件结构
         const fileTree = {
             "前言": {
-                "关于我是如何显示Scratch积木的.html": "file"
+                "关于我是如何显示Scratch积木的.html": "file",
+                "Scratch 文件格式.html": "file"
             },
             "技巧": {
                 "如何实现判断大小写.html": "file"
@@ -228,7 +231,7 @@
                 const emptyLi = document.createElement('li');
                 emptyLi.textContent = '没有找到文件或文件夹';
                 emptyLi.style.color = '#aaa';
-                emptyLi.style.paddingLeft = '0';
+                emptyLi.style.paddingLeft = '15';
                 fileList.appendChild(emptyLi);
             }
         }
