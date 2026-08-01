@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/docxsvg.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="../styles/HeadBtn.css">
+
+    <script src="../lib/scratchblocks-v3.6.4-min.js"></script>
+    <script src="../lib/translations-all-v3.6.4.js"></script>
+    <script src="../lib/_ScratchBlocksRendering.js"></script>
+    <title>Scratch 文件格式</title>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <main class="main-content">
+            <a class="head-btn" href="./"><span class="no-select">返回</span></a>
+            <a class="head-btn" href="../"><span class="no-select">首页</span></a>
+            <div class="content-wrapper">
+                <h1>Scratch 文件格式</h1>
+                <p>
+                    <strong>Scratch 3.0 文件格式</strong> 是用于存储导出的 Scratch 3.0 项目和角色的格式。
+                    这些文件是 ZIP 压缩包，其中包含以 JSON 文本格式编码的信息，以及单独存储的项目媒体文件。
+                    项目文件的扩展名为 <code>.sb3</code>，角色文件的扩展名为
+                    <code>.sprite3</code>。
+                </p>
+                <!-- 目录 -->
+                <div class="toc">
+                    <strong style="font-size:1.2em;">目录</strong>
+                    <ul>
+                        <li><a href="#project-files">1. 项目文件</a></li>
+                        <li><a href="#sprite-files">2. 角色文件</a></li>
+                        <li><a href="#format">3. 格式</a>
+                            <ul>
+                                <li><a href="#projects">3.1 项目 (Project)</a></li>
+                                <li><a href="#targets">3.2 目标 (Targets)</a>
+                                    <ul>
+                                        <li><a href="#stage">3.2.1 舞台 (Stage)</a></li>
+                                        <li><a href="#sprites">3.2.2 角色 (Sprites)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#blocks">3.3 积木 (Blocks)</a>
+                                    <ul>
+                                        <li><a href="#inputs">3.3.1 输入 (Inputs)</a></li>
+                                        <li><a href="#fields">3.3.2 字段 (Fields)</a></li>
+                                        <li><a href="#shadowBlocks">3.3.3 阴影块 (Shadow blocks)</a></li>
+                                        <li><a href="#mutations">3.3.4 变体 (Mutations)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#comments">3.4 注释 (Comments)</a></li>
+                                <li><a href="#assets">3.5 资源 (Assets)</a>
+                                    <ul>
+                                        <li><a href="#costumes">3.5.1 造型</a></li>
+                                        <li><a href="#sounds">3.5.2 声音</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#monitors">3.6 监视器 (Monitors)</a></li>
+                                <li><a href="#metadata">3.7 元数据 (Meta)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2 id="project-files">1. 项目文件</h2>
+                <p>一个 <code>.sb3</code> 文件是一个 ZIP 压缩包，包含一个名为 <code>project.json</code> 的 JSON
+                    文件，该文件表示整个项目。（在大多数操作系统上，可以通过先将文件重命名为以 <code>.zip</code> 结尾来解压 <code>.sb3</code> 文件，或使用 7-Zip
+                    等程序直接右键打开。）背景、造型和声音以单独的文件存储，文件名以它们的 MD5 校验和开头，后跟文件扩展名。</p>
+
+                <h2 id="sprite-files">2. 角色文件</h2>
+                <p><code>.sprite3</code> 文件与项目文件类似，但其中的 JSON 文件名为 <code>sprite.json</code>，并将角色表示为一个<a
+                        href="#targets">目标 (target)</a>。</p>
+
+                <h2 id="format">3. 格式</h2>
+
+                <h3 id="projects">3.1 项目</h3>
+                <p>项目具有以下属性：</p>
+                <dl>
+                    <dt><code>targets</code>（目标）</dt>
+                    <dd>数组，顺序与 Scratch 用户界面中的顺序相同。</dd>
+
+                    <dt><code>monitors</code>（监视器）</dt>
+                    <dd>数组，按它们的图层顺序排列。</dd>
+
+                    <dt><code>extensions</code>（所使用的扩展标识）</dt>
+                    <dd>数组。<br>
+                        内置拓展以及它们对应的标识：<sup class="reference"><a href="#ref1">[1]</a></sup>
+                        <ul>
+                            <li><code>pen</code>：画笔</li>
+                            <li><code>wedo2</code>：LEGO Education WeDo 2.0</li>
+                            <li><code>music</code>：音乐</li>
+                            <li><code>microbit</code>：micro:bit</li>
+                            <li><code>text2speech</code>：文字朗读</li>
+                            <li><code>translate</code>：翻译</li>
+                            <li><code>videoSensing</code>：视频侦测</li>
+                            <li><code>ev3</code>：LEGO MINDSTORMS EV3</li>
+                            <li><code>makeymakey</code>：Makey Makey</li>
+                            <li><code>boost</code>：LEGO BOOST</li>
+                            <li><code>gdxfor</code>：Go Direct Force &amp; Acceleration</li>
+                        </ul>
+                    </dd>
+
+                    <dt><code>meta</code></dt>
+                    <dd>关于项目作者和所用 Scratch 版本的<a href="#metadata">元数据</a>。</dd>
+                </dl>
+
+                <br>
+                <h3 id="targets">3.2 目标 (Targets)</h3>
+                <p><strong>目标</strong> 是指舞台或角色。<br>所有目标具有以下属性：<sup class="reference"><a href="#ref2">[2]</a></sup></p>
+                <dl>
+                    <dt><code>isStage</code></dt>
+                    <dd>如果是舞台则为 <code>true</code>，否则为 <code>false</code>。默认为 <code>false</code>。</dd>
+
+                    <dt><code>name</code></dt>
+                    <dd>角色的名称。舞台始终为 <code>"Stage"</code>。如果未提供，目标将无法加载。</dd>
+
+                    <dt><code>variables</code></dt>
+                    <dd>一个对象，将 ID 与表示变量的数组关联。数组的第一个元素是变量名，第二个是值，第三个元素为 <code>true</code> 表示该变量是云变量，否则不存在。</dd>
+
+                    <dt><code>lists</code></dt>
+                    <dd>一个对象，将 ID 与表示列表的数组关联。数组的第一个元素是列表名，第二个是列表数组。</dd>
+
+                    <dt><code>broadcasts</code></dt>
+                    <dd>一个对象，将 ID 与广播名称关联。通常仅存在于舞台中。</dd>
+
+                    <dt><code>blocks</code></dt>
+                    <dd>一个对象，将 ID 与<a href="#blocks">积木</a>关联。</dd>
+
+                    <dt><code>comments</code></dt>
+                    <dd>一个对象，将 ID 与<a href="#comments">注释</a>关联。</dd>
+
+                    <dt><code>currentCostume</code></dt>
+                    <dd>一个数值，记录着项目被保存时的造型编号。</dd>
+
+                    <dt><code>costumes</code></dt>
+                    <dd>数组，存储这个对象的<a href="#costumes">造型</a>。</dd>
+
+                    <dt><code>sounds</code></dt>
+                    <dd>数组，存储这个对象的<a href="#sounds">声音</a>。</dd>
+
+                    <dt><code>layerOrder</code></dt>
+                    <dd>一个数值，记录着项目被保存时的图层编号。</dd>
+
+                    <dt><code>volume</code></dt>
+                    <dd>一个数值，记录着项目被保存时这个对象的音量。</dd>
+                </dl>
+
+                <br>
+                <h3 id="blocks">3.3 积木 (Blocks)</h3>
+                <dl>
+                    <dt><code>opcode</code>（操作码）</dt>
+                    <dd>一个字符串，用于命名该积木。积木操作码列表可<a href="https://en.scratch-wiki.info/wiki/List_of_Block_Opcodes"
+                            target="_blank">在此处</a>查看。</dd>
+
+                    <dt><code>next</code></dt>
+                    <dd>下一个积木的 ID，若无则为 <code>null</code>。</dd>
+
+                    <dt><code>parent</code></dt>
+                    <dd>若该积木是栈积木且前面有其他积木，则此属性为前一个积木的 ID。<br>若该积木是 C 型积木中的第一个栈积木，则此属性为 C 型积木的
+                        ID。<br>若该积木是另一个积木的输入，则此属性为那个积木的 ID。<br>其他情况下则为 <code>null</code>。</dd>
+
+                    <dt><code>inputs</code></dt>
+                    <dd>一个对象，将名称与这块积木中的<a href="#inputs">输入</a>的数组关联，这些数组表示可拖入其他积木的输入槽，包括 C 型积木的输入口。</dd>
+
+                    <dt><code>fields</code></dt>
+                    <dd>一个对象，将名称与数组关联，这些数组表示字段。每个数组的第一个元素为字段的值。对于某些字段，如变量下拉菜单和广播消息下拉菜单，还存在第二个元素，即该字段值的 ID。<sup
+                            class="reference"><a href="#ref3">[3]</a></sup></dd>
+
+                    <dt><code>shadow</code></dt>
+                    <dd>如果该积木是阴影块则为 <code>true</code>，否则为 <code>false</code>。</dd>
+
+                    <dt><code>topLevel</code></dt>
+                    <dd>如果该积木没有父级积木则为 <code>true</code>，否则为 <code>false</code>。</dd>
+                </dl>
+
+                <br>
+                <p>一个顶层积木对象还包含 <code>x</code> 和 <code>y</code> 属性，表示该积木在代码区域中的坐标。
+                    <br>若积木附有注释，则还有一个 <code>comment</code>属性，其值为该注释的 ID。
+                    <br>若积木带有<a href="#mutations">变体 (mutation)</a>，则还有一个 <code>mutation</code>属性，其值为表示该变体的对象。
+                </p>
+                <p>少数积木以数组形式表示，其第一个元素为表示所应用积木的数字。<sup class="reference"><a href="#ref4">[4]</a></sup><sup
+                        class="reference"><a href="#ref5">[5]</a></sup> 但这些积木也可以使用常规格式表示，正如在背包中所做的那样。<sup
+                        class="reference"><a href="#ref6">[6]</a></sup> 不过，在调用使用时，Scratch 会自动将这些积木转换为数组格式。</p>
+
+                <br>
+                <h4 id="inputs">3.3.1 输入 (Inputs)</h4>
+                在输入这个对象中，会有一个或多个键值对。
+                <br>如 <code class="inline">在(1)秒内滑行到(随机位置 v)</code>
+                它的积木代码大概是这样子的：
+                <pre>
+"a": {
+    "opcode": "motion_glideto",
+    "next": null,
+    "parent": null,
+    "inputs": {
+        "SECS": [
+            1,
+            [
+                4,
+                "1"
+            ]
+        ],
+        "TO": [
+            1,
+            "b"
+        ]
+    },
+    "fields": {},
+    "shadow": false,
+    "topLevel": true,
+    "x": 48,
+    "y": 704
+},
+"b": {
+    "opcode": "motion_glideto_menu",
+    "next": null,
+    "parent": "a",
+    "inputs": {},
+    "fields": {
+        "TO": [
+            "_random_",
+            null
+        ]
+    },
+    "shadow": true,
+    "topLevel": false
+}
+</pre>
+                在主积木块中（<code>motion_glideto</code>），<code>inputs</code> 中的 <code>SECS</code> 和 <code>TO</code>
+                分别表示两个输入槽。<br>
+                <br>
+                <pre>
+"SECS": [
+    1,
+    [
+        4,
+        "1"
+    ]
+],
+</pre>
+
+                在其中，如果第一个元素为<br>
+                <code>1</code>表示该输入为阴影块（即这里是可以输入的，你可以把任何一个报告块放在里面），<br>
+                <code>2</code> 表示没有阴影块（这种情况比较少见，这里会显示为一个比较宽的深色胶囊型，你不能更改文本，只能往里面填充积木），<br>
+                <code>3</code> 表示存在阴影块但被输入遮盖（这种情况就是当你报告块放在里面的时候）。<sup class="reference"><a href="#ref7">[7]</a></sup>
+                <br><br>第二个元素为输入积木的 ID，或表示该输入积木的数组（具体格式见下表）。
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>积木类型</th>
+                            <th>第 1 个元素</th>
+                            <th>第 2 个元素</th>
+                            <th>第 3 个元素</th>
+                            <th>第 4 个元素</th>
+                            <th>第 5 个元素</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>数字</td>
+                            <td>4</td>
+                            <td colspan="4">值</td>
+                        </tr>
+                        <tr>
+                            <td>正数</td>
+                            <td>5</td>
+                            <td colspan="4">值</td>
+                        </tr>
+                        <tr>
+                            <td>正整数</td>
+                            <td>6</td>
+                            <td colspan="4">值</td>
+                        </tr>
+                        <tr>
+                            <td>整数</td>
+                            <td>7</td>
+                            <td colspan="4">值</td>
+                        </tr>
+                        <tr>
+                            <td>角度</td>
+                            <td>8</td>
+                            <td colspan="4">值</td>
+                        </tr>
+                        <tr>
+                            <td>颜色</td>
+                            <td>9</td>
+                            <td><code>"#"</code> 后跟十六进制颜色值</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>字符串</td>
+                            <td>10</td>
+                            <td>值</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>广播</td>
+                            <td>11</td>
+                            <td>名称</td>
+                            <td>ID</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>变量</td>
+                            <td>12</td>
+                            <td>名称</td>
+                            <td>ID</td>
+                            <td>x 坐标（若顶层）</td>
+                            <td>y 坐标（若顶层）</td>
+                        </tr>
+                        <tr>
+                            <td>列表</td>
+                            <td>13</td>
+                            <td>名称</td>
+                            <td>ID</td>
+                            <td>x 坐标（若顶层）</td>
+                            <td>y 坐标（若顶层）</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                若存在被遮盖的阴影块，则第三个元素为该阴影块的 ID 或表示该阴影块的数组。<sup class="reference"><a href="#ref8">[8]</a></sup><br><br>
+                就如<code
+                    class="inline">在(secs)秒内滑行到(随机位置 v)</code>，此时里面就变成了<code>"SECS":[3,[12,"secs","`jEk@4|i[#Fk?(8x)AV.-my variable"],[4,"1"]]</code>，<br>
+                "SECS"的第一个元素是<code>3</code>，表示存在阴影块但被输入遮盖，<br>第二个元素是<code>[12,"secs","`jEk@4|i[#Fk?(8x)AV.-my variable"]</code>，表示阴影块上方的积木名称为<code>"secs"</code>的一个变量（<code>12</code>），<br>第三个元素是<code>[4,"1"]</code>，表示阴影块的类型为数字，值为<code>"1"</code>。
+
+                <br>
+                <br>
+                <h4 id="fields">3.3.2 字段 (Fields)</h4>
+                <p>
+                    一般是指文本框、不接受子积木的下拉菜单（长得像方形的下拉菜单框）等，比较特殊的还有音乐拓展中那些点击就可以弹出音符键盘的输入框（NOTE）和比较少见的矩阵（MATRIX）。这些元素直接用于那些无法拖入报告块的输入型积木中。然而，大多数情况下，用户应当能够拖入报告块；此时积木中并不直接存在字段，而是存在一个输入槽，且该输入槽中可能包含一个阴影块。
+                </p>
+                <br>
+                <h4 id="shadowBlocks">3.3.3 阴影块 (Shadow blocks)</h4>
+                <p> 是指位于输入槽中的一种报告块，用户可以在其中输入或选择值。它无法被拖拽移动，但可以被普通的报告块替换。<sup class="reference"><a
+                            href="#ref9">[9]</a></sup> Scratch 内部将这些也视为积木，尽管通常并不被当作积木看待。（这些概念来源于
+                    Blockly，Scratch 积木系统正是基于 Blockly 开发的。）</p>
+                <br>
+                <h4 id="mutations">3.3.4 变体 (Mutations)</h4>
+                <p>变体存在于 <code>opcode</code> 属性为
+                    <code>"procedures_call"</code>（即自定义积木调用）、<code>"procedures_prototype"</code>（即自定义积木定义内部）或
+                    <code>"control_stop"</code> 的积木上。变体具有以下属性：
+                </p>
+                <dl>
+                    <dt><code>tagName</code></dt>
+                    <dd>始终等于 <code>"mutation"</code>。</dd>
+                    <dt><code>children</code></dt>
+                    <dd>似乎始终为空数组。</dd>
+                </dl>
+                <br>
+                <p><code>"procedures_prototype"</code> 和 <code>"procedures_call"</code> 的变体还具有以下附加属性：</p>
+                <dl>
+                    <dt><code>proccode</code></dt>
+                    <dd>自定义积木的名称，包含输入占位符：<code>%s</code> 表示字符串/数字输入，<code>%b</code> 表示布尔输入。</dd>
+                    <dt><code>argumentids</code></dt>
+                    <dd>参数 ID 的数组；这些也可以在主积木的 <code>input</code> 属性中找到。</dd>
+                    <dt><code>warp</code></dt>
+                    <dd>是否以“运行时不刷新屏幕”方式运行该积木。</dd>
+                </dl>
+                <br>
+                <p><code>"procedures_prototype"</code> 的变体还具有以下附加属性：</p>
+                <dl>
+                    <dt><code>argumentnames</code></dt>
+                    <dd>参数名称的数组。</dd>
+                    <dt><code>argumentdefaults</code></dt>
+                    <dd>参数的默认值数组；对于字符串/数字参数，此为空字符串；对于布尔参数，为 <code>false</code>。</dd>
+                </dl>
+                <br>
+                <p><code>"control_stop"</code> 的变体还具有以下附加属性：</p>
+                <dl>
+                    <dt><code>hasnext</code></dt>
+                    <dd>该积木后面是否还有其他积木（<code>stop all</code> 和 <code>stop all in sprite</code> 为
+                        <code>false</code>，<code>stop other scripts in sprite</code> 为 <code>true</code>）。
+                    </dd>
+                </dl>
+
+                <br>
+                <h3 id="comments">3.4 注释 (Comments)</h3>
+                <p>注释具有以下属性：</p>
+                <dl>
+                    <dt><code>blockId</code></dt>
+                    <dd>该注释所附加到的积木的 ID。</dd>
+                    <dt><code>x</code></dt>
+                    <dd>注释在代码区域中的 x 坐标。</dd>
+                    <dt><code>y</code></dt>
+                    <dd>注释在代码区域中的 y 坐标。</dd>
+                    <dt><code>width</code></dt>
+                    <dd>宽度。</dd>
+                    <dt><code>height</code></dt>
+                    <dd>高度。</dd>
+                    <dt><code>minimized</code></dt>
+                    <dd>如果注释已折叠则为 <code>true</code>，否则为 <code>false</code>。</dd>
+                    <dt><code>text</code></dt>
+                    <dd>注释文本。</dd>
+                </dl>
+
+                <br>
+                <h3 id="assets">3.5 资源 (Assets)</h3>
+                <p><strong>资源</strong> 是指造型或声音。（背景也被视为造型。）它们具有以下属性：<sup class="reference"><a
+                            href="#ref10">[10]</a></sup></p>
+                <dl>
+                    <dt><code>assetId</code></dt>
+                    <dd>资源文件内容的 MD5 哈希值。</dd>
+                    <dt><code>name</code></dt>
+                    <dd>资源的名称。</dd>
+                    <dt><code>md5ext</code></dt>
+                    <dd>资源文件的名称；基本上就是 <code>assetId</code> 加上相应的文件扩展名。</dd>
+                    <dt><code>dataFormat</code></dt>
+                    <dd>资源文件格式的名称。</dd>
+                </dl>
+
+                <h4 id="costumes">3.5.1 造型 (Costumes)</h4>
+                <p>造型除了所有资源共有的属性外，还具有以下属性：</p>
+                <dl>
+                    <dt><code>bitmapResolution</code></dt>
+                    <dd>位图造型缩放因子的倒数。可能不存在。在 Scratch 3.0 中，所有位图造型都是双倍分辨率。<sup class="reference"><a
+                                href="#ref11">[11]</a></sup></dd>
+                    <dt><code>rotationCenterX</code></dt>
+                    <dd>旋转中心的 x 坐标。</dd>
+                    <dt><code>rotationCenterY</code></dt>
+                    <dd>旋转中心的 y 坐标。</dd>
+                </dl>
+
+                <h4 id="sounds">3.5.2 声音 (Sounds)</h4>
+                <p>声音除了所有资源共有的属性外，还具有以下属性：</p>
+                <dl>
+                    <dt><code>rate</code></dt>
+                    <dd>声音的采样率（赫兹）。</dd>
+                    <dt><code>sampleCount</code></dt>
+                    <dd>样本数。</dd>
+                </dl>
+                <p>这些附加属性在加载声音时会被忽略并覆盖<sup class="reference"><a href="#ref12">[12]</a></sup>，因此可以完全省略。</p>
+
+                <br>
+                <h3 id="monitors">3.6 监视器 (Monitors)</h3>
+                <p>监视器具有以下属性：</p>
+                <dl>
+                    <dt><code>id</code></dt>
+                    <dd>ID。</dd>
+                    <dt><code>mode</code></dt>
+                    <dd>监视器的模式名称：<code>"default"</code>、<code>"large"</code>、<code>"slider"</code> 或
+                        <code>"list"</code>。
+                    </dd>
+                    <dt><code>opcode</code></dt>
+                    <dd>该监视器所属积木的操作码。</dd>
+                    <dt><code>params</code></dt>
+                    <dd>一个对象，将监视器所属积木的输入名称与其值关联。</dd>
+                    <dt><code>spriteName</code></dt>
+                    <dd>监视器所属目标的名称（如果有）。</dd>
+                    <dt><code>value</code></dt>
+                    <dd>监视器上显示的值。</dd>
+                    <dt><code>width</code></dt>
+                    <dd>宽度。</dd>
+                    <dt><code>height</code></dt>
+                    <dd>高度。</dd>
+                    <dt><code>x</code></dt>
+                    <dd>x 坐标。</dd>
+                    <dt><code>y</code></dt>
+                    <dd>y 坐标。</dd>
+                    <dt><code>visible</code></dt>
+                    <dd>如果监视器可见则为 <code>true</code>，否则为 <code>false</code>。</dd>
+                </dl>
+                <p>不属于列表的监视器还具有以下属性：</p>
+                <dl>
+                    <dt><code>sliderMin</code></dt>
+                    <dd>监视器滑块的最小值。</dd>
+                    <dt><code>sliderMax</code></dt>
+                    <dd>监视器滑块的最大值。</dd>
+                    <dt><code>isDiscrete</code></dt>
+                    <dd>如果监视器的滑块只允许整数值则为 <code>true</code>，否则为 <code>false</code>。</dd>
+                </dl>
+
+                <br>
+                <h3 id="metadata">3.7 元数据 (Metadata)</h3>
+                <p>项目 JSON 文件的 <code>meta</code> 属性具有以下属性：</p>
+                <dl>
+                    <dt><code>semver</code></dt>
+                    <dd>始终为 <code>3.0.0</code>。</dd>
+                    <dt><code>vm</code></dt>
+                    <dd>创建该项目时所使用的 Scratch VM 版本。</dd>
+                    <dt><code>agent</code></dt>
+                    <dd>最后编辑该项目之人的用户代理字符串。</dd>
+                </dl>
+
+                <div class="note">
+                    <ol>
+                        <li id="ref1"><a
+                                href="https://github.com/LLK/scratch-vm/blob/e5950c3/src/extension-support/extension-manager.js#L16-L26">https://github.com/LLK/scratch-vm/blob/e5950c3/src/extension-support/extension-manager.js#L16-L26</a>
+                        </li>
+                        <li id="ref2"><a
+                                href="https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L928-L1098">https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L928-L1098</a>
+                        </li>
+                        <li id="ref3"><a
+                                href="https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L793-L799">https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L793-L799</a>
+                        </li>
+                        <li id="ref4"><a
+                                href="https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L60-L81">https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L60-L81</a>
+                        </li>
+                        <li id="ref5"><a
+                                href="https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L607-L736">https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L607-L736</a>
+                        </li>
+                        <li id="ref6"><a
+                                href="https://backpack.scratch.mit.edu/485793396d94b2c08a48d3ff05f32de5.json">https://backpack.scratch.mit.edu/485793396d94b2c08a48d3ff05f32de5.json</a>
+                        </li>
+                        <li id="ref7"><a
+                                href="https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L39-L41">https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L39-L41</a>
+                        </li>
+                        <li id="ref8"><a
+                                href="https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L758-L769">https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/sb3.js#L758-L769</a>
+                        </li>
+                        <li id="ref9"><a
+                                href="https://developers.google.com/blockly/guides/configure/web/toolbox#shadow_blocks">https://developers.google.com/blockly/guides/configure/web/toolbox#shadow_blocks</a>
+                        </li>
+                        <li id="ref10"><a
+                                href="https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/deserialize-assets.js">https://github.com/LLK/scratch-vm/blob/e5950c3/src/serialization/deserialize-assets.js</a>
+                        </li>
+                        <li id="ref11"><a
+                                href="https://github.com/LLK/scratch-gui/issues/1820">https://github.com/LLK/scratch-gui/issues/1820</a>
+                        </li>
+                        <li id="ref12"><a
+                                href="https://github.com/scratchfoundation/scratch-vm/blob/17035d66048e306d1b375e91d9a9271f28a0e43e/src/import/load-sound.js#L26">https://github.com/scratchfoundation/scratch-vm/blob/17035d66048e306d1b375e91d9a9271f28a0e43e/src/import/load-sound.js#L26-31</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        scratchblocks.renderMatching("pre.normal", {
+            style: "scratch3",
+            languages: ["zh_cn", "en"],
+            scale: 0.675
+        });
+        scratchblocks.renderMatching("code.inline", {
+            inline: true,
+            style: "scratch3",
+            languages: ["zh_cn", "en"],
+            scale: 0.675
+        });
+    </script>
+</body>
+
+</html>
