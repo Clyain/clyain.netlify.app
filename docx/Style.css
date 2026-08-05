@@ -219,6 +219,7 @@ code:not(.inline) {
     border-radius: 4px;
     font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
     font-size: 0.9em;
+    line-height: 1.4;
 }
 
 th,
@@ -286,7 +287,7 @@ dl {
 dt {
   font-weight: 600;
   color: #181818;
-  padding: 10px 0 5px 0;
+  padding: 5px 0 5px 0;
   border-bottom: 2px solid #d8d8d8;
 }
 

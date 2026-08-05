@@ -22,6 +22,9 @@
             <a class="head-btn" href="./"><span class="no-select">返回</span></a>
             <a class="head-btn" href="../"><span class="no-select">首页</span></a>
             <div class="content-wrapper">
+                <i style="font-size:0.9em;">改编自 [Scratch维基] <a
+                        href="https://en.scratch-wiki.info/wiki/Scratch_File_Format" target="_blank">Scratch 3.0 File
+                        Format</a></i>
                 <h1>Scratch 文件格式</h1>
                 <p>
                     <strong>Scratch 3.0 文件格式</strong> 是用于存储导出的 Scratch 3.0 项目和角色的格式。
@@ -245,7 +248,7 @@
 
                 在其中，如果第一个元素为<br>
                 <code>1</code>表示该输入为阴影块（即这里是可以输入的，你可以把任何一个报告块放在里面），<br>
-                <code>2</code> 表示没有阴影块（这种情况比较少见，这里会显示为一个比较宽的深色胶囊型，你不能更改文本，只能往里面填充积木），<br>
+                <code>2</code> 表示没有阴影块（这里会显示为一般会显示为一个深色的东西，你不能更改文本，里面也没有文本，只能往里面填充积木，比较常见在C型积木里面放的栈积木），<br>
                 <code>3</code> 表示存在阴影块但被输入遮盖（这种情况就是当你报告块放在里面的时候）。<sup class="reference"><a href="#ref7">[7]</a></sup>
                 <br><br>第二个元素为输入积木的 ID，或表示该输入积木的数组（具体格式见下表）。
                 <br>
@@ -418,7 +421,7 @@
                     <dt><code>dataFormat</code></dt>
                     <dd>资源文件格式的名称。</dd>
                 </dl>
-
+                <br>
                 <h4 id="costumes">3.5.1 造型 (Costumes)</h4>
                 <p>造型除了所有资源共有的属性外，还具有以下属性：</p>
                 <dl>
@@ -430,7 +433,7 @@
                     <dt><code>rotationCenterY</code></dt>
                     <dd>旋转中心的 y 坐标。</dd>
                 </dl>
-
+                <br>
                 <h4 id="sounds">3.5.2 声音 (Sounds)</h4>
                 <p>声音除了所有资源共有的属性外，还具有以下属性：</p>
                 <dl>
