@@ -14,7 +14,7 @@
     flex: 1 1 380px;
     background: var(--glass-white);
     backdrop-filter: blur(12px);
-    border-radius: 28px;
+    border-radius: 16px;
     box-shadow: var(--shadow-sm);
     border: 1px solid rgba(255, 255, 255, 0.7);
     overflow: hidden;

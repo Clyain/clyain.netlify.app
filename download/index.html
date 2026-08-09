@@ -40,6 +40,45 @@
             color: #3a3a3a;
         }
 
+        details {
+            background: rgba(127, 127, 127, 0.2);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+
+        /* 隐藏原生箭头 */
+        details summary {
+            list-style: none;
+            cursor: pointer;
+            position: relative;
+            padding-left: 32px;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* 用 ::before 来承载图片 */
+        details summary::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background-image: url('../epsa/Dropdown.svg'); /* ← 替换为你的图片路径 */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.25s ease; /* 旋转动画 */
+        }
+
+        /* 展开时旋转 180 度 */
+        details[open] summary::before {
+            transform: translateY(-50%) rotate(180deg);
+        }
 
         /* =====  9. 响应式  ===== */
 
@@ -97,95 +136,143 @@
         </div>
         <hr>
 
-        <div class="section-title">EPNC 超强数值计算器</div>
-        <div class="cards-container">
-            <div class="card">
-                <div class="card-content">
-                    <div class="title">EPNC 超强数值计算器 Ver.3.0.0</div>
-                    <div class="label-group">
-                        <div class="label" style="border: 1px solid #e54646; background-color: #e99f9f;">不进行维护</div>
-                        <div class="label" style="border: 1px solid #e54646; background-color: #e99f9f;">可能含有bug！</div>
-                    </div>
-                    <div class="desc">一款功能强大的数值计算器，支持复杂数学运算。<br>更新日期：2025-12-27</div>
-                    <div class="basic-btn-group">
-                        <button class="basic-btn view-details-btn" data-modal="modal-1"><span class="no-select">详情</span></button>
-                        <button class="basic-btn download-btn" data-file="EPNC-超强数值计算器 Ver.3.0.0.sb3"><span class="no-select">下载</span></button>
-                        <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/epnc3/'">
-                            <span class="no-select">在线游玩</span>
-                            <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
-                        </button>
-                        <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/67a0b136e77d7c09f357fccd?inviteCode=yZdDWDdLlJrxDSVj', '_blank')">
-                            <span class="no-select">跳转至共创世界</span>
-                            <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
-                        </button>
-                    </div>
+        <details style="background-color: rgba(77, 151, 255, 0.2); border: 1px solid rgba(77, 151, 255, 0.6); box-shadow: 0 20px 40px rgba(77, 151, 255, 0.1);">
+            <summary>
+                <div class="section-title no-select" style="overflow: auto;">
+                    EPNC 超强数值计算器 <span style="padding: 0px 6px; margin: 3px; border-radius: 5px; float: right; font-size:medium; background-color: rgba(77, 151, 255, 0.2); color: rgba(77, 151, 255);">Scratch 作品</span>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="title">EPNC-ENGINE Ver.2.1.0</div>
-                    <div class="label-group">
-                        <div class="label"
-                            style="border: 1px solid hsl(0, 75%, 59%); background-color: hsl(0, 63%, 77%);">不进行维护</div>
-                        <div class="label"
-                            style="border: 1px solid hsl(214, 75%, 59%); background-color: hsl(214, 63%, 77%);">引擎</div>
-                    </div>
-                    <div class="desc">EPNC 超强数值计算器的计算引擎，支持复杂数学运算。<br>更新日期：2025-12-27</div>
-                    <div class="basic-btn-group">
-                        <button class="basic-btn view-details-btn" data-modal="modal-2"><span class="no-select">详情</span></button>
-                        <button class="basic-btn download-btn" data-file="EPNC-ENGINE Ver.2.1.0.sb3"><span class="no-select">下载</span></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="section-title">EPTeX</div>
-        <div class="cards-container">
-            <div class="card">
-                <div class="card-content">
-                    <div class="title">EPTeX Ver.0.6.7</div>
-                    <div class="label-group">
-                        <div class="label"
-                            style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);">最新！
+            </summary>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="title"><span class="no-select">EPNC 超强数值计算器 Ver.3.0.0</span></div>
+                        <div class="label-group">
+                            <div class="label" style="border: 1px solid #e54646; background-color: #e99f9f;"><span class="no-select">不进行维护</span></div>
+                            <div class="label" style="border: 1px solid #e54646; background-color: #e99f9f;"><span class="no-select">可能含有bug！</span>
+                            </div>
+                        </div>
+                        <div class="desc"><span class="no-select">一款功能强大的数值计算器，支持复杂数学运算。<br>更新日期：2025-12-27</span></div>
+                        <div class="basic-btn-group">
+                            <button class="basic-btn view-details-btn" data-modal="modal-1"><span
+                                    class="no-select">详情</span></button>
+                            <button class="basic-btn download-btn" data-file="EPNC-超强数值计算器 Ver.3.0.0.sb3"><span
+                                    class="no-select">下载</span></button>
+                            <button class="basic-btn onlineplay-btn"
+                                onclick="window.location.href='../onlineplay/epnc3/'">
+                                <span class="no-select">在线游玩</span>
+                                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button class="basic-btn skip-btn"
+                                onclick="window.open('https://www.ccw.site/detail/67a0b136e77d7c09f357fccd?inviteCode=yZdDWDdLlJrxDSVj', '_blank')">
+                                <span class="no-select">跳转至共创世界</span>
+                                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                                    </path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="desc">一款强大的TeX编辑器，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07</div>
-                    <div class="basic-btn-group">
-                        <button class="basic-btn view-details-btn" data-modal="modal-3"><span class="no-select">详情</span></button>
-                        <button class="basic-btn download-btn" data-file="EPTeX Ver.0.6.7.sb3"><span class="no-select">下载</span></button>
-                        <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/eptex/'">
-                            <span class="no-select">在线游玩</span>
-                            <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
-                        </button>
-                        <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/6989b65bf84f05669a033765?accessKey=6e9231&inviteCode=qlWZVEqDDhGCL9Cp', '_blank')">
-                            <span class="no-select">跳转至共创世界</span>
-                            <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
-                        </button>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="title"><span class="no-select">EPNC-ENGINE Ver.2.1.0</span></div>
+                        <div class="label-group">
+                            <div class="label"
+                                style="border: 1px solid hsl(0, 75%, 59%); background-color: hsl(0, 63%, 77%);"><span class="no-select">不进行维护</span>
+                            </div>
+                            <div class="label"
+                                style="border: 1px solid hsl(214, 75%, 59%); background-color: hsl(214, 63%, 77%);"><span class="no-select">引擎</span>
+                            </div>
+                        </div>
+                        <div class="desc"><span class="no-select">EPNC 超强数值计算器的计算引擎，支持复杂数学运算。<br>更新日期：2025-12-27</span></div>
+                        <div class="basic-btn-group">
+                            <button class="basic-btn view-details-btn" data-modal="modal-2"><span
+                                    class="no-select">详情</span></button>
+                            <button class="basic-btn download-btn" data-file="EPNC-ENGINE Ver.2.1.0.sb3"><span
+                                    class="no-select">下载</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="title">EPTeX-ENGINE Ver.0.7.0</div>
-                    <div class="label-group">
-                        <div class="label" style="border: 1px solid hsl(214, 75%, 59%); background-color: hsl(214, 63%, 77%);">引擎</div>
-                        <div class="label" style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);">最新！</div>
+        </details>
+
+        <br>
+
+        <details style="background-color: rgba(77, 151, 255, 0.2); border: 1px solid rgba(77, 151, 255, 0.6); box-shadow: 0 20px 40px rgba(77, 151, 255, 0.1);">
+            <summary>
+                <div class="section-title no-select" style="overflow: auto;">
+                    EPTeX
+                    <span style="padding: 0px 6px; margin: 3px; border-radius: 5px; float: right; font-size:medium; background-color: rgba(77, 151, 255, 0.2); color: rgba(77, 151, 255);">Scratch 作品</span>
+                </div>
+            </summary>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="title"><span class="no-select">EPTeX Ver.0.6.7</span></div>
+                        <div class="label-group">
+                            <div class="label"
+                                style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);"><span class="no-select">最新！</span>
+                            </div>
+                        </div>
+                        <div class="desc"><span class="no-select">一款强大的TeX编辑器，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07</span></div>
+                        <div class="basic-btn-group">
+                            <button class="basic-btn view-details-btn" data-modal="modal-3"><span
+                                    class="no-select">详情</span></button>
+                            <button class="basic-btn download-btn" data-file="EPTeX Ver.0.6.7.sb3"><span
+                                    class="no-select">下载</span></button>
+                            <button class="basic-btn onlineplay-btn" onclick="window.location.href='../onlineplay/eptex/'">
+                                <span class="no-select">在线游玩</span>
+                                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button class="basic-btn skip-btn" onclick="window.open('https://www.ccw.site/detail/6989b65bf84f05669a033765?accessKey=6e9231&inviteCode=qlWZVEqDDhGCL9Cp', '_blank')">
+                                <span class="no-select">跳转至共创世界</span>
+                                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    <div class="desc">EPTeX的渲染引擎，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07</div>
-                    <div class="basic-btn-group">
-                        <button class="basic-btn view-details-btn" data-modal="modal-4"><span class="no-select">详情</span></button>
-                        <button class="basic-btn download-btn" data-file="EPTeX-ENGINE Ver.0.7.0.sb3"><span class="no-select">下载</span></button>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="title"><span class="no-select">EPTeX-ENGINE Ver.0.7.0</span></div>
+                        <div class="label-group">
+                            <div class="label"
+                                style="border: 1px solid hsl(214, 75%, 59%); background-color: hsl(214, 63%, 77%);"><span class="no-select">引擎</span></div>
+                            <div class="label"
+                                style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);"><span class="no-select">最新！</span>
+                            </div>
+                        </div>
+                        <div class="desc">EPTeX的渲染引擎，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07</div>
+                        <div class="basic-btn-group">
+                            <button class="basic-btn view-details-btn" data-modal="modal-4"><span
+                                    class="no-select">详情</span></button>
+                            <button class="basic-btn download-btn" data-file="EPTeX-ENGINE Ver.0.7.0.sb3"><span
+                                    class="no-select">下载</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </details>
     </div>
 
     <div id="modalOverlay" class="modal-overlay">
         <div class="modal-card">
             <div class="modal-header">
                 <h3 class="modal-title" id="modalTitle"></h3>
-                <button class="modal-close-btn" id="closeModalBtn" aria-label="关闭弹窗"><span class="no-select">✕</span></button>
+                <button class="modal-close-btn" id="closeModalBtn" aria-label="关闭弹窗"><span
+                        class="no-select">✕</span></button>
             </div>
             <div class="modal-body" id="modalBody">
                 <!-- 动态内容会渲染到这里 -->
