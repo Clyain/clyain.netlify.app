@@ -49,9 +49,9 @@ window.renderDashboardWithData = function (data) {
         { key: 'showCostumeCount', icon: './assets/CostumeIcon.svg', label: '造型', value: costumeCount() },
         { key: 'showSoundCount', icon: './assets/SoundIcon.svg', label: '声音', value: soundCount() },
         { key: 'showBlocksNum', icon: './assets/BlocksIcon.svg', label: '合计', value: stats.BlocksNum },
-        { key: 'showTrueBlocksNum', icon: './assets/TrueBlocksIcon.svg', label: '有效', value: stats.TrueBlocksNum },
-        { key: 'showPilesNum', icon: './assets/PilesIcon.svg', label: '合计', value: stats.PilesNum },
-        { key: 'showTruePilesNum', icon: './assets/TruePilesIcon.svg', label: '有效', value: stats.TruePilesNum },
+        { key: 'showEffectiveBlocksNum', icon: './assets/TrueBlocksIcon.svg', label: '有效', value: stats.EffectiveBlocksNum },
+        { key: 'showScriptsNum', icon: './assets/PilesIcon.svg', label: '合计', value: stats.ScriptsNum },
+        { key: 'showEffectiveScriptsNum', icon: './assets/TruePilesIcon.svg', label: '有效', value: stats.EffectiveScriptsNum },
         { key: 'showExtensionsNum', icon: './assets/ExtensionIcon.svg', label: '扩展', value: ProjectData.extensions?.length || 0 },
         { key: 'showVarDefinitionsNum', icon: './assets/VarIcon.svg', label: '变量', value: variableCount() },
         { key: 'showListDefinitionsNum', icon: './assets/ListIcon.svg', label: '列表', value: listCount() },
@@ -68,8 +68,8 @@ window.renderDashboardWithData = function (data) {
     const displayOrder = [
         { groupLabel: '文件信息', keys: ['showFileSize', 'showExtensionsNum'] },
         { groupLabel: '资源', keys: ['showSpriteCount', 'showCostumeCount', 'showSoundCount'] },
-        { groupLabel: '积木数量', keys: ['showBlocksNum', 'showTrueBlocksNum'] },
-        { groupLabel: '积木段数', keys: ['showPilesNum', 'showTruePilesNum'] },
+        { groupLabel: '积木数量', keys: ['showBlocksNum', 'showEffectiveBlocksNum'] },
+        { groupLabel: '积木段数', keys: ['showScriptsNum', 'showEffectiveScriptsNum'] },
         { groupLabel: '定义', keys: ['showVarDefinitionsNum', 'showListDefinitionsNum', 'showFuncDefinitionsNum'] }
     ];
 

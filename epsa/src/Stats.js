@@ -1,8 +1,8 @@
 function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
     let BlocksNum = 0,
-        PilesNum = 0,
-        TrueBlocksNum = 0,
-        TruePilesNum = 0,
+        ScriptsNum = 0,
+        EffectiveBlocksNum = 0,
+        EffectiveScriptsNum = 0,
         FuncDefinitionsNum = 0;
     ErrorList = [];
 
@@ -193,9 +193,9 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
             if (blockData && blockData.opcode === "procedures_definition") {
                 if (nextOne?.parent === blockId || blockData?.next == null) {
                     BlocksNum += 1;
-                    PilesNum += 1;
-                    TruePilesNum += 1;
-                    TrueBlocksNum += 1;
+                    ScriptsNum += 1;
+                    EffectiveScriptsNum += 1;
+                    EffectiveBlocksNum += 1;
                     BlocksNumInType.procedures = (BlocksNumInType.procedures || 0) + 1;
                     FuncDefinitionsNum += 1;
                     return;
@@ -207,14 +207,14 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
                 BlocksNum += 1;
                 BlocksNumInType.addons = (BlocksNumInType.addons || 0) + 1;
                 if (blockData && blockData.topLevel) {
-                    PilesNum += 1;
+                    ScriptsNum += 1;
                 }
                 //TurboWarp函数返回值 或 AE的“终端”插件报告块、布尔块积木
                 if (blockData && blockData.topLevel && !(blockData.mutation.return === "1") && !(blockData.mutation.return === "2") && !(blockData.mutation.return === undefined)) {
-                    TruePilesNum += 1;
-                    TrueBlocksNum += 1;
+                    EffectiveScriptsNum += 1;
+                    EffectiveBlocksNum += 1;
                 } else if (blockData && TopLevelBlockIsHat(blockId, blockData, blocksById, hatCache) === "true") {
-                    TrueBlocksNum += 1;
+                    EffectiveBlocksNum += 1;
                 }
                 return;
             }
@@ -224,7 +224,7 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
             // 处理变量/列表块（数组形式，表现为单独的报告块）
             if (isDataBlockArray(blockData) && blockData.length === 5) {
                 BlocksNum += 1;
-                PilesNum += 1;
+                ScriptsNum += 1;
                 classifyBlock(blockData, target.name);
                 return;
             } else if (isDataBlockArray(blockData) && blockData.length !== 5) {
@@ -238,11 +238,11 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
             if (blockData && blockData.topLevel) {
                 if (nextOne?.parent === blockId || blockData?.next == null) {
                     BlocksNum += 1;
-                    PilesNum += 1;
+                    ScriptsNum += 1;
                     classifyBlock(blockData, target.name);
                     if (ToplevelBlockOPs.includes(blockData.opcode)) {
-                        TruePilesNum += 1;
-                        TrueBlocksNum += 1;
+                        EffectiveScriptsNum += 1;
+                        EffectiveBlocksNum += 1;
                     }
                     // 处理 inputs 中的变量/列表块
                     if (blockData && blockData.inputs) {
@@ -253,7 +253,7 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
                                         classifyBlock(item, target.name);
                                         BlocksNum += 1;
                                         if (ToplevelBlockOPs.includes(blockData.opcode)) {
-                                            TrueBlocksNum += 1;
+                                            EffectiveBlocksNum += 1;
                                         }
                                     }
                                 });
@@ -267,7 +267,7 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
             } else if (blockData && TopLevelBlockIsHat(blockId, blockData, blocksById, hatCache) === "true") {
                 classifyBlock(blockData, target.name);
                 BlocksNum += 1;
-                TrueBlocksNum += 1;
+                EffectiveBlocksNum += 1;
                 // 处理 inputs 中的变量/列表块
                 if (blockData && blockData.inputs) {
                     Object.values(blockData.inputs).forEach(inputData => {
@@ -276,7 +276,7 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
                                 if (isDataBlockArray(item)) {
                                     classifyBlock(item, target.name);
                                     BlocksNum += 1;
-                                    TrueBlocksNum += 1;
+                                    EffectiveBlocksNum += 1;
                                 }
                             });
                         }
@@ -304,5 +304,5 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
         });
     });
 
-    return { BlocksNum, PilesNum, TruePilesNum, BlocksNumInType, TrueBlocksNum, ExtBlocksNumInTypes, FuncDefinitionsNum, ErrorList };
+    return { BlocksNum, ScriptsNum, EffectiveScriptsNum, EffectiveBlocksNum, BlocksNumInType, ExtBlocksNumInTypes, FuncDefinitionsNum, ErrorList };
 }
