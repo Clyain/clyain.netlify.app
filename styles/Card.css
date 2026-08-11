@@ -9,7 +9,7 @@
 
 .card {
     width: 100%;
-    max-width: 480px;
+    max-width: 430px;
     min-width: 260px;
     flex: 1 1 380px;
     background: var(--glass-white);

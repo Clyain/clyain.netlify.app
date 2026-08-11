@@ -20,6 +20,7 @@
     <script src="../lib/_ScratchBlocksRendering.js"></script>
 
     <style>
+        /* ===== 卡片底部的小按钮 ===== */
         .download-btn {
             background: #eef2ff;
             color: #1e3a8a;
@@ -41,47 +42,91 @@
         }
 
         details {
-            background: rgba(127, 127, 127, 0.2);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(2px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            padding: 6px 6px 6px 6px;
+            transition: background 0.2s, box-shadow 0.2s;
         }
 
-        /* 隐藏原生箭头 */
         details summary {
             list-style: none;
             cursor: pointer;
-            position: relative;
-            padding-left: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: background 0.15s;
+            user-select: none;
         }
+
+        details summary:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
         details summary::-webkit-details-marker {
             display: none;
         }
 
-        /* 用 ::before 来承载图片 */
+        /* 自定义图标 — 使用 ::before 且不再用绝对定位，转为 flex 子项 */
         details summary::before {
             content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 15px;
-            height: 15px;
-            background-image: url('../epsa/Dropdown.svg'); /* ← 替换为你的图片路径 */
+            flex: 0 0 18px;
+            width: 18px;
+            height: 18px;
+            background-image: url('../epsa/Dropdown.svg');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            transition: transform 0.25s ease; /* 旋转动画 */
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
         }
 
-        /* 展开时旋转 180 度 */
+        /* 展开时旋转 180deg */
         details[open] summary::before {
-            transform: translateY(-50%) rotate(180deg);
+            transform: rotate(180deg);
         }
 
-        /* =====  9. 响应式  ===== */
+        /* summary 内的文字区块 — 让它占满剩余宽度，并保持对齐 */
+        details summary .section-title {
+            flex: 1;
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            color: #e8edf5;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
 
+        /* 右侧标签 */
+        details summary .section-title .badge {
+            background: rgba(77, 151, 255, 0.25);
+            color: #8bb9ff;
+            padding: 4px 14px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(77, 151, 255, 0.2);
+            backdrop-filter: blur(4px);
+            white-space: nowrap;
+        }
+
+        /* 卡片容器内边距微调 */
+        details .cards-container {
+            padding: 8px 12px 16px 12px;
+        }
+
+
+        /*  响应式  */
         @media (max-width: 640px) {
             .content {
                 border-radius: 20px;
@@ -103,6 +148,18 @@
                 font-size: 10px;
                 padding: 3px 10px;
             }
+
+            details summary {
+                padding: 12px 14px;
+                gap: 10px;
+            }
+            details summary .section-title {
+                font-size: 0.95rem;
+            }
+            details summary .section-title .badge {
+                font-size: 0.7rem;
+                padding: 2px 12px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -121,6 +178,20 @@
             .modal-footer {
                 justify-content: center;
             }
+
+            details summary {
+                padding: 10px 12px;
+                gap: 8px;
+            }
+            details summary .section-title {
+                font-size: 0.9rem;
+                flex-wrap: wrap;
+            }
+            details summary::before {
+                flex: 0 0 16px;
+                width: 16px;
+                height: 16px;
+            }
         }
 
     </style>
@@ -136,10 +207,11 @@
         </div>
         <hr>
 
-        <details style="background-color: rgba(77, 151, 255, 0.2); border: 1px solid rgba(77, 151, 255, 0.6); box-shadow: 0 20px 40px rgba(77, 151, 255, 0.1);">
+        <details style="background-color: rgba(77, 151, 255, 0.08); border: 1px solid rgba(77, 151, 255, 0.15); box-shadow: 0 8px 24px rgba(77, 151, 255, 0.05);">
             <summary>
-                <div class="section-title no-select" style="overflow: auto;">
-                    EPNC 超强数值计算器 <span style="padding: 0px 6px; margin: 3px; border-radius: 5px; float: right; font-size:medium; background-color: rgba(77, 151, 255, 0.2); color: rgba(77, 151, 255);">Scratch 作品</span>
+                <div class="section-title no-select" style="overflow: visible;">
+                    <span>EPNC 超强数值计算器</span>
+                    <span class="badge">Scratch 作品</span>
                 </div>
             </summary>
             <div class="cards-container">
@@ -203,11 +275,11 @@
 
         <br>
 
-        <details style="background-color: rgba(77, 151, 255, 0.2); border: 1px solid rgba(77, 151, 255, 0.6); box-shadow: 0 20px 40px rgba(77, 151, 255, 0.1);">
+        <details style="background-color: rgba(77, 151, 255, 0.08); border: 1px solid rgba(77, 151, 255, 0.15); box-shadow: 0 8px 24px rgba(77, 151, 255, 0.05);">
             <summary>
-                <div class="section-title no-select" style="overflow: auto;">
-                    EPTeX
-                    <span style="padding: 0px 6px; margin: 3px; border-radius: 5px; float: right; font-size:medium; background-color: rgba(77, 151, 255, 0.2); color: rgba(77, 151, 255);">Scratch 作品</span>
+                <div class="section-title no-select" style="overflow: visible;">
+                    <span>EPTeX</span>
+                    <span class="badge">Scratch 作品</span>
                 </div>
             </summary>
             <div class="cards-container">
@@ -254,7 +326,7 @@
                                 style="border: 1px solid hsl(185, 75%, 59%); background-color: hsl(185, 63%, 77%);"><span class="no-select">最新！</span>
                             </div>
                         </div>
-                        <div class="desc">EPTeX的渲染引擎，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07</div>
+                        <div class="desc"><span class="no-select">EPTeX的渲染引擎，支持渲染超多LaTeX能显示的公式。<br>更新日期：2026-06-07</span></div>
                         <div class="basic-btn-group">
                             <button class="basic-btn view-details-btn" data-modal="modal-4"><span
                                     class="no-select">详情</span></button>
@@ -267,22 +339,7 @@
         </details>
     </div>
 
-    <div id="modalOverlay" class="modal-overlay">
-        <div class="modal-card">
-            <div class="modal-header">
-                <h3 class="modal-title" id="modalTitle"></h3>
-                <button class="modal-close-btn" id="closeModalBtn" aria-label="关闭弹窗"><span
-                        class="no-select">✕</span></button>
-            </div>
-            <div class="modal-body" id="modalBody">
-                <!-- 动态内容会渲染到这里 -->
-                <div id="modalContent"></div>
-            </div>
-            <div class="modal-footer" id="modalFooter">
-                <!-- 动态页脚按钮会渲染到这里 -->
-            </div>
-        </div>
-    </div>
+    <div id="modalOverlay" class="modal-overlay"> <div class="modal-card"> <div class="modal-header"> <h3 class="modal-title" id="modalTitle"></h3> <button class="modal-close-btn" id="closeModalBtn" aria-label="关闭弹窗"><span class="no-select">✕</span></button> </div> <div class="modal-body" id="modalBody"><div id="modalContent"></div></div> <div class="modal-footer" id="modalFooter"></div> </div> </div>
 
     <script src="../Modal.js"></script>
     <script src="ModalContent.js"></script>
