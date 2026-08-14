@@ -65,7 +65,7 @@
     <div class="background"></div>
 
     <div class="content">
-        <img src="./favicon.ico" alt="Favicon" class="no-select">
+        <img src="./favicon.ico" alt="Favicon" style="-webkit-user-select: none;-moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none;">
         <h1><span class="no-select">Clyain 主页导航</span></h1>
         <span class="no-select">
         <p class="subtitle">
@@ -88,6 +88,11 @@
             <button onclick="window.location.href='./EPSA'" class="main-btn">
                 <span class="no-select">Scratch 作品分析器</span>
             </button>
+
+            <button onclick="window.location.href='./hm'" class="main-btn">
+                <span class="no-select">HyperMimic</span>
+            </button>
+
             <div id="poem-container" class="subtext">
                 <span class="no-select"><p id="poem-text" >诗词正在加载...</p></span>
                 <span class="no-select"><p id="poem-info">信息正在加载...</p></span>
