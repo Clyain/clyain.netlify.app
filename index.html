@@ -18,18 +18,45 @@
         }
 
         h1 {
-            font-size: clamp(1.8rem, 8vw, 2.5rem);
-            margin-bottom: 1rem;
-            text-shadow: none;
+            font-size: clamp(1.7rem, 7vw, 2.2rem);
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            text-align: center;
+            margin: 0.2rem 0 0.2rem 0;
+            background: linear-gradient(to right, #f0f4ff, #b6cbff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             word-break: break-word;
         }
 
-        .subtext {
-            font-size: clamp(0.9rem, 4vw, 1.1rem);
-            color: #94a3b8;
-            margin-bottom: 2rem;
+        .subtitle {
+            font-size: clamp(0.85rem, 3.5vw, 1rem);
+            color: var(--text-muted);
+            text-align: center;
             line-height: 1.6;
-            word-break: break-word;
+            margin: 0.2rem 0 1.2rem 0;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            padding: 0 0.2rem;
+        }
+
+       .avatar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+        .avatar img {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            user-select: none;
+            pointer-events: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
         }
 
         .btn-container {
@@ -58,6 +85,58 @@
             font-style: italic;
         }
 
+        .btn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem 0.8rem;
+            margin: 1.2rem 0 0.6rem;
+        }
+
+        .main-btn {
+            background: rgba(255, 255, 255, 0.04);
+            color: #eef2f6;
+            font-size: clamp(0.8rem, 2.8vw, 0.95rem);
+            font-weight: 500;
+            padding: 0.65rem 0.2rem;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            letter-spacing: 0.3px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            white-space: nowrap;
+        }
+
+        /* 特殊按钮微调 (宽字符) */
+        .main-btn span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .main-btn:hover {
+            background: rgba(255, 255, 255, 0.10);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        .main-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+        }
+
     </style>
 </head>
 
@@ -65,33 +144,38 @@
     <div class="background"></div>
 
     <div class="content">
-        <img src="./favicon.ico" alt="Favicon" style="-webkit-user-select: none;-moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none;">
+        <div class="avatar">
+            <img src="./favicon.ico" alt="Clyain" width="68" height="68">
+        </div>
+        
         <h1><span class="no-select">Clyain 主页导航</span></h1>
         <span class="no-select">
         <p class="subtitle">
             欢迎来到我的主页！<br>你可以点击下方的按钮来获取你想要的资源 []~(￣▽￣)~*
         </p>
         </span>
+
         <div class="btn-container">
-            <button onclick="window.location.href='./download'" class="main-btn">
-                <span class="no-select">资源下载</span>
-            </button>
-
-            <button onclick="window.location.href='./docx'" class="main-btn">
-                <span class="no-select">查看文档</span>
-            </button>
-
-            <button onclick="window.location.href='./onlineplay'" class="main-btn">
-                <span class="no-select">在线游玩</span>
-            </button>
-
-            <button onclick="window.location.href='./EPSA'" class="main-btn">
-                <span class="no-select">Scratch 作品分析器</span>
-            </button>
-
-            <button onclick="window.location.href='./hm'" class="main-btn">
-                <span class="no-select">HyperMimic</span>
-            </button>
+            <div class="btn-grid">
+                <button onclick="window.location.href='./hm'" class="main-btn" data-icon="hm">
+                    <span>HyperMimic</span>
+                </button>
+                <button onclick="window.location.href='./download'" class="main-btn" data-icon="dl">
+                    <span>资源下载</span>
+                </button>
+                <button onclick="window.location.href='./docx'" class="main-btn" data-icon="doc">
+                    <span>查看文档</span>
+                </button>
+                <button onclick="window.location.href='./onlineplay'" class="main-btn" data-icon="play">
+                    <span>在线游玩</span>
+                </button>
+                <button onclick="window.location.href='./EPSA'" class="main-btn" data-icon="scratch">
+                    <span>作品分析器</span>
+                </button>
+                <!-- <button onclick="window.location.href='./myplaylist'" class="main-btn" data-icon="music">
+                    <span>一起来听歌</span>
+                </button> -->
+            </div>
 
             <div id="poem-container" class="subtext">
                 <span class="no-select"><p id="poem-text" >诗词正在加载...</p></span>

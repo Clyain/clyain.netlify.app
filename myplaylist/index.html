@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clyain 的播放列表</title>
+    <link rel="stylesheet" href="../styles/Content.css">
+    <link rel="stylesheet" href="../styles/Global.css">
+    <link rel="stylesheet" href="../styles/HeadBtn.css">
+    <link rel="stylesheet" href="../styles/Modal.css">
+    <link rel="stylesheet" href="../styles/MainBtn.css">
+    <link rel="stylesheet" href="Modal.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../styles/SearchBox.css">
+
+    <style>
+        .content {
+            width: 80%;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="content">
+        <a class="head-btn" href="../"><span class="no-select">首页</span></a>
+        <div style="flex:1; text-align:center;" class="no-select">
+            <h1 style="margin:0;">播放列表</h1>
+            <p style="margin:0;">Clyain</p>
+            <i style="margin:0;">~ 一起来听歌吧 ~</i>
+        </div>
+
+        <hr>
+
+        <!-- 搜索框和按钮 -->
+        <div class="search-container">
+            <input id="search-box" type="text" placeholder="搜索歌曲..." oninput="filterSongs()">
+
+            <!-- 播放模式容器 -->
+            <div class="button-group">
+                <button class="inside-button active" onclick="setPlaybackMode('list')" id="list-loop-btn"><img
+                        src="assets/list.svg" alt="List"></button>
+                <button class="inside-button" onclick="setPlaybackMode('single')" id="single-loop-btn"><img
+                        src="assets/single.svg" alt="Single"></button>
+                <button class="inside-button" id="openModalBtn"><img src="assets/filter.svg" alt="Filter"></button>
+            </div>
+        </div>
+
+        <div class="outer-container">
+            <div id="selected-tags-container" class="selected-tags-container"></div>
+            <div id="inner-container">
+                <div id="songs-container"></div>
+            </div>
+        </div>
+
+        <div class="player">
+            <div id="current-track" class="current-track">
+                <span class="song-name" id="current-song-name"><b>--- Welcome to the MUSIC WORLD ---</b></span>
+                <div class="song-tags-container" id="current-song-tags"></div>
+            </div>
+            <audio id="player" controls></audio>
+        </div>
+
+
+    </div>
+    <!-- 标签弹窗 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title">筛选</h3>
+                <button class="modal-close-btn" id="closeModalBtn" aria-label="关闭弹窗"><span
+                        class="no-select">✕</span></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <div class="tag-list" id="tag-list">
+                    <!-- 标签将在这里动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="Modal.js"></script>
+</body>
+
+</html>

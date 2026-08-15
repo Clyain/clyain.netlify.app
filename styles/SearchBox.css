@@ -1,0 +1,31 @@
+.search-wrapper {
+    margin-bottom: 1.6rem;
+}
+
+#search-box {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: clamp(0.85rem, 4vw, 0.95rem);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 60px;
+    color: var(--text-white);
+    outline: none;
+    transition: var(--transition);
+    font-weight: 400;
+}
+
+#search-box:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(71, 156, 255, 0.5);
+    /* 向外扩展的边框效果 */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+#search-box::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}

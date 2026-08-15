@@ -1,0 +1,426 @@
+.outer-container {
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 150px;
+}
+
+.inner-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    padding: 2px 7px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.play-button {
+    background-color: #ffffff;
+    color: rgb(247, 247, 247);
+    border: none;
+    padding: 10px 13px;
+    border-radius: 10px;
+    margin: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(177, 177, 177, 0.5);
+}
+
+.play-button:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0 6px 8px rgba(206, 206, 206, 0.4);
+}
+
+.play-button:active {
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+}
+
+.play-button::before {
+    content: "▶";
+    font-size: 12px;
+    color: #333;
+}
+
+.player {
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 90%;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fcfcfc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.current-track {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.song-name {
+    margin-right: 10px;
+}
+
+.song-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.tag-badge {
+    background-color: #e0e0e0;
+    color: #8f8f8f;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.player audio {
+    width: 100%;
+    border-radius: 80px;
+}
+
+.player audio::-webkit-media-controls-panel {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.01);
+}
+
+.player audio::-webkit-media-controls-current-time-display,
+.player audio::-webkit-media-controls-time-remaining-display {
+    color: #000000;
+    font-weight: 700;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.player audio::-webkit-media-controls-timeline {
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 6px;
+}
+
+.player audio::-webkit-media-controls-volume-slider {
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 6px;
+}
+
+.player audio {
+    background-color: #ffffff;
+}
+.player audio::-webkit-media-controls-play-button,
+.player audio::-webkit-media-controls-mute-button,
+.player audio::-webkit-media-controls-fullscreen-button {
+    color: #ffffff;
+    filter: none;
+}
+/* 搜索框和按钮容器 */
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+/* 播放模式容器 */
+.play-mode-container {
+    padding: 12px 20px;
+    border: 2px solid #dddddd00;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+    outline: none;
+}
+
+.button-group:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(71, 156, 255, 0.5);
+    /* 向外扩展的边框效果 */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+.inside-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 11px;
+    border: none;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #2c3e50;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    box-shadow: none;
+    white-space: nowrap;
+    min-width: 70px;
+    backdrop-filter: blur(2px);
+}
+
+.inside-button:hover {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.inside-button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    transition: filter 0.25s, transform 0.2s;
+}
+
+.inside-button:active {
+    transform: scale(0.94);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+/* ========= 激活状态 · 清新「翡翠绿」质感 ========= */
+.inside-button.active {
+    background: #ffffff;
+    color: #1e2b37;
+    box-shadow: 
+        0 6px 18px rgba(76, 175, 80, 0.18),
+        0 2px 6px rgba(76, 175, 80, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(76, 175, 80, 0.25);
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+}
+
+.inside-button.active:hover {
+    background: #f6fff6;
+    box-shadow: 
+        0 8px 24px rgba(76, 175, 80, 0.2),
+        0 2px 6px rgba(76, 175, 80, 0.1);
+    border-color: rgba(76, 175, 80, 0.4);
+}
+
+/* 文字辅助 (无图时备用) */
+.inside-button .btn-label {
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.song-title {
+    margin-left: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.song-main-title {
+    color: var(--text-dark);
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.song-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 3px;
+}
+
+.song-tag {
+    background-color: #f0f0f0;
+    color: var(--text-dark);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+/* 标签弹窗样式 */
+.tag-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    max-height: 70vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.tag-modal-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(70vh - 100px);
+}
+
+.tag-modal-header {
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag-modal-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tag-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.tag-modal-close:hover {
+    background-color: #eee;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag-item {
+    color: var(--text-dark);
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.tag-item:hover {
+    background-color: #e0e0e0;
+}
+
+.tag-item.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+/* 已选标签显示区域样式 */
+.selected-tags-container {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    min-height: 40px;
+}
+
+.selected-tags-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.selected-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.selected-tag-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remove-tag-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.remove-tag-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
