@@ -1684,7 +1684,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_themes_guiHelpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../lib/themes/guiHelpers */ "./src/lib/themes/guiHelpers.js");
 /* harmony import */ var _lib_themes_themePersistance__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../lib/themes/themePersistance */ "./src/lib/themes/themePersistance.js");
 /* harmony import */ var _users__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./users */ "./src/playground/credits/users.js");
+/* harmony import */ var _Clyain_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Clyain.png */ "./src/playground/credits/Clyain.png");
+/* harmony import */ var _Clyain_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_Clyain_png__WEBPACK_IMPORTED_MODULE_8__);
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+
 
 
 
@@ -1739,9 +1742,48 @@ const Credits = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.
   className: _credits_css__WEBPACK_IMPORTED_MODULE_3___default.a.headerContainer
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
   className: _credits_css__WEBPACK_IMPORTED_MODULE_3___default.a.headerText
-}, _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " Credits")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "HyperMimic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The ", _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " project is made possible by the work of the following member:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserList, {
-  users: _users__WEBPACK_IMPORTED_MODULE_7__["default"].hmDevelopers
-}))), _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"] !== 'TurboWarp' &&
+}, _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " Credits")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "HyperMimic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The ", _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " project is made possible by the work of the following member:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: _credits_css__WEBPACK_IMPORTED_MODULE_3___default.a.users
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(User, {
+  image: _Clyain_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+  text: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      margin: '10px 0'
+    }
+  }, "Clyain"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/Clyain",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    style: {
+      fontSize: 'small'
+    }
+  }, "Github"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      width: '5px',
+      display: 'inline-block'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://space.bilibili.com/3546580911131107",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    style: {
+      fontSize: 'small'
+    }
+  }, "Bilibili"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      width: '5px',
+      display: 'inline-block'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.ccw.site/student/655362014b9a4844976e9231",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    style: {
+      fontSize: 'small'
+    }
+  }, "ccw")),
+  href: 'https://clyain.netlify.app'
+})))), _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"] !== 'TurboWarp' &&
 /*#__PURE__*/
 // Be kind and considerate. Don't remove this :)
 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "TurboWarp"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " is based on ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1772,8 +1814,6 @@ Object(_app_target__WEBPACK_IMPORTED_MODULE_2__["default"])(/*#__PURE__*/react__
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Clyain_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Clyain.png */ "./src/playground/credits/Clyain.png");
-/* harmony import */ var _Clyain_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Clyain_png__WEBPACK_IMPORTED_MODULE_0__);
 const shuffle = list => {
   for (let i = list.length - 1; i > 0; i--) {
     const random = Math.floor(Math.random() * (i + 1));
@@ -1799,11 +1839,6 @@ const fromHardcoded = _ref => {
 
 // The lists below are in no particular order.
 
-const hmDevelopers = [{
-  image: _Clyain_png__WEBPACK_IMPORTED_MODULE_0___default.a,
-  text: 'Clyain',
-  href: 'https://scratch.mit.edu/users/-Clyain-/'
-}];
 const contributors = [{
   userID: '41219524',
   username: 'CubesterYT'
@@ -2064,7 +2099,6 @@ const docs = [{
   username: 'Naleksuh'
 }].map(fromHardcoded);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  hmDevelopers: shuffle(hmDevelopers),
   contributors: shuffle(contributors),
   addonDevelopers: shuffle(addonDevelopers),
   extensionDevelopers: shuffle(extensionDevelopers),
