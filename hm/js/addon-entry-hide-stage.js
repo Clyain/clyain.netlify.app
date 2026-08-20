@@ -1,9 +1,9 @@
 (window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([["addon-entry-hide-stage"],{
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/hide-stage/style.css":
-/*!**************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/hide-stage/style.css ***!
-  \**************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/hide-stage/style.css":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/hide-stage/style.css ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12,23 +12,21 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".sa-hide-stage-button [class*=\"stage-header_stage-button-icon_\"] {\n  /* Preserve aspect ratio */\n  height: auto;\n}\n\n.sa-stage-hidden [class*=\"blocks_blocks_\"] .injectionDiv,\n.sa-stage-hidden [class*=\"asset-panel_wrapper_\"],\n.sa-stage-hidden [class*=\"backpack_backpack-header_\"] {\n  border-radius: 0;\n}\n\n/* [class*=\"gui_flex-wrapper_\"] is for specificity over hide-flyout */\n.sa-stage-hidden [class*=\"gui_flex-wrapper_\"] [class*=\"gui_stage-and-target-wrapper_\"],\n.sa-stage-hidden [class*=\"stage-wrapper_stage-wrapper_\"]:not([class*=\"stage-wrapper_full-screen_\"]),\n.sa-stage-hidden [class*=\"gui_target-wrapper_\"] {\n  padding: 0;\n}\n\n.sa-stage-hidden\n  [class*=\"stage-wrapper_stage-wrapper_\"]:not([class*=\"stage-wrapper_full-screen_\"])\n  [class*=\"controls_controls-container_\"],\n.sa-stage-hidden [class*=\"gui_target-wrapper_\"] {\n  display: none;\n}\n.sa-stage-hidden\n  [class*=\"stage-wrapper_stage-wrapper_\"]:not([class*=\"stage-wrapper_full-screen_\"])\n  [class*=\"stage-wrapper_stage-canvas-wrapper_\"] {\n  /* can't use display: none because that causes the canvas's clientWidth/Height to become 0 which causes crashes */\n  visibility: hidden;\n  position: absolute;\n  z-index: -9999;\n  /* move the stage to avoid a horizontal scroll bar */\n  right: 0;\n  /* and move it up so that the mouse can't hover over the stage while its hidden */\n  bottom: 100%;\n}\n[dir=\"rtl\"]\n  .sa-stage-hidden\n  [class*=\"stage-wrapper_stage-wrapper_\"]:not([class*=\"stage-wrapper_full-screen_\"])\n  [class*=\"stage-wrapper_stage-canvas-wrapper_\"] {\n  right: initial;\n  left: 0;\n}\n\n.sa-stage-hidden [class*=\"stage-header_stage-size-row\"] {\n  position: absolute;\n  top: 0;\n  right: 0.5rem;\n  height: 2.75rem;\n  align-items: center;\n}\n\n[dir=\"rtl\"] .sa-stage-hidden [class*=\"stage-header_stage-size-row\"] {\n  right: auto;\n  left: 0.5rem;\n}\n\n.sa-stage-hidden-outer .scratchEyedropper {\n  display: none;\n}\n", ""]);
+exports.push([module.i, ".sa-hide-stage-button [class*=\"stage-header_stage-button-icon_\"] {\n  /* Preserve aspect ratio */\n  height: auto;\n}\n\n.sa-stage-hidden [class*=\"blocks_blocks_\"] .injectionDiv,\n.sa-stage-hidden [class*=\"asset-panel_wrapper_\"],\n.sa-stage-hidden [class*=\"backpack_backpack-header_\"] {\n  border-radius: 0;\n}\n\n/* [class*=\"gui_flex-wrapper_\"] is for specificity over hide-flyout */\n.sa-stage-hidden [class*=\"gui_flex-wrapper_\"] [class*=\"gui_stage-and-target-wrapper_\"],\n.sa-stage-hidden [class*=\"stage-wrapper_stage-wrapper_\"]:not([class*=\"stage-wrapper_full-screen_\"]),\n.sa-stage-hidden [class*=\"gui_target-wrapper_\"] {\n  padding: 0;\n}\n\n.sa-stage-hidden\n  [class*=\"stage-wrapper_stage-wrapper_\"]:not([class*=\"stage-wrapper_full-screen_\"])\n  [class*=\"controls_controls-container_\"],\n.sa-stage-hidden [class*=\"gui_target-wrapper_\"] {\n  display: none;\n}\n.sa-stage-hidden\n  [class*=\"stage-wrapper_stage-wrapper_\"]:not([class*=\"stage-wrapper_full-screen_\"])\n  [class*=\"stage-wrapper_stage-canvas-wrapper_\"] {\n  /* can't use display: none because that causes the canvas's clientWidth/Height to become 0 which causes crashes */\n  visibility: hidden;\n  position: absolute;\n  z-index: -9999;\n  /* move the stage to avoid a horizontal scroll bar */\n  right: 0;\n  /* and move it up so that the mouse can't hover over the stage while its hidden */\n  bottom: 100%;\n}\n[dir=\"rtl\"]\n  .sa-stage-hidden\n  [class*=\"stage-wrapper_stage-wrapper_\"]:not([class*=\"stage-wrapper_full-screen_\"])\n  [class*=\"stage-wrapper_stage-canvas-wrapper_\"] {\n  right: initial;\n  left: 0;\n}\n\n.sa-stage-hidden [class*=\"stage-header_stage-size-row\"] {\n  position: absolute;\n  top: 0;\n  right: 0.5rem;\n  height: 2.75rem;\n  align-items: center;\n  /* 高于 .tab-list (z-index: 25)，避免按钮被 tablist 遮挡 */\n  z-index: 43;\n}\n\n[dir=\"rtl\"] .sa-stage-hidden [class*=\"stage-header_stage-size-row\"] {\n  right: auto;\n  left: 0.5rem;\n}\n\n.sa-stage-hidden-outer .scratchEyedropper {\n  display: none;\n}\n\n/* 我完全不知道扣式咯到底做了什么让这个插件不生效了 */\n/* 所以我来加css了 */\n\n/* 现在让编辑器在舞台隐藏时占据全宽 */\n.sa-stage-hidden [class*=\"gui_editor-wrapper_\"] {\n    flex-basis: auto !important;\n    flex-grow: 1 !important;\n    width: 100% !important;\n}\n\n/* 确保舞台包裹器不占据空间 */\n.sa-stage-hidden [class*=\"gui_stage-and-target-wrapper_\"] {\n    flex-basis: 0 !important;\n    flex-grow: 0 !important;\n    width: 0 !important;\n    min-width: 0 !important;\n    padding: 0 !important;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/hide-stage/icon.svg":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/hide-stage/icon.svg ***!
-  \*************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/hide-stage/icon.svg":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/hide-stage/icon.svg ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSIjODU1Y2Q2IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTQgNGExIDEgMCAwIDAtMSAxdjEwYTEgMSAwIDAgMCAxIDFoMTJhMSAxIDAgMCAwIDEtMVY1LjVoLTRWNFoiLz48cGF0aCBkPSJNMTMgNGgzYTEgMSAwIDAgMSAxIDF2LjVoLTR6IiBmaWxsPSIjODU1Y2Q2Ii8+PC9nPjwvc3ZnPgo=");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSIjODU1Y2Q2IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTQgNGExIDEgMCAwIDAtMSAxdjEwYTEgMSAwIDAgMCAxIDFoMTJhMSAxIDAgMCAwIDEtMVY1LjVoLTRWNFoiLz48cGF0aCBkPSJNMTMgNGgzYTEgMSAwIDAgMSAxIDF2LjVoLTR6IiBmaWxsPSIjODU1Y2Q2Ii8+PC9nPjwvc3ZnPgo="
 
 /***/ }),
 
@@ -43,17 +41,18 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
 /* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/hide-stage/userscript.js");
-/* harmony import */ var _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./style.css */ "./node_modules/css-loader/index.js!./src/addons/addons/hide-stage/style.css");
-/* harmony import */ var _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_style_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _url_loader_icon_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader!./icon.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/hide-stage/icon.svg");
+/* harmony import */ var _css_loader_esModule_false_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader?{"esModule":false}!./style.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/hide-stage/style.css");
+/* harmony import */ var _css_loader_esModule_false_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _url_loader_esModule_false_icon_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icon.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/hide-stage/icon.svg");
+/* harmony import */ var _url_loader_esModule_false_icon_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icon_svg__WEBPACK_IMPORTED_MODULE_2__);
 /* generated by pull.js */
 
 
 
 const resources = {
   "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  "style.css": _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1___default.a,
-  "icon.svg": _url_loader_icon_svg__WEBPACK_IMPORTED_MODULE_2__["default"]
+  "style.css": _css_loader_esModule_false_style_css__WEBPACK_IMPORTED_MODULE_1___default.a,
+  "icon.svg": _url_loader_esModule_false_icon_svg__WEBPACK_IMPORTED_MODULE_2___default.a
 };
 
 /***/ }),
@@ -131,20 +130,44 @@ __webpack_require__.r(__webpack_exports__);
     if (stageControls) stageControls.insertBefore(hideStageButton, smallStageButton);
   });
   while (true) {
+    const storedSettings = localStorage.getItem('AESettings');
+    let hideButton = false;
+    try {
+      hideButton = JSON.parse(storedSettings).EnableMobileLayout;
+    } catch (e) {
+      hideButton = false;
+    }
+    if (hideButton) {
+      break;
+    }
     const stageControls = await addon.tab.waitForElement("[class*='stage-header_stage-size-toggle-group_'] > [class*='toggle-buttons_row_']", {
       markAsSeen: true,
       reduxCondition: state => !state.scratchGui.mode.isPlayerOnly
     });
     bodyWrapper = document.querySelector("[class*='gui_body-wrapper_']");
-    const stageButtons = Array.from(stageControls.querySelectorAll("button"));
-    smallStageButton = stageButtons[0];
-    largeStageButton = stageButtons.length === 3 ? stageButtons[1] : null;
-    fullStageButton = stageButtons[stageButtons.length - 1];
+    const setButton = () => {
+      const stageButtons = Array.from(stageControls.querySelectorAll("button:not(.sa-hide-stage-button)"));
+      smallStageButton = stageButtons[0];
+      largeStageButton = stageButtons.length === 3 ? stageButtons[1] : null;
+      fullStageButton = stageButtons[stageButtons.length - 1];
+      if (smallStageButton) {
+        smallStageButton.removeEventListener("click", unhideStage);
+        smallStageButton.addEventListener("click", unhideStage);
+      }
+      if (largeStageButton) {
+        largeStageButton.removeEventListener("click", unhideStage);
+        largeStageButton.addEventListener("click", unhideStage);
+      }
+      if (fullStageButton) {
+        fullStageButton.removeEventListener("click", unhideStage);
+        fullStageButton.addEventListener("click", unhideStage);
+      }
+    };
+    setButton();
+    document.addEventListener('urlchange', () => setTimeout(setButton), 5); // 改变舞台大小会改变url
+
     if (!addon.self.disabled) stageControls.insertBefore(hideStageButton, smallStageButton);
     if (stageHidden) hideStage();else unhideStage();
-    if (smallStageButton) smallStageButton.addEventListener("click", unhideStage);
-    if (largeStageButton) largeStageButton.addEventListener("click", unhideStage);
-    if (fullStageButton) fullStageButton.addEventListener("click", unhideStage);
   }
 });
 

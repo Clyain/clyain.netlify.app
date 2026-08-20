@@ -1,9 +1,9 @@
 (window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([["addon-entry-sprite-properties"],{
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/sprite-properties/userstyle.css":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/sprite-properties/userstyle.css ***!
-  \*************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/sprite-properties/userstyle.css":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/sprite-properties/userstyle.css ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19,29 +19,25 @@ exports.push([module.i, "[class^=\"sprite-info_sprite-info_\"] {\n  height: 0;\n
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/sprite-properties/collapse.svg":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/sprite-properties/collapse.svg ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/sprite-properties/collapse.svg":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/sprite-properties/collapse.svg ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIuNyIgaGVpZ2h0PSI4Ljc5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik02LjM2IDFhMS40MyAxLjQzIDAgMCAwLTEgLjQyTDEuNDIgNS4zNGExLjQ0IDEuNDQgMCAwIDAgMCAyYy41Ni41NiA5LjMxLjU2IDkuODcgMGExLjQ0IDEuNDQgMCAwIDAgMC0yTDcuMzcgMS40MkExLjQzIDEuNDMgMCAwIDAgNi4zNiAxeiIgZmlsbD0iIzU3NWU3NSIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIuNyIgaGVpZ2h0PSI4Ljc5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik02LjM2IDFhMS40MyAxLjQzIDAgMCAwLTEgLjQyTDEuNDIgNS4zNGExLjQ0IDEuNDQgMCAwIDAgMCAyYy41Ni41NiA5LjMxLjU2IDkuODcgMGExLjQ0IDEuNDQgMCAwIDAgMC0yTDcuMzcgMS40MkExLjQzIDEuNDMgMCAwIDAgNi4zNiAxeiIgZmlsbD0iIzU3NWU3NSIvPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/sprite-properties/info.svg":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/sprite-properties/info.svg ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/sprite-properties/info.svg":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/sprite-properties/info.svg ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAwLjU3IDAuNTciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNLjIzMi4yMzJ2LjAzNmguMDM2Vi41SC4yMTR2LjAzNWguMTQzVi41SC4zMDRWLjIzM3oiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuMDcxIiBzdHlsZT0icGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycyIvPjxjaXJjbGUgY3g9Ii4yODUiIGN5PSIuMDcxIiByPSIuMDcxIiBzdHlsZT0icGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycyIvPjwvZz48L3N2Zz4=");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAwLjU3IDAuNTciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNLjIzMi4yMzJ2LjAzNmguMDM2Vi41SC4yMTR2LjAzNWguMTQzVi41SC4zMDRWLjIzM3oiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuMDcxIiBzdHlsZT0icGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycyIvPjxjaXJjbGUgY3g9Ii4yODUiIGN5PSIuMDcxIiByPSIuMDcxIiBzdHlsZT0icGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycyIvPjwvZz48L3N2Zz4="
 
 /***/ }),
 
@@ -56,10 +52,12 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
 /* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/sprite-properties/userscript.js");
-/* harmony import */ var _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./userstyle.css */ "./node_modules/css-loader/index.js!./src/addons/addons/sprite-properties/userstyle.css");
-/* harmony import */ var _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _url_loader_collapse_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader!./collapse.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/sprite-properties/collapse.svg");
-/* harmony import */ var _url_loader_info_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! url-loader!./info.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/sprite-properties/info.svg");
+/* harmony import */ var _css_loader_esModule_false_userstyle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader?{"esModule":false}!./userstyle.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/sprite-properties/userstyle.css");
+/* harmony import */ var _css_loader_esModule_false_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_userstyle_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _url_loader_esModule_false_collapse_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader?{"esModule":false}!./collapse.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/sprite-properties/collapse.svg");
+/* harmony import */ var _url_loader_esModule_false_collapse_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_collapse_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _url_loader_esModule_false_info_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! url-loader?{"esModule":false}!./info.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/sprite-properties/info.svg");
+/* harmony import */ var _url_loader_esModule_false_info_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_info_svg__WEBPACK_IMPORTED_MODULE_3__);
 /* generated by pull.js */
 
 
@@ -67,9 +65,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const resources = {
   "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  "userstyle.css": _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default.a,
-  "collapse.svg": _url_loader_collapse_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-  "info.svg": _url_loader_info_svg__WEBPACK_IMPORTED_MODULE_3__["default"]
+  "userstyle.css": _css_loader_esModule_false_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default.a,
+  "collapse.svg": _url_loader_esModule_false_collapse_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
+  "info.svg": _url_loader_esModule_false_info_svg__WEBPACK_IMPORTED_MODULE_3___default.a
 };
 
 /***/ }),

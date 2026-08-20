@@ -1,9 +1,9 @@
 (window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([["addon-entry-fullscreen"],{
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/hideOverflow.css":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/fullscreen/hideOverflow.css ***!
-  \*********************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/hideOverflow.css":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/fullscreen/hideOverflow.css ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19,10 +19,10 @@ exports.push([module.i, ".sa-fullscreen.sa-body-editor {\n  overflow: hidden !im
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/hideToolbar.css":
-/*!********************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/fullscreen/hideToolbar.css ***!
-  \********************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/hideToolbar.css":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/fullscreen/hideToolbar.css ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31,17 +31,17 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "[class*=\"stage-wrapper_full-screen\"] {\n  display: none;\n  top: 0rem !important;\n}\n\n[class*=\"stage-header_stage-header-wrapper-overlay\"] {\n  display: block;\n  transform: translateY(-101%);\n  transition: transform 0.3s;\n}\n\n.phantom-header {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  height: 8px;\n  display: block;\n  z-index: 5000;\n}\n\n.stage-header-hover {\n  transform: translateY(0%);\n  transition: transform 0.3s 0.25s;\n}\n", ""]);
+exports.push([module.i, ":root {\n  --stage-fullscreen-toolbar-height: 0rem;\n}\n\n[class*=\"stage-header_stage-header-wrapper-overlay\"] {\n  display: block;\n  top: var(--stage-fullscreen-top, 0rem);\n  transform: translateY(-101%);\n  transition: transform 0.3s;\n}\n\n.phantom-header {\n  position: absolute;\n  top: var(--stage-fullscreen-top, 0rem);\n  left: 0px;\n  right: 0px;\n  height: 8px;\n  display: block;\n  z-index: 5000;\n}\n\n.stage-header-hover {\n  transform: translateY(0%);\n  transition: transform 0.3s 0.25s;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/removeBorder.css":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/fullscreen/removeBorder.css ***!
-  \*********************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/removeBorder.css":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/fullscreen/removeBorder.css ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50,17 +50,17 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_full-screen\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_green-flag-overlay-wrapper\"] {\n  border: 0 !important;\n  border-radius: 0 !important;\n}\n\n[class*=\"stage_stage-overlays_\"][class*=\"stage_full-screen_\"] {\n  top: 0;\n  left: 0;\n}\n", ""]);
+exports.push([module.i, "[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_full-screen\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_green-flag-overlay-wrapper\"] {\n  border: 0 !important;\n  border-radius: 0 !important;\n}\n\n[class*=\"stage_stage-overlays_\"][class*=\"stage_full-screen_\"] {\n  top: var(--stage-fullscreen-top, 0rem);\n  left: 0;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/resizeWindow.css":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/fullscreen/resizeWindow.css ***!
-  \*********************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/resizeWindow.css":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/fullscreen/resizeWindow.css ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -69,17 +69,17 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-wrapper_stage-canvas-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_stage\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-header_stage-menu-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] canvas {\n  width: min(calc((100vh - 44px) * var(--sa-fullscreen-width) / var(--sa-fullscreen-height)), 100vw) !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-wrapper_stage-canvas-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_stage\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_green-flag-overlay-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] canvas {\n  height: min(calc(100vh - 44px), calc(100vw * var(--sa-fullscreen-height) / var(--sa-fullscreen-width))) !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] {\n  padding: 0rem !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"monitor-list_monitor-list\"] {\n  overflow: visible;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_question-wrapper\"] {\n  width: auto !important;\n}\n", ""]);
+exports.push([module.i, "[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-wrapper_stage-canvas-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_stage\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-header_stage-menu-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] canvas {\n  width: min(calc((100vh - var(--stage-fullscreen-top, 0rem) - 44px) * var(--sa-fullscreen-width) / var(--sa-fullscreen-height)), 100vw) !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-wrapper_stage-canvas-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_stage\"],\n[class*=\"stage-wrapper_full-screen\"] canvas {\n  height: min(calc(100vh - var(--stage-fullscreen-top, 0rem) - 44px), calc(100vw * var(--sa-fullscreen-height) / var(--sa-fullscreen-width))) !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] {\n  padding: 0rem !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"monitor-list_monitor-list\"] {\n  overflow: visible;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_question-wrapper\"] {\n  width: auto !important;\n}\n\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/resizeWindow_noToolbar.css":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/fullscreen/resizeWindow_noToolbar.css ***!
-  \*******************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/resizeWindow_noToolbar.css":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/fullscreen/resizeWindow_noToolbar.css ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -88,7 +88,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-wrapper_stage-canvas-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_stage\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-header_stage-menu-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] canvas {\n  width: min(calc(100vh * var(--sa-fullscreen-width) / var(--sa-fullscreen-height)), 100vw) !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-wrapper_stage-canvas-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_stage\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_green-flag-overlay-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] canvas {\n  height: min(100vh, calc(100vw * var(--sa-fullscreen-height) / var(--sa-fullscreen-width))) !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] {\n  padding: 0rem !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"monitor-list_monitor-list\"] {\n  overflow: visible;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_question-wrapper\"] {\n  width: auto !important;\n}\n", ""]);
+exports.push([module.i, "[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-wrapper_stage-canvas-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_stage\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-header_stage-menu-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] canvas {\n  width: min(calc((100vh - var(--stage-fullscreen-top, 0rem)) * var(--sa-fullscreen-width) / var(--sa-fullscreen-height)), 100vw) !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-wrapper_stage-canvas-wrapper\"],\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_stage\"],\n[class*=\"stage-wrapper_full-screen\"] canvas {\n  height: min(calc(100vh - var(--stage-fullscreen-top, 0rem)), calc(100vw * var(--sa-fullscreen-height) / var(--sa-fullscreen-width))) !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] {\n  padding: 0rem !important;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"monitor-list_monitor-list\"] {\n  overflow: visible;\n}\n\n[class*=\"stage-wrapper_full-screen\"] [class*=\"stage_question-wrapper\"] {\n  width: auto !important;\n}\n\n[class*=\"stage-wrapper_stage-wrapper\"][class*=\"stage-wrapper_full-screen\"] {\n  top: var(--stage-fullscreen-top, 0rem) !important;\n  height: calc(100vh - var(--stage-fullscreen-top, 0rem));\n}\n", ""]);
 
 // exports
 
@@ -106,16 +106,16 @@ exports.push([module.i, "[class*=\"stage-wrapper_full-screen\"] [class*=\"stage-
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
 /* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/fullscreen/userscript.js");
-/* harmony import */ var _css_loader_hideOverflow_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./hideOverflow.css */ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/hideOverflow.css");
-/* harmony import */ var _css_loader_hideOverflow_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_hideOverflow_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _css_loader_removeBorder_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! css-loader!./removeBorder.css */ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/removeBorder.css");
-/* harmony import */ var _css_loader_removeBorder_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_loader_removeBorder_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _css_loader_resizeWindow_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! css-loader!./resizeWindow.css */ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/resizeWindow.css");
-/* harmony import */ var _css_loader_resizeWindow_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_loader_resizeWindow_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _css_loader_resizeWindow_noToolbar_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! css-loader!./resizeWindow_noToolbar.css */ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/resizeWindow_noToolbar.css");
-/* harmony import */ var _css_loader_resizeWindow_noToolbar_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_loader_resizeWindow_noToolbar_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _css_loader_hideToolbar_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! css-loader!./hideToolbar.css */ "./node_modules/css-loader/index.js!./src/addons/addons/fullscreen/hideToolbar.css");
-/* harmony import */ var _css_loader_hideToolbar_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_css_loader_hideToolbar_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _css_loader_esModule_false_hideOverflow_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader?{"esModule":false}!./hideOverflow.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/hideOverflow.css");
+/* harmony import */ var _css_loader_esModule_false_hideOverflow_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_hideOverflow_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_loader_esModule_false_removeBorder_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! css-loader?{"esModule":false}!./removeBorder.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/removeBorder.css");
+/* harmony import */ var _css_loader_esModule_false_removeBorder_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_removeBorder_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _css_loader_esModule_false_resizeWindow_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! css-loader?{"esModule":false}!./resizeWindow.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/resizeWindow.css");
+/* harmony import */ var _css_loader_esModule_false_resizeWindow_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_resizeWindow_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _css_loader_esModule_false_resizeWindow_noToolbar_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! css-loader?{"esModule":false}!./resizeWindow_noToolbar.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/resizeWindow_noToolbar.css");
+/* harmony import */ var _css_loader_esModule_false_resizeWindow_noToolbar_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_resizeWindow_noToolbar_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _css_loader_esModule_false_hideToolbar_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! css-loader?{"esModule":false}!./hideToolbar.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/fullscreen/hideToolbar.css");
+/* harmony import */ var _css_loader_esModule_false_hideToolbar_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_hideToolbar_css__WEBPACK_IMPORTED_MODULE_5__);
 /* generated by pull.js */
 
 
@@ -125,11 +125,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const resources = {
   "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  "hideOverflow.css": _css_loader_hideOverflow_css__WEBPACK_IMPORTED_MODULE_1___default.a,
-  "removeBorder.css": _css_loader_removeBorder_css__WEBPACK_IMPORTED_MODULE_2___default.a,
-  "resizeWindow.css": _css_loader_resizeWindow_css__WEBPACK_IMPORTED_MODULE_3___default.a,
-  "resizeWindow_noToolbar.css": _css_loader_resizeWindow_noToolbar_css__WEBPACK_IMPORTED_MODULE_4___default.a,
-  "hideToolbar.css": _css_loader_hideToolbar_css__WEBPACK_IMPORTED_MODULE_5___default.a
+  "hideOverflow.css": _css_loader_esModule_false_hideOverflow_css__WEBPACK_IMPORTED_MODULE_1___default.a,
+  "removeBorder.css": _css_loader_esModule_false_removeBorder_css__WEBPACK_IMPORTED_MODULE_2___default.a,
+  "resizeWindow.css": _css_loader_esModule_false_resizeWindow_css__WEBPACK_IMPORTED_MODULE_3___default.a,
+  "resizeWindow_noToolbar.css": _css_loader_esModule_false_resizeWindow_noToolbar_css__WEBPACK_IMPORTED_MODULE_4___default.a,
+  "hideToolbar.css": _css_loader_esModule_false_hideToolbar_css__WEBPACK_IMPORTED_MODULE_5___default.a
 };
 
 /***/ }),
@@ -151,6 +151,28 @@ __webpack_require__.r(__webpack_exports__);
   let addon = _ref.addon,
     console = _ref.console;
   const vm = addon.tab.traps.vm;
+  let cleanupPhantomHeader = null;
+  const getTopPx = () => {
+    try {
+      const root = document.documentElement;
+      const rawValue = getComputedStyle(root).getPropertyValue('--stage-fullscreen-top').trim();
+      if (!rawValue) return 0;
+      if (rawValue.endsWith('rem')) {
+        const remValue = parseFloat(rawValue);
+        const rootFontSize = parseFloat(getComputedStyle(root).fontSize);
+        return remValue * rootFontSize;
+      }
+      if (rawValue.endsWith('px')) {
+        return parseFloat(rawValue);
+      }
+      const numericValue = parseFloat(rawValue);
+      return Number.isNaN(numericValue) ? 0 : numericValue;
+    } catch (e) {
+      console.error(e);
+      return 0;
+    }
+  };
+  const getHeaderTriggerZonePx = () => Math.max(8, getTopPx());
   const updateStageSize = () => {
     document.documentElement.style.setProperty('--sa-fullscreen-width', vm.runtime.stageWidth);
     document.documentElement.style.setProperty('--sa-fullscreen-height', vm.runtime.stageHeight);
@@ -199,9 +221,20 @@ __webpack_require__.r(__webpack_exports__);
   // The "phantom header" is a small strip at the top of the page that
   // brings the header into view when hovered.
   async function updatePhantomHeader() {
+    if (cleanupPhantomHeader) {
+      cleanupPhantomHeader();
+      cleanupPhantomHeader = null;
+    }
     if (!addon.self.disabled && addon.tab.redux.state.scratchGui.mode.isFullScreen && addon.settings.get("toolbar") === "hover") {
       const canvas = await addon.tab.waitForElement('[class*="stage_full-screen"] canvas');
       const header = await addon.tab.waitForElement('[class^="stage-header_stage-header-wrapper"]');
+
+      // 如果已经有旧的 phantom，就先拆掉再重建，避免监听器丢失。
+      if (header.parentElement.classList.contains("phantom-header")) {
+        const existingPhantom = header.parentElement;
+        existingPhantom.parentElement.appendChild(header);
+        existingPhantom.remove();
+      }
       const phantom = header.parentElement.appendChild(document.createElement("div"));
       phantom.classList.add("phantom-header");
 
@@ -214,26 +247,55 @@ __webpack_require__.r(__webpack_exports__);
       phantom.addEventListener("mouseleave", () => {
         header.classList.remove("stage-header-hover");
       });
+      const showHeader = () => {
+        header.classList.add("stage-header-hover");
+      };
+      const hideHeader = () => {
+        header.classList.remove("stage-header-hover");
+      };
 
       // Listen for when the mouse moves above the page (helps to show header when not in browser full screen mode)
-      document.body.addEventListener("mouseleave", e => {
-        if (e.clientY < 8) {
-          header.classList.add("stage-header-hover");
+      const handleBodyMouseLeave = e => {
+        if (e.clientY < getHeaderTriggerZonePx()) {
+          showHeader();
         }
-      });
+      };
       // and for when the mouse re-enters the page
-      document.body.addEventListener("mouseenter", () => {
-        header.classList.remove("stage-header-hover");
-      });
+      const handleBodyMouseEnter = () => {
+        if (!phantom.matches(":hover") && !header.matches(":hover")) {
+          hideHeader();
+        }
+      };
+      // Permanent menubar means the pointer often enters the menubar zone instead of truly leaving the page.
+      const handleDocumentMouseMove = e => {
+        if (e.clientY <= getHeaderTriggerZonePx()) {
+          showHeader();
+        } else if (!phantom.matches(":hover") && !header.matches(":hover")) {
+          hideHeader();
+        }
+      };
+      document.body.addEventListener("mouseleave", handleBodyMouseLeave);
+      document.body.addEventListener("mouseenter", handleBodyMouseEnter);
+      document.addEventListener("mousemove", handleDocumentMouseMove);
 
       // Pass click events on the phantom header onto the project player, essentially making it click-through
-      ["mousedown", "mousemove", "mouseup", "touchstart", "touchmove", "touchend", "wheel"].forEach(eventName => {
-        phantom.addEventListener(eventName, e => {
-          if (e.target.classList.contains("phantom-header")) {
-            canvas.dispatchEvent(new e.constructor(e.type, e));
-          }
-        });
+      const forwardedEvents = ["mousedown", "mousemove", "mouseup", "touchstart", "touchmove", "touchend", "wheel"];
+      const forwardToCanvas = e => {
+        if (e.target.classList.contains("phantom-header")) {
+          canvas.dispatchEvent(new e.constructor(e.type, e));
+        }
+      };
+      forwardedEvents.forEach(eventName => {
+        phantom.addEventListener(eventName, forwardToCanvas);
       });
+      cleanupPhantomHeader = () => {
+        document.body.removeEventListener("mouseleave", handleBodyMouseLeave);
+        document.body.removeEventListener("mouseenter", handleBodyMouseEnter);
+        document.removeEventListener("mousemove", handleDocumentMouseMove);
+        forwardedEvents.forEach(eventName => {
+          phantom.removeEventListener(eventName, forwardToCanvas);
+        });
+      };
     } else {
       const header = await addon.tab.waitForElement('[class*="stage-header_stage-header-wrapper"]');
       if (header.parentElement.classList.contains("phantom-header")) {

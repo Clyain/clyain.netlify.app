@@ -1,9 +1,9 @@
 (window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([["addon-entry-paint-snap"],{
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/paint-snap/userstyle.css":
-/*!******************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/paint-snap/userstyle.css ***!
-  \******************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/paint-snap/userstyle.css":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/paint-snap/userstyle.css ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19,81 +19,69 @@ exports.push([module.i, ".sa-paint-snap-button {\n  position: relative;\n}\n.sa-
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/decrement.svg":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/decrement.svg ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/decrement.svg":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/paint-snap/icons/decrement.svg ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggc3R5bGU9ImZpbGw6IzU3NWU3NTtzdHJva2Utd2lkdGg6LjczNDczNiIgZD0iTTMuMjUgMTEuMzU4aDE3LjUwMXYxLjI4NUgzLjI1eiIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggc3R5bGU9ImZpbGw6IzU3NWU3NTtzdHJva2Utd2lkdGg6LjczNDczNiIgZD0iTTMuMjUgMTEuMzU4aDE3LjUwMXYxLjI4NUgzLjI1eiIvPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/increment.svg":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/increment.svg ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/increment.svg":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/paint-snap/icons/increment.svg ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHdpZHRoPSIyNCI+PHBhdGggc3R5bGU9ImZpbGw6IzU3NWU3NTtzdHJva2Utd2lkdGg6LjczNDczNiIgZD0iTTMuMjUgMTEuMzU4aDE3LjUwMXYxLjI4NUgzLjI1eiIvPjxwYXRoIHRyYW5zZm9ybT0icm90YXRlKDkwKSIgc3R5bGU9ImZpbGw6IzU3NWU3NTtzdHJva2Utd2lkdGg6LjczNDczNiIgZD0iTTMuMjUtMTIuNjQyaDE3LjUwMXYxLjI4NUgzLjI1eiIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHdpZHRoPSIyNCI+PHBhdGggc3R5bGU9ImZpbGw6IzU3NWU3NTtzdHJva2Utd2lkdGg6LjczNDczNiIgZD0iTTMuMjUgMTEuMzU4aDE3LjUwMXYxLjI4NUgzLjI1eiIvPjxwYXRoIHRyYW5zZm9ybT0icm90YXRlKDkwKSIgc3R5bGU9ImZpbGw6IzU3NWU3NTtzdHJva2Utd2lkdGg6LjczNDczNiIgZD0iTTMuMjUtMTIuNjQyaDE3LjUwMXYxLjI4NUgzLjI1eiIvPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/off.svg":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/off.svg ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/off.svg":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/paint-snap/icons/off.svg ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU3NWU3NSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0ibTExLjI1IDQuNzUtNi41IDYuNW0wLTYuNSA2LjUgNi41Ii8+PC9zdmc+");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU3NWU3NSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0ibTExLjI1IDQuNzUtNi41IDYuNW0wLTYuNSA2LjUgNi41Ii8+PC9zdmc+"
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/on.svg":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/on.svg ***!
-  \*****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/on.svg":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/paint-snap/icons/on.svg ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGZpbGw9IiM1NzVlNzUiIGQ9Ik0xMi43MzYgMy45N2EuNzMzLjczMyAwIDAgMSAxLjA0NyAwYy4yODYuMjg5LjI5Ljc1Ni4wMSAxLjA1TDcuODggMTIuMDFhLjczMy43MzMgMCAwIDEtMS4wNjUuMDJMMy4yMTcgOC4zODRhLjc1Ny43NTcgMCAwIDEgMC0xLjA2LjczMy43MzMgMCAwIDEgMS4wNDcgMGwzLjA1MiAzLjA5MyA1LjQtNi40MjVhLjI0Ny4yNDcgMCAwIDEgLjAyLS4wMjJaIi8+PC9zdmc+");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGZpbGw9IiM1NzVlNzUiIGQ9Ik0xMi43MzYgMy45N2EuNzMzLjczMyAwIDAgMSAxLjA0NyAwYy4yODYuMjg5LjI5Ljc1Ni4wMSAxLjA1TDcuODggMTIuMDFhLjczMy43MzMgMCAwIDEtMS4wNjUuMDJMMy4yMTcgOC4zODRhLjc1Ny43NTcgMCAwIDEgMC0xLjA2LjczMy43MzMgMCAwIDEgMS4wNDcgMGwzLjA1MiAzLjA5MyA1LjQtNi40MjVhLjI0Ny4yNDcgMCAwIDEgLjAyLS4wMjJaIi8+PC9zdmc+"
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/settings.svg":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/settings.svg ***!
-  \***********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/settings.svg":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/paint-snap/icons/settings.svg ***!
+  \******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iMTIuNTUiIGN5PSIxMi41NSIgcj0iOS4wNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTc1ZTc1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNyIvPjxjaXJjbGUgY3g9IjYxLjk0MyIgY3k9IjYxLjQzNiIgcj0iNy41IiBmaWxsPSIjNTc1ZTc1Ii8+PHBhdGggZmlsbD0iIzU3NWU3NSIgZD0ibTUzLjExOSAyNy43NDMtOC4yNjcgOC4yNjZMMzEuNjkgMjIuODQ3bC04LjU3IDguNTczIDEzLjE2IDEzLjE2LTguMjY2IDguMjY2aDI1LjEwNXoiIGNvbG9yPSIjNTc1ZTc1Ii8+PHBhdGggZmlsbD0iIzU3NWU3NSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNDYuMjI3IDEwMGMuNTMtMy4yMDUgMS4yMTktNi4zNzQgMi4xMTItOS40N2wtNC44MDQtMS4zODZjLS45NTQgMy4zMS0xLjY4MyA2LjY2OS0yLjI0IDEwLjA0em0zLjYwMy0xNC4wNjhhNjMuOTM1IDYzLjkzNSAwIDAgMSAzLjkzLTguNzc1bC00LjM5My0yLjM4NmE2OC45MTcgNjguOTE3IDAgMCAwLTQuMjQgOS40NnptNi4zODItMTIuOWMxLjc1My0yLjY5NCAzLjY5LTUuMjQ5IDUuODQtNy41NzhsLTMuNjczLTMuMzkyYy0yLjM3MiAyLjU2OS00LjQ3NCA1LjM1LTYuMzU3IDguMjQxem05LjIzNC0xMC45NDFhNTcuOTUgNTcuOTUgMCAwIDEgNy42MDktNS44MTNsLTIuNzAzLTQuMjA4YTYyLjk0NCA2Mi45NDQgMCAwIDAtOC4yNjYgNi4zMTd6bTExLjc1Mi04LjI2MmE3MS4yNjUgNzEuMjY1IDAgMCAxIDguNzg2LTRsLTEuNzY2LTQuNjc3YTc2LjI0MiA3Ni4yNDIgMCAwIDAtOS40MDEgNC4yODF6bTEzLjM3Mi01LjU3MkE4Ny45MjYgODcuOTI2IDAgMCAxIDEwMCA0NS45MUw5OS4wNTcgNDFhOTIuOTM4IDkyLjkzOCAwIDAgMC05Ljk2NyAyLjQ4eiIgY29sb3I9IiM1NzVlNzUiLz48L3N2Zz4=");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iMTIuNTUiIGN5PSIxMi41NSIgcj0iOS4wNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTc1ZTc1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNyIvPjxjaXJjbGUgY3g9IjYxLjk0MyIgY3k9IjYxLjQzNiIgcj0iNy41IiBmaWxsPSIjNTc1ZTc1Ii8+PHBhdGggZmlsbD0iIzU3NWU3NSIgZD0ibTUzLjExOSAyNy43NDMtOC4yNjcgOC4yNjZMMzEuNjkgMjIuODQ3bC04LjU3IDguNTczIDEzLjE2IDEzLjE2LTguMjY2IDguMjY2aDI1LjEwNXoiIGNvbG9yPSIjNTc1ZTc1Ii8+PHBhdGggZmlsbD0iIzU3NWU3NSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNDYuMjI3IDEwMGMuNTMtMy4yMDUgMS4yMTktNi4zNzQgMi4xMTItOS40N2wtNC44MDQtMS4zODZjLS45NTQgMy4zMS0xLjY4MyA2LjY2OS0yLjI0IDEwLjA0em0zLjYwMy0xNC4wNjhhNjMuOTM1IDYzLjkzNSAwIDAgMSAzLjkzLTguNzc1bC00LjM5My0yLjM4NmE2OC45MTcgNjguOTE3IDAgMCAwLTQuMjQgOS40NnptNi4zODItMTIuOWMxLjc1My0yLjY5NCAzLjY5LTUuMjQ5IDUuODQtNy41NzhsLTMuNjczLTMuMzkyYy0yLjM3MiAyLjU2OS00LjQ3NCA1LjM1LTYuMzU3IDguMjQxem05LjIzNC0xMC45NDFhNTcuOTUgNTcuOTUgMCAwIDEgNy42MDktNS44MTNsLTIuNzAzLTQuMjA4YTYyLjk0NCA2Mi45NDQgMCAwIDAtOC4yNjYgNi4zMTd6bTExLjc1Mi04LjI2MmE3MS4yNjUgNzEuMjY1IDAgMCAxIDguNzg2LTRsLTEuNzY2LTQuNjc3YTc2LjI0MiA3Ni4yNDIgMCAwIDAtOS40MDEgNC4yODF6bTEzLjM3Mi01LjU3MkE4Ny45MjYgODcuOTI2IDAgMCAxIDEwMCA0NS45MUw5OS4wNTcgNDFhOTIuOTM4IDkyLjkzOCAwIDAgMC05Ljk2NyAyLjQ4eiIgY29sb3I9IiM1NzVlNzUiLz48L3N2Zz4="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/snap.svg":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/snap.svg ***!
-  \*******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/snap.svg":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/paint-snap/icons/snap.svg ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzU3NWU3NSIgc3Ryb2tlPSIjNTc1ZTc1IiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMzIiIGQ9Ik0xOTEuOTggNDYzLjU4di00OE05MC4xNiA0MjEuNGwzMy45NC0zMy45NG0tNzYuMTItNjcuODhoNDgiLz48cGF0aCBmaWxsPSIjNTc1ZTc1IiBkPSJNNDIyLjIgODkuODJhMTQ0IDE0NCAwIDAgMC0yMDMuNzEtLjA3bC02Ny44OCA2Ny44OCA2Ny44OCA2Ny44OSA2Ny44OC02Ny44OWE0OCA0OCAwIDAgMSA2OC40Ni41OWMxOC4zIDE4LjkyIDE3LjQ4IDQ5LjI0LTEuMTQgNjcuODZsLTY3LjMyIDY3LjMyIDY3Ljg4IDY3Ljg4IDY2LjkxLTY2LjkxYzU2LjM3LTU2LjM3IDU3LjM3LTE0OC4xNSAxLjA0LTIwNC41NVpNODIuNzE5IDIyNS41MTdsNDUuMjU0LTQ1LjI1NCA2Ny44ODMgNjcuODgyTDE1MC42IDI5My40ek0yMTguNDkgMzYxLjI3bDQ1LjI1NC00NS4yNTQgNjcuODgyIDY3Ljg4Mi00NS4yNTUgNDUuMjU1eiIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzU3NWU3NSIgc3Ryb2tlPSIjNTc1ZTc1IiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMzIiIGQ9Ik0xOTEuOTggNDYzLjU4di00OE05MC4xNiA0MjEuNGwzMy45NC0zMy45NG0tNzYuMTItNjcuODhoNDgiLz48cGF0aCBmaWxsPSIjNTc1ZTc1IiBkPSJNNDIyLjIgODkuODJhMTQ0IDE0NCAwIDAgMC0yMDMuNzEtLjA3bC02Ny44OCA2Ny44OCA2Ny44OCA2Ny44OSA2Ny44OC02Ny44OWE0OCA0OCAwIDAgMSA2OC40Ni41OWMxOC4zIDE4LjkyIDE3LjQ4IDQ5LjI0LTEuMTQgNjcuODZsLTY3LjMyIDY3LjMyIDY3Ljg4IDY3Ljg4IDY2LjkxLTY2LjkxYzU2LjM3LTU2LjM3IDU3LjM3LTE0OC4xNSAxLjA0LTIwNC41NVpNODIuNzE5IDIyNS41MTdsNDUuMjU0LTQ1LjI1NCA2Ny44ODMgNjcuODgyTDE1MC42IDI5My40ek0yMTguNDkgMzYxLjI3bDQ1LjI1NC00NS4yNTQgNjcuODgyIDY3Ljg4Mi00NS4yNTUgNDUuMjU1eiIvPjwvc3ZnPg=="
 
 /***/ }),
 
@@ -108,14 +96,20 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
 /* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/paint-snap/userscript.js");
-/* harmony import */ var _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./userstyle.css */ "./node_modules/css-loader/index.js!./src/addons/addons/paint-snap/userstyle.css");
-/* harmony import */ var _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _url_loader_icons_decrement_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader!./icons/decrement.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/decrement.svg");
-/* harmony import */ var _url_loader_icons_increment_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! url-loader!./icons/increment.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/increment.svg");
-/* harmony import */ var _url_loader_icons_off_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! url-loader!./icons/off.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/off.svg");
-/* harmony import */ var _url_loader_icons_on_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! url-loader!./icons/on.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/on.svg");
-/* harmony import */ var _url_loader_icons_settings_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! url-loader!./icons/settings.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/settings.svg");
-/* harmony import */ var _url_loader_icons_snap_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! url-loader!./icons/snap.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/paint-snap/icons/snap.svg");
+/* harmony import */ var _css_loader_esModule_false_userstyle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader?{"esModule":false}!./userstyle.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/paint-snap/userstyle.css");
+/* harmony import */ var _css_loader_esModule_false_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_userstyle_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _url_loader_esModule_false_icons_decrement_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/decrement.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/decrement.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_decrement_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_decrement_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _url_loader_esModule_false_icons_increment_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/increment.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/increment.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_increment_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_increment_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _url_loader_esModule_false_icons_off_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/off.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/off.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_off_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_off_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _url_loader_esModule_false_icons_on_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/on.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/on.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_on_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_on_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _url_loader_esModule_false_icons_settings_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/settings.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/settings.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_settings_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_settings_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _url_loader_esModule_false_icons_snap_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/snap.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/paint-snap/icons/snap.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_snap_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_snap_svg__WEBPACK_IMPORTED_MODULE_7__);
 /* generated by pull.js */
 
 
@@ -127,13 +121,13 @@ __webpack_require__.r(__webpack_exports__);
 
 const resources = {
   "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  "userstyle.css": _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default.a,
-  "icons/decrement.svg": _url_loader_icons_decrement_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-  "icons/increment.svg": _url_loader_icons_increment_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
-  "icons/off.svg": _url_loader_icons_off_svg__WEBPACK_IMPORTED_MODULE_4__["default"],
-  "icons/on.svg": _url_loader_icons_on_svg__WEBPACK_IMPORTED_MODULE_5__["default"],
-  "icons/settings.svg": _url_loader_icons_settings_svg__WEBPACK_IMPORTED_MODULE_6__["default"],
-  "icons/snap.svg": _url_loader_icons_snap_svg__WEBPACK_IMPORTED_MODULE_7__["default"]
+  "userstyle.css": _css_loader_esModule_false_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default.a,
+  "icons/decrement.svg": _url_loader_esModule_false_icons_decrement_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
+  "icons/increment.svg": _url_loader_esModule_false_icons_increment_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
+  "icons/off.svg": _url_loader_esModule_false_icons_off_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+  "icons/on.svg": _url_loader_esModule_false_icons_on_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+  "icons/settings.svg": _url_loader_esModule_false_icons_settings_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+  "icons/snap.svg": _url_loader_esModule_false_icons_snap_svg__WEBPACK_IMPORTED_MODULE_7___default.a
 };
 
 /***/ }),
@@ -1582,7 +1576,6 @@ const updateSelectTool = (paper, tool, vm) => {
   };
   let removeGuides;
   function onMouseDrag(event) {
-    var _getLayer$children$fi, _getLayer$children$fi2;
     const point = event.point;
     const actionBounds = getActionBounds(this.mode in _helpers_js__WEBPACK_IMPORTED_MODULE_1__["BitmapModes"]);
     point.x = Math.max(actionBounds.left, Math.min(point.x, actionBounds.right));
@@ -1598,7 +1591,8 @@ const updateSelectTool = (paper, tool, vm) => {
     const getDist = (p1, p2) => {
       return p1.getDistance(p2);
     };
-    const selectionAnchor = (_getLayer$children$fi = (_getLayer$children$fi2 = getLayer("isGuideLayer").children.find(c => c.data.isSelectionBound)) === null || _getLayer$children$fi2 === void 0 ? void 0 : _getLayer$children$fi2.selectionAnchor) !== null && _getLayer$children$fi !== void 0 ? _getLayer$children$fi : {};
+    const found = getLayer("isGuideLayer").children.find(c => c.data.isSelectionBound);
+    const selectionAnchor = found && found.selectionAnchor !== undefined && found.selectionAnchor !== null ? found.selectionAnchor : {};
     const resetAnchorColor = () => {
       selectionAnchor.strokeColor = new paper.Color(0.30196078431372547, 0.592156862745098, 1);
       selectionAnchor.fillColor = null;

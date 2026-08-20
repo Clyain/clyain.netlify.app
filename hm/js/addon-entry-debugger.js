@@ -1,29 +1,29 @@
 (window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([["addon-entry-debugger"],{
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/debugger/style.css":
-/*!************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/debugger/style.css ***!
-  \************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/debugger/style.css":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/debugger/style.css ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var escape = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-exports.i(__webpack_require__(/*! -!../../../../node_modules/css-loader!../editor-theme3/compatibility.css */ "./node_modules/css-loader/index.js!./src/addons/addons/editor-theme3/compatibility.css"), "");
+exports.i(__webpack_require__(/*! -!../../../../node_modules/css-loader?{"esModule":false}!../editor-theme3/compatibility.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/editor-theme3/compatibility.css"), "");
 
 // module
-exports.push([module.i, "[dir=\"ltr\"] .sa-debugger-container {\n  margin-right: 0.2rem;\n}\n\n[dir=\"rtl\"] .sa-debugger-container {\n  margin-left: 0.2rem;\n}\n\n.sa-small-stage [class*=\"gui_body-wrapper_\"]:not(.sa-stage-hidden) .sa-debugger-container {\n  display: none !important;\n}\n\n.sa-debugger-container [class*=\"button_content_\"] {\n  position: relative;\n}\n\n.sa-debugger-unread::after {\n  content: \"\";\n  position: absolute;\n  top: 1px;\n  right: 0;\n  display: block;\n  width: 6px;\n  height: 6px;\n  background-color: var(--editorDarkMode-highlightText, #855cd6);\n  border-radius: 50%;\n}\n\n.sa-debugger-interface {\n  display: none;\n  position: absolute;\n  z-index: 492;\n  background-color: var(--ui-modal-background);\n  color: var(--ui-modal-foreground);\n  width: 565px;\n  height: 25rem;\n}\n\n.sa-debugger-interface [class*=\"card_header-buttons_\"] {\n  background-color: #29beb8;\n  border-color: #3aa8a4;\n}\n\n.sa-debugger-interface h1 {\n  padding: 10px;\n  z-index: 10;\n  width: calc(100% - 20px);\n  font-size: 20px;\n}\n\n.sa-debugger-tabs {\n  margin: 0;\n  display: flex;\n  align-items: center;\n  padding: 0 15px;\n  font-size: 0.75rem;\n}\n.sa-debugger-tabs li {\n  margin: 0;\n  display: flex;\n  align-items: center;\n  padding: 0.5em 1em;\n  background-color: rgba(0, 0, 0, 0.1);\n  border: 1px solid rgba(0, 0, 0, 0.15);\n  border-radius: 1rem;\n  color: white;\n  cursor: pointer;\n}\n.sa-debugger-tabs li + li {\n  margin-inline-start: 10px;\n}\n.sa-debugger-tabs li:hover {\n  background-color: rgba(0, 0, 0, 0.15);\n}\n.sa-debugger-tabs li.sa-debugger-tab-selected {\n  background-color: white;\n  background-clip: padding-box;\n  border-color: rgba(0, 0, 0, 0.25);\n  color: var(--looks-secondary);\n}\n.sa-debugger-tabs li img {\n  margin: 0;\n  margin-right: 0.25rem;\n  width: 1rem;\n  filter: brightness(0) invert(1);\n}\n.sa-debugger-tabs li.sa-debugger-tab-selected img {\n  filter: none;\n}\n\n.sa-debugger-header-buttons img {\n  width: 20px;\n  height: 20px;\n}\n\n.sa-debugger-unpause {\n  animation: saDebuggerUnpause 2s infinite alternate;\n}\n\n@keyframes saDebuggerUnpause {\n  0% {\n    background-color: rgba(0, 0, 0, 0.15);\n  }\n  100% {\n    background-color: rgba(0, 0, 0, 0);\n  }\n}\n\n.sa-debugger-tab-content {\n  width: 100%;\n  height: 100%;\n  overflow: auto;\n  cursor: auto;\n}\n\n.sa-debugger-chart {\n  width: 100%;\n  height: 100%;\n}\n\n.sa-performance-tab-content {\n  padding: 15px;\n}\n\n.sa-debugger-log-outer {\n  height: 100%;\n}\n\n.sa-debugger-log-inner {\n  position: relative;\n  overflow-y: auto;\n  font-size: 12px;\n  line-height: 1.2;\n  height: 100%;\n  contain: strict;\n}\n\n.sa-debugger-log-empty {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  font-size: 20px;\n  font-style: italic;\n}\n\n.sa-debugger-log-end {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 1px;\n  height: 1px;\n}\n\n.sa-debugger-log {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 20px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid var(--ui-black-transparent);\n  padding-left: 4px;\n  font-family: monospace;\n}\n.sa-debugger-log[data-type=\"warn\"] {\n  border-color: hsla(56deg, 100%, 69%, 0.5);\n  background-color: hsla(56deg, 100%, 69%, 0.3);\n}\n.sa-debugger-log[data-type=\"error\"] {\n  border-color: hsla(0deg, 100%, 69%, 0.5);\n  color: red;\n  background-color: hsla(0deg, 100%, 69%, 0.3);\n}\n\n.sa-debugger-log-repeats {\n  background-color: hsla(163, 85%, 40%, 1);\n  color: white;\n  border-radius: 100px;\n  padding: 1px 6px;\n  margin-right: 4px;\n}\n\n.sa-debugger-log-icon {\n  width: 16px;\n  height: 16px;\n  margin-right: 4px;\n}\n[data-type=\"warn\"] .sa-debugger-log-icon {\n  background-image: url(" + escape(__webpack_require__(/*! ./icons/warning.svg */ "./src/addons/addons/debugger/icons/warning.svg")) + ");\n}\n[data-type=\"error\"] .sa-debugger-log-icon {\n  background-image: url(" + escape(__webpack_require__(/*! ./icons/error.svg */ "./src/addons/addons/debugger/icons/error.svg")) + ");\n}\n.sa-debugger-threads .sa-debugger-log-icon {\n  background-image: url(" + escape(__webpack_require__(/*! ./icons/subthread.svg */ "./src/addons/addons/debugger/icons/subthread.svg")) + ");\n}\n\n.sa-debugger-log-link {\n  color: inherit;\n  cursor: pointer;\n  opacity: 0.5;\n  text-decoration: underline;\n  float: right;\n  text-align: right;\n  max-width: 100%;\n  padding-left: 4px;\n  margin-right: 4px;\n  margin-left: auto;\n}\n.sa-debugger-log-link:hover {\n  text-decoration: underline;\n  color: var(--looks-secondary);\n  opacity: 1;\n}\n.sa-debugger-log-link-unknown {\n  pointer-events: none;\n}\n\n.sa-debugger-log-text {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: pre;\n}\n.sa-debugger-log-text-empty {\n  font-style: italic;\n}\n.sa-debugger-log-internal .sa-debugger-log-text {\n  font-style: italic;\n}\n\n.sa-debugger-thread-indent {\n  width: calc(16px * var(--level));\n  margin-right: 4px;\n}\n.sa-debugger-thread-title .sa-debugger-thread-indent {\n  margin: 0;\n}\n.sa-debugger-thread-target-name {\n  font-weight: bold;\n  margin-right: 8px;\n}\n.sa-debugger-thread-running {\n  background-color: rgba(255, 187, 0, 0.233);\n  font-weight: bold;\n}\n\n.sa-debugger-block-preview {\n  padding: 1px 6px;\n  margin-right: 4px;\n  background-color: var(--sa-block-colored-background);\n  color: var(--sa-block-text);\n}\n.sa-debugger-block-preview[data-shape=\"round\"] {\n  border-radius: 100px;\n}\n.sa-debugger-block-preview[data-shape=\"stacked\"] {\n  border-radius: 3px;\n}\n\n.sa-debugger-thread-compiled {\n  font-style: italic;\n}\n\n.sa-debugger-compiler-warning {\n  position: relative;\n  display: block;\n  text-align: center;\n  height: 24px;\n  color: var(--link-color);\n}\n.sa-debugger-compiler-warning[hidden] {\n  display: none;\n}\n", ""]);
+exports.push([module.i, "[dir=\"ltr\"] .sa-debugger-container {\n  margin-right: 0.2rem;\n}\n\n[dir=\"rtl\"] .sa-debugger-container {\n  margin-left: 0.2rem;\n}\n\n.sa-small-stage [class*=\"gui_body-wrapper_\"]:not(.sa-stage-hidden) .sa-debugger-container {\n  display: none !important;\n}\n\n.sa-debugger-container [class*=\"button_content_\"] {\n  position: relative;\n}\n\n.sa-debugger-unread::after {\n  content: \"\";\n  position: absolute;\n  top: 1px;\n  right: 0;\n  display: block;\n  width: 6px;\n  height: 6px;\n  background-color: var(--editorDarkMode-highlightText, #855cd6);\n  border-radius: 50%;\n\n}\n\n.sa-debugger-interface {\n  display: none;\n  position: absolute;\n  z-index: 492;\n  background-color: var(--ui-modal-background);\n  color: var(--ui-modal-foreground);\n  width: 705px;\n  height: 25rem;\n  top: calc(50% - 12.5rem); /* 25rem / 2 */\n  left: calc(50% - 352.5px); /* 705px / 2 */\n  resize: both;\n  padding-bottom: 10px;\n  min-width: 350px;\n  min-height: 120px;\n}\n\n.sa-debugger-interface [class*=\"card_header-buttons_\"] {\n  background-color: var(--looks-secondary);\n  border-color:var(--looks-transparent);\n}\n\n.sa-debugger-interface h1 {\n  padding: 10px;\n  z-index: 10;\n  width: calc(100% - 20px);\n  font-size: 20px;\n}\n\n.sa-debugger-tabs {\n  margin: 0;\n  display: flex;\n  align-items: center;\n  padding: 0 15px;\n  font-size: 0.75rem;\n}\n.sa-debugger-tabs li {\n  margin: 0;\n  display: flex;\n  align-items: center;\n  padding: 0.5em 1em;\n  background-color: rgba(0, 0, 0, 0.1);\n  border: 1px solid rgba(0, 0, 0, 0.15);\n  border-radius: 1rem;\n  color: white;\n  cursor: pointer;\n}\n.sa-debugger-tabs li + li {\n  margin-inline-start: 10px;\n}\n.sa-debugger-tabs li:hover {\n  background-color: rgba(0, 0, 0, 0.15);\n}\n.sa-debugger-tabs li.sa-debugger-tab-selected {\n  background-color: white;\n  background-clip: padding-box;\n  border-color: rgba(0, 0, 0, 0.25);\n  color: var(--looks-secondary);\n}\n.sa-debugger-tabs li img {\n  margin: 0;\n  margin-right: 0.25rem;\n  width: 1rem;\n  filter: brightness(0) invert(1);\n}\n.sa-debugger-tabs li.sa-debugger-tab-selected img {\n  filter: none;\n}\n\n.sa-debugger-header-buttons img {\n  width: 20px;\n  height: 20px;\n}\n\n.sa-debugger-unpause {\n  animation: saDebuggerUnpause 2s infinite alternate;\n}\n\n@keyframes saDebuggerUnpause {\n  0% {\n    background-color: rgba(0, 0, 0, 0.15);\n  }\n  100% {\n    background-color: rgba(0, 0, 0, 0);\n  }\n}\n\n.sa-debugger-tab-content {\n  width: 100%;\n  height: 100%;\n  overflow: auto;\n  cursor: auto;\n}\n\n.sa-debugger-chart {\n  width: 100%;\n  height: 100%;\n}\n\n.sa-performance-tab-content {\n  padding: 15px;\n}\n\n.sa-debugger-log-outer {\n  height: 100%;\n}\n\n.sa-debugger-log-inner {\n  position: relative;\n  overflow-y: auto;\n  font-size: 12px;\n  line-height: 1.2;\n  height: 100%;\n  contain: strict;\n}\n\n.sa-debugger-log-empty {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  font-size: 20px;\n  font-style: italic;\n}\n\n.sa-debugger-log-end {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 1px;\n  height: 1px;\n}\n\n.sa-debugger-log {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 20px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid var(--ui-black-transparent);\n  padding-left: 4px;\n  font-family: monospace;\n}\n.sa-debugger-log[data-type=\"warn\"] {\n  border-color: hsla(56deg, 100%, 69%, 0.5);\n  background-color: hsla(56deg, 100%, 69%, 0.3);\n}\n.sa-debugger-log[data-type=\"error\"] {\n  border-color: hsla(0deg, 100%, 69%, 0.5);\n  color: red;\n  background-color: hsla(0deg, 100%, 69%, 0.3);\n}\n\n.sa-debugger-log-repeats {\n  background-color: hsla(163, 85%, 40%, 1);\n  color: white;\n  border-radius: 100px;\n  padding: 1px 6px;\n  margin-right: 4px;\n}\n\n.sa-debugger-log-icon {\n  width: 16px;\n  height: 16px;\n  margin-right: 4px;\n}\n[data-type=\"warn\"] .sa-debugger-log-icon {\n  background-image: url(" + escape(__webpack_require__(/*! ./icons/warning.svg */ "./src/addons/addons/debugger/icons/warning.svg")) + ");\n}\n[data-type=\"error\"] .sa-debugger-log-icon {\n  background-image: url(" + escape(__webpack_require__(/*! ./icons/error.svg */ "./src/addons/addons/debugger/icons/error.svg")) + ");\n}\n.sa-debugger-threads .sa-debugger-log-icon {\n  background-image: url(" + escape(__webpack_require__(/*! ./icons/subthread.svg */ "./src/addons/addons/debugger/icons/subthread.svg")) + ");\n}\n\n.sa-debugger-log-link {\n  color: inherit;\n  cursor: pointer;\n  opacity: 0.5;\n  text-decoration: underline;\n  float: right;\n  text-align: right;\n  max-width: 100%;\n  padding-left: 4px;\n  margin-right: 4px;\n  margin-left: auto;\n}\n.sa-debugger-log-link:hover {\n  text-decoration: underline;\n  color: var(--looks-secondary);\n  opacity: 1;\n}\n.sa-debugger-log-link-unknown {\n  pointer-events: none;\n}\n\n.sa-debugger-log-text {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: pre;\n}\n.sa-debugger-log-text-empty {\n  font-style: italic;\n}\n.sa-debugger-log-internal .sa-debugger-log-text {\n  font-style: italic;\n}\n\n.sa-debugger-thread-indent {\n  width: calc(16px * var(--level));\n  margin-right: 4px;\n}\n.sa-debugger-thread-title .sa-debugger-thread-indent {\n  margin: 0;\n}\n.sa-debugger-thread-target-name {\n  font-weight: bold;\n  margin-right: 8px;\n}\n.sa-debugger-thread-running {\n  background-color: rgba(255, 187, 0, 0.233);\n  font-weight: bold;\n}\n\n.sa-debugger-block-preview {\n  padding: 1px 6px;\n  margin-right: 4px;\n  background-color: var(--sa-block-colored-background);\n  color: var(--sa-block-text);\n}\n.sa-debugger-block-preview[data-shape=\"round\"] {\n  border-radius: 100px;\n}\n.sa-debugger-block-preview[data-shape=\"stacked\"] {\n  border-radius: 3px;\n}\n\n.sa-debugger-thread-compiled {\n  font-style: italic;\n}\n\n.sa-debugger-compiler-warning {\n  position: relative;\n  display: block;\n  text-align: center;\n  height: 24px;\n  color: var(--link-color);\n}\n.sa-debugger-compiler-warning[hidden] {\n  display: none;\n}\n\n.sa-debugger-variables {\n  display: block;\n  padding: 10px;\n}\n\n.sa-debugger-variables-searchbox {\n  background-image: url(" + escape(__webpack_require__(/*! ./icons/search.svg */ "./src/addons/addons/debugger/icons/search.svg")) + ");\n  width: calc(100% - 40px);\n  margin-bottom: 8px;\n  padding: 8px;\n  padding-right: 32px;\n  border-radius: 4px;\n  border: 1px solid var(--ui-black-transparent);\n  background-repeat: no-repeat;\n  background-size: 18px 18px;\n  background-position: calc(100% - 7px) center;\n  font-size: 0.75rem;\n}\n\n[dir=\"rtl\"] .sa-debugger-variables-searchbox {\n  padding-right: 8px;\n  padding-left: 32px;\n  background-position: 7px center;\n}\n\n.sa-debugger-variables.freeze .sa-debugger-variables-value *,\n.sa-debugger-variables.freeze .sa-debugger-variables-name * {\n  opacity: 0.5;\n}\n\n.sa-debugger-variables.freeze input:focus,\n.sa-debugger-variables.freeze textarea:focus {\n  opacity: 1;\n}\n\n.sa-debugger-variables-heading {\n  display: block;\n  font-weight: bold;\n  font-size: 14px;\n  margin-top: 6px;\n  margin-bottom: 6px;\n}\n\n.sa-debugger-variables-name {\n  word-break: break-word;\n  display: flex;\n  align-items: center;\n  gap: 4px;\n}\n\n.sa-debugger-variables .sa-debugger-variables-value {\n  width: 75%;\n}\n\n.sa-debugger-variables * > input {\n  background: none;\n  border: none;\n  padding: 4px;\n  width: 100%;\n  height: 100%;\n}\n\n.sa-debugger-variables-value > textarea {\n  background: none;\n  border: none;\n  padding: 4px;\n  width: 100%;\n  height: 100%;\n  line-height: 1.5em;\n  resize: none;\n  font-family: monospace;\n}\n\n.sa-debugger-variables-too-big {\n  display: none;\n  cursor: pointer;\n  font: inherit;\n  font-style: italic;\n  color: inherit;\n  background: none;\n  border: none;\n  margin: 0;\n  padding: 4px;\n  opacity: 0.8;\n  width: 100%;\n  text-align: left;\n}\n.sa-debugger-variables-too-big:hover {\n  text-decoration: underline;\n}\n[data-too-big=\"true\"] .sa-debugger-variables-too-big {\n  display: block;\n}\n[data-too-big=\"true\"] .sa-debugger-variables-value-input {\n  display: none;\n}\n\n.sa-debugger-variables table {\n  border-radius: 5px;\n  border-collapse: collapse;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\n.sa-debugger-variables td {\n  border: 1px solid var(--ui-black-transparent);\n  text-align: left;\n  padding: 2px;\n}\n\n.sa-debugger-variables-favorite {\n  background: none;\n  border: none;\n  cursor: pointer;\n  padding: 0;\n  margin: 0;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 20px;\n  height: 20px;\n  vertical-align: middle;\n  margin-right: 4px;\n  opacity: 0.6;\n  transition: opacity 0.15s ease;\n}\n\n.sa-debugger-variables-favorite:hover {\n  opacity: 1;\n}\n\n.sa-debugger-variables-favorite-icon {\n  width: 16px;\n  height: 16px;\n  display: block;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/editor-theme3/compatibility.css":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/editor-theme3/compatibility.css ***!
-  \*************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/editor-theme3/compatibility.css":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/css-loader?{"esModule":false}!./src/addons/addons/editor-theme3/compatibility.css ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39,159 +39,168 @@ exports.push([module.i, "/* Imported by other addons */\n\n.sa-block-color {\n  
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/close.svg":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/close.svg ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/close.svg":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/close.svg ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDcuNDggNy40OCIgc3R5bGU9InRyYW5zZm9ybTpyb3RhdGUoNDVkZWcpIj48cGF0aCBkPSJNMy43NCA2LjQ4VjFNMSAzLjc0aDUuNDgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNmZmY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDoycHgiLz48L3N2Zz4=");
+module.exports = "data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDcuNDggNy40OCIgc3R5bGU9InRyYW5zZm9ybTpyb3RhdGUoNDVkZWcpIj48cGF0aCBkPSJNMy43NCA2LjQ4VjFNMSAzLjc0aDUuNDgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNmZmY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDoycHgiLz48L3N2Zz4="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/debug.svg":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/debug.svg ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/debug.svg":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/debug.svg ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSIjNEM5N0ZGIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggc3R5bGU9ImZpbGw6IzU3NWU3NTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MTtwYWludC1vcmRlcjptYXJrZXJzIHN0cm9rZSBmaWxsIiBkPSJNNCAzLjVjLS44MzEgMC0xLjUuNjY5LTEuNSAxLjV2MTBjMCAuODMxLjY2OSAxLjUgMS41IDEuNWgxMmMuODMxIDAgMS41LS42NjkgMS41LTEuNVY1YzAtLjgzMS0uNjY5LTEuNS0xLjUtMS41Wm0wIDFoMTJjLjI3NyAwIC41LjIyMy41LjV2MTBjMCAuMjc3LS4yMjMuNS0uNS41SDRhLjQ5OS40OTkgMCAwIDEtLjUtLjVWNWMwLS4yNzcuMjIzLS41LjUtLjVaIiBzdHJva2U9Im5vbmUiLz48cGF0aCBkPSJtNS40MTcgNy41IDMuNzUgMi41LTMuNzUgMi41bTUgMGg0LjE2NiIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzhmOGY4ZjtzdHJva2Utd2lkdGg6MTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIi8+PC9nPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSIjNEM5N0ZGIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggc3R5bGU9ImZpbGw6IzU3NWU3NTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MTtwYWludC1vcmRlcjptYXJrZXJzIHN0cm9rZSBmaWxsIiBkPSJNNCAzLjVjLS44MzEgMC0xLjUuNjY5LTEuNSAxLjV2MTBjMCAuODMxLjY2OSAxLjUgMS41IDEuNWgxMmMuODMxIDAgMS41LS42NjkgMS41LTEuNVY1YzAtLjgzMS0uNjY5LTEuNS0xLjUtMS41Wm0wIDFoMTJjLjI3NyAwIC41LjIyMy41LjV2MTBjMCAuMjc3LS4yMjMuNS0uNS41SDRhLjQ5OS40OTkgMCAwIDEtLjUtLjVWNWMwLS4yNzcuMjIzLS41LjUtLjVaIiBzdHJva2U9Im5vbmUiLz48cGF0aCBkPSJtNS40MTcgNy41IDMuNzUgMi41LTMuNzUgMi41bTUgMGg0LjE2NiIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzhmOGY4ZjtzdHJva2Utd2lkdGg6MTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIi8+PC9nPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/delete.svg":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/delete.svg ***!
-  \*******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/delete.svg":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/delete.svg ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik00LjU0OCA3aDEwLjkwNGEuNS41IDAgMCAxIC40OTguNTQ1bC0uNzg1IDguNjM1QTIgMiAwIDAgMSAxMy4xNzQgMThINi44MjdhMiAyIDAgMCAxLTEuOTkyLTEuODJMNC4wNSA3LjU0NkEuNS41IDAgMCAxIDQuNTQ4IDd6bTIuNzg1LTMgLjU1My0xLjY1OEEuNS41IDAgMCAxIDguMzYgMmgzLjI4YS41LjUgMCAwIDEgLjQ3NC4zNDJMMTIuNjY3IDRIMTYuNWEuNS41IDAgMCAxIC41LjV2MWEuNS41IDAgMCAxLS41LjVoLTEzYS41LjUgMCAwIDEtLjUtLjV2LTFhLjUuNSAwIDAgMSAuNS0uNWgzLjgzM3ptMS4wNTQgMGgzLjIyNmwtLjMzNC0xSDguNzIxbC0uMzM0IDF6TTEwIDExLjcybDEuNTk1LTEuNTk1YS41LjUgMCAwIDEgLjcwNyAwbC4wNzMuMDczYS41LjUgMCAwIDEgMCAuNzA3TDEwLjc4IDEyLjVsMS41OTUgMS41OTVhLjUuNSAwIDAgMSAwIC43MDdsLS4wNzMuMDczYS41LjUgMCAwIDEtLjcwNyAwTDEwIDEzLjI4bC0xLjU5NSAxLjU5NWEuNS41IDAgMCAxLS43MDcgMGwtLjA3My0uMDczYS41LjUgMCAwIDEgMC0uNzA3TDkuMjIgMTIuNWwtMS41OTUtMS41OTVhLjUuNSAwIDAgMSAwLS43MDdsLjA3My0uMDczYS41LjUgMCAwIDEgLjcwNyAwTDEwIDExLjcyeiIgaWQ9ImEiLz48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48bWFzayBpZD0iYiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjYSIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2IpIiBmaWxsPSIjRkZGIj48cGF0aCBkPSJNMCAwaDIwdjIwSDB6Ii8+PC9nPjwvZz48L3N2Zz4=");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik00LjU0OCA3aDEwLjkwNGEuNS41IDAgMCAxIC40OTguNTQ1bC0uNzg1IDguNjM1QTIgMiAwIDAgMSAxMy4xNzQgMThINi44MjdhMiAyIDAgMCAxLTEuOTkyLTEuODJMNC4wNSA3LjU0NkEuNS41IDAgMCAxIDQuNTQ4IDd6bTIuNzg1LTMgLjU1My0xLjY1OEEuNS41IDAgMCAxIDguMzYgMmgzLjI4YS41LjUgMCAwIDEgLjQ3NC4zNDJMMTIuNjY3IDRIMTYuNWEuNS41IDAgMCAxIC41LjV2MWEuNS41IDAgMCAxLS41LjVoLTEzYS41LjUgMCAwIDEtLjUtLjV2LTFhLjUuNSAwIDAgMSAuNS0uNWgzLjgzM3ptMS4wNTQgMGgzLjIyNmwtLjMzNC0xSDguNzIxbC0uMzM0IDF6TTEwIDExLjcybDEuNTk1LTEuNTk1YS41LjUgMCAwIDEgLjcwNyAwbC4wNzMuMDczYS41LjUgMCAwIDEgMCAuNzA3TDEwLjc4IDEyLjVsMS41OTUgMS41OTVhLjUuNSAwIDAgMSAwIC43MDdsLS4wNzMuMDczYS41LjUgMCAwIDEtLjcwNyAwTDEwIDEzLjI4bC0xLjU5NSAxLjU5NWEuNS41IDAgMCAxLS43MDcgMGwtLjA3My0uMDczYS41LjUgMCAwIDEgMC0uNzA3TDkuMjIgMTIuNWwtMS41OTUtMS41OTVhLjUuNSAwIDAgMSAwLS43MDdsLjA3My0uMDczYS41LjUgMCAwIDEgLjcwNyAwTDEwIDExLjcyeiIgaWQ9ImEiLz48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48bWFzayBpZD0iYiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjYSIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2IpIiBmaWxsPSIjRkZGIj48cGF0aCBkPSJNMCAwaDIwdjIwSDB6Ii8+PC9nPjwvZz48L3N2Zz4="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/download-white.svg":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/download-white.svg ***!
-  \***************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/download-white.svg":
+/*!**********************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/download-white.svg ***!
+  \**********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTE0LjczIDguNzc5LTQuMjUzIDQuMjY0YS42MTkuNjE5IDAgMCAxLS44OSAwTDUuMzM2IDguNzc5QS42My42MyAwIDAgMSA1Ljc4OCA3LjdoMi4xMTdsMS4yNjMtNS4wMTZhLjkxMi45MTIgMCAwIDEgMS4xMDYtLjY1Ni44OS44OSAwIDAgMSAuNjY4LjY1NkwxMi4yMDYgNy43aDIuMDcyYy41NTkgMCAuODU2LjY3LjQ1MSAxLjA3OHpNMTggMTEuODEydjIuNTc5QzE4IDE2LjM3NSAxNi4zOTUgMTggMTQuNDE3IDE4SDUuNkEzLjYwNyAzLjYwNyAwIDAgMSAyIDE0LjM5di0yLjU3OGExLjE3IDEuMTcgMCAxIDEgMi4zMzcgMHYyLjU3OUExLjI3IDEuMjcgMCAwIDAgNS42IDE1LjY1Nmg4LjgxN2MuNjg2IDAgMS4yNDYtLjU3OCAxLjI0Ni0xLjI2NXYtMi41NzljMC0uNjU2LjUzLTEuMTcyIDEuMTY5LTEuMTcyLjY1NCAwIDEuMTY4LjUxNiAxLjE2OCAxLjE3MnoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTE0LjczIDguNzc5LTQuMjUzIDQuMjY0YS42MTkuNjE5IDAgMCAxLS44OSAwTDUuMzM2IDguNzc5QS42My42MyAwIDAgMSA1Ljc4OCA3LjdoMi4xMTdsMS4yNjMtNS4wMTZhLjkxMi45MTIgMCAwIDEgMS4xMDYtLjY1Ni44OS44OSAwIDAgMSAuNjY4LjY1NkwxMi4yMDYgNy43aDIuMDcyYy41NTkgMCAuODU2LjY3LjQ1MSAxLjA3OHpNMTggMTEuODEydjIuNTc5QzE4IDE2LjM3NSAxNi4zOTUgMTggMTQuNDE3IDE4SDUuNkEzLjYwNyAzLjYwNyAwIDAgMSAyIDE0LjM5di0yLjU3OGExLjE3IDEuMTcgMCAxIDEgMi4zMzcgMHYyLjU3OUExLjI3IDEuMjcgMCAwIDAgNS42IDE1LjY1Nmg4LjgxN2MuNjg2IDAgMS4yNDYtLjU3OCAxLjI0Ni0xLjI2NXYtMi41NzljMC0uNjU2LjUzLTEuMTcyIDEuMTY5LTEuMTcyLjY1NCAwIDEuMTY4LjUxNiAxLjE2OCAxLjE3MnoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/error.svg":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/error.svg ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/error.svg":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/error.svg ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTEyIDE0YTEuMjUgMS4yNSAwIDEgMCAxLjI1IDEuMjVBMS4yNSAxLjI1IDAgMCAwIDEyIDE0em0wLTEuNWExIDEgMCAwIDAgMS0xdi0zYTEgMSAwIDAgMC0yIDB2M2ExIDEgMCAwIDAgMSAxek0xMiAyYTEwIDEwIDAgMSAwIDEwIDEwQTEwLjAxMSAxMC4wMTEgMCAwIDAgMTIgMnptMCAxOGE4IDggMCAxIDEgOC04IDguMDEgOC4wMSAwIDAgMS04IDh6IiBmaWxsPSJyZWQiLz48L3N2Zz4=");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTEyIDE0YTEuMjUgMS4yNSAwIDEgMCAxLjI1IDEuMjVBMS4yNSAxLjI1IDAgMCAwIDEyIDE0em0wLTEuNWExIDEgMCAwIDAgMS0xdi0zYTEgMSAwIDAgMC0yIDB2M2ExIDEgMCAwIDAgMSAxek0xMiAyYTEwIDEwIDAgMSAwIDEwIDEwQTEwLjAxMSAxMC4wMTEgMCAwIDAgMTIgMnptMCAxOGE4IDggMCAxIDEgOC04IDguMDEgOC4wMSAwIDAgMS04IDh6IiBmaWxsPSJyZWQiLz48L3N2Zz4="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/logs.svg":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/logs.svg ***!
-  \*****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/favorited.svg":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/favorited.svg ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTMgN2gxOGExIDEgMCAwIDAgMC0ySDNhMSAxIDAgMCAwIDAgMnptMCA0aDE0YTEgMSAwIDAgMCAwLTJIM2ExIDEgMCAwIDAgMCAyem0xOCAySDNhMSAxIDAgMCAwIDAgMmgxOGExIDEgMCAwIDAgMC0yem0tNCA0SDNhMSAxIDAgMCAwIDAgMmgxNGExIDEgMCAwIDAgMC0yeiIgZmlsbD0iIzg1NWNkNiIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjIwcHgiCiAgIGhlaWdodD0iMjBweCIKICAgdmlld0JveD0iMCAwIDIwIDIwIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTpkb2NuYW1lPSJmYXZvcml0ZS1hY3RpdmUuc3ZnIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIxLjMgKDBlMTUwZWQ2YzQsIDIwMjMtMDctMjEpIgogICB4bWw6c3BhY2U9InByZXNlcnZlIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzCiAgICAgaWQ9ImRlZnMyIiAvPjxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0ibmFtZWR2aWV3MiIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiMwMDAwMDAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMC4yNSIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgaW5rc2NhcGU6ZGVza2NvbG9yPSIjZDFkMWQxIgogICAgIGlua3NjYXBlOnpvb209IjE0LjMzNjU5IgogICAgIGlua3NjYXBlOmN4PSI3LjExNDY2MjYiCiAgICAgaW5rc2NhcGU6Y3k9IjEwLjE0ODg1NyIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjE5MjAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTAwOCIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTM2NiIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzIiIC8+PHBhdGgKICAgICBkPSJtIDkuOTk5OTk5OSwxNC45MzM1MDYgLTQuMTAxNDY1OSwyLjQ2OTcgUSA1LjcyMjEyNjksMTcuNTEzNDYxIDUuNTIzNjY4OSwxNy41MDI0MzUgNS4zMjUyMTA5LDE3LjQ5MTQxIDUuMTcwODU0NiwxNy4zODExNTUgNS4wMTY0OTg0LDE3LjI3MDkwMSA0LjkzOTMyMDMsMTcuMDk0NDk0IDQuODYyMTQyMiwxNi45MTgwODcgNC45MDYyNDM5LDE2LjY5NzU3OCBMIDUuOTg2NzM3NiwxMi4wMjI3ODkgMi4zNzAzOTE0LDguODY5NTExNCBRIDIuMTkzOTg0Myw4LjcxNTE1NTEgMi4xNjA5MDc5LDguNTI3NzIyNSAyLjEyNzgzMTYsOC4zNDAyODk5IDIuMTcxOTMzNCw4LjE2Mzg4MjggMi4yMTYwMzUxLDcuOTg3NDc1NyAyLjM3MDM5MTQsNy44NjYxOTU3IDIuNTI0NzQ3Niw3Ljc0NDkxNTggMi43NDUyNTY1LDcuNzIyODY1IEwgNy41MzAzMDAxLDcuMzAzODk4IDkuMzgyNTc1LDIuODkzNzE5NiBxIDAuMDg4MjA0LC0wLjE5ODQ1OCAwLjI2NDYxMDcsLTAuMjk3Njg3IDAuMTc2NDA3MSwtMC4wOTkyMjkgMC4zNTI4MTQyLC0wLjA5OTIyOSAwLjE3NjQwNzEsMCAwLjM1MjgxNDEsMC4wOTkyMjkgMC4xNzY0MDcsMC4wOTkyMjkgMC4yNjQ2MTEsMC4yOTc2ODcgTCAxMi40Njk3LDcuMzAzODk4IDE3LjI1NDc0Myw3LjcyMjg2NSBxIDAuMjIwNTA5LDAuMDIyMDUxIDAuMzc0ODY2LDAuMTQzMzMwNyAwLjE1NDM1NiwwLjEyMTI4IDAuMTk4NDU4LDAuMjk3Njg3MSAwLjA0NDEsMC4xNzY0MDcxIDAuMDExMDMsMC4zNjM4Mzk3IC0wLjAzMzA4LDAuMTg3NDMyNiAtMC4yMDk0ODMsMC4zNDE3ODg5IGwgLTMuNjE2MzQ2LDMuMTUzMjc3NiAxLjA4MDQ5Myw0LjY3NDc4OSBxIDAuMDQ0MSwwLjIyMDUwOSAtMC4wMzMwOCwwLjM5NjkxNiAtMC4wNzcxOCwwLjE3NjQwNyAtMC4yMzE1MzQsMC4yODY2NjEgLTAuMTU0MzU3LDAuMTEwMjU1IC0wLjM1MjgxNSwwLjEyMTI4IC0wLjE5ODQ1OCwwLjAxMTAzIC0wLjM3NDg2NSwtMC4wOTkyMyB6IgogICAgIGlkPSJwYXRoMS0zIgogICAgIHN0eWxlPSJmaWxsOiNmZmJmMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiNjYzk5MDA7c3Ryb2tlLXdpZHRoOjEuNTY1NjE7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIiAvPjwvc3ZnPgo="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/performance.svg":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/performance.svg ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/favorites.svg":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/favorites.svg ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjxwYXRoIHN0cm9rZT0iIzg1NWNkNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik05IDE5di02YTIgMiAwIDAgMC0yLTJINWEyIDIgMCAwIDAtMiAydjZhMiAyIDAgMCAwIDIgMmgyYTIgMiAwIDAgMCAyLTJ6bTAgMFY5YTIgMiAwIDAgMSAyLTJoMmEyIDIgMCAwIDEgMiAydjEwbS02IDBhMiAyIDAgMCAwIDIgMmgyYTIgMiAwIDAgMCAyLTJtMCAwVjVhMiAyIDAgMCAxIDItMmgyYTIgMiAwIDAgMSAyIDJ2MTRhMiAyIDAgMCAxLTIgMmgtMmEyIDIgMCAwIDEtMi0yeiIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjIwcHgiCiAgIGhlaWdodD0iMjBweCIKICAgdmlld0JveD0iMCAwIDIwIDIwIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTpkb2NuYW1lPSJmYXZvcml0ZS1pbmFjdGl2ZS5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMyAoMGUxNTBlZDZjNCwgMjAyMy0wNy0yMSkiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnMKICAgICBpZD0iZGVmczIiIC8+PHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJuYW1lZHZpZXcyIgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzAwMDAwMCIKICAgICBib3JkZXJvcGFjaXR5PSIwLjI1IgogICAgIGlua3NjYXBlOnNob3dwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0iMCIKICAgICBpbmtzY2FwZTpkZXNrY29sb3I9IiNkMWQxZDEiCiAgICAgaW5rc2NhcGU6em9vbT0iMTQuMzM2NTkiCiAgICAgaW5rc2NhcGU6Y3g9IjcuMDQ0OTExIgogICAgIGlua3NjYXBlOmN5PSIxMC4xNDg4NTciCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMDgiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjEzNjYiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmcyIiAvPjxwYXRoCiAgICAgZD0ibSA5Ljk5OTk5OTksMTQuOTMzNTA2IC00LjEwMTQ2NTksMi40Njk3IFEgNS43MjIxMjY5LDE3LjUxMzQ2MSA1LjUyMzY2ODksMTcuNTAyNDM1IDUuMzI1MjEwOSwxNy40OTE0MSA1LjE3MDg1NDYsMTcuMzgxMTU1IDUuMDE2NDk4NCwxNy4yNzA5MDEgNC45MzkzMjAzLDE3LjA5NDQ5NCA0Ljg2MjE0MjIsMTYuOTE4MDg3IDQuOTA2MjQzOSwxNi42OTc1NzggTCA1Ljk4NjczNzYsMTIuMDIyNzg5IDIuMzcwMzkxNCw4Ljg2OTUxMTQgUSAyLjE5Mzk4NDMsOC43MTUxNTUxIDIuMTYwOTA3OSw4LjUyNzcyMjUgMi4xMjc4MzE2LDguMzQwMjg5OSAyLjE3MTkzMzQsOC4xNjM4ODI4IDIuMjE2MDM1MSw3Ljk4NzQ3NTcgMi4zNzAzOTE0LDcuODY2MTk1NyAyLjUyNDc0NzYsNy43NDQ5MTU4IDIuNzQ1MjU2NSw3LjcyMjg2NSBMIDcuNTMwMzAwMSw3LjMwMzg5OCA5LjM4MjU3NSwyLjg5MzcxOTYgcSAwLjA4ODIwNCwtMC4xOTg0NTggMC4yNjQ2MTA3LC0wLjI5NzY4NyAwLjE3NjQwNzEsLTAuMDk5MjI5IDAuMzUyODE0MiwtMC4wOTkyMjkgMC4xNzY0MDcxLDAgMC4zNTI4MTQxLDAuMDk5MjI5IDAuMTc2NDA3LDAuMDk5MjI5IDAuMjY0NjExLDAuMjk3Njg3IEwgMTIuNDY5Nyw3LjMwMzg5OCAxNy4yNTQ3NDMsNy43MjI4NjUgcSAwLjIyMDUwOSwwLjAyMjA1MSAwLjM3NDg2NiwwLjE0MzMzMDcgMC4xNTQzNTYsMC4xMjEyOCAwLjE5ODQ1OCwwLjI5NzY4NzEgMC4wNDQxLDAuMTc2NDA3MSAwLjAxMTAzLDAuMzYzODM5NyAtMC4wMzMwOCwwLjE4NzQzMjYgLTAuMjA5NDgzLDAuMzQxNzg4OSBsIC0zLjYxNjM0NiwzLjE1MzI3NzYgMS4wODA0OTMsNC42NzQ3ODkgcSAwLjA0NDEsMC4yMjA1MDkgLTAuMDMzMDgsMC4zOTY5MTYgLTAuMDc3MTgsMC4xNzY0MDcgLTAuMjMxNTM0LDAuMjg2NjYxIC0wLjE1NDM1NywwLjExMDI1NSAtMC4zNTI4MTUsMC4xMjEyOCAtMC4xOTg0NTgsMC4wMTEwMyAtMC4zNzQ4NjUsLTAuMDk5MjMgeiIKICAgICBpZD0icGF0aDEtMyIKICAgICBzdHlsZT0iZmlsbDojODE4N2ExO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojNTc1ZTc1O3N0cm9rZS13aWR0aDoxLjU2NTYxO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIgLz48L3N2Zz4K"
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/play.svg":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/play.svg ***!
-  \*****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/logs.svg":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/logs.svg ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNTIiIHZpZXdCb3g9Ii01IDAgNDkgNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0xNy4yMjEgOC4zNDVjMi41NTYtNC4yNTkgNi43MDItNC4yNTIgOS4yNTQgMGwxMy42NzcgMjIuNzk2YzIuNTU1IDQuMjU4LjU5NyA3LjcxLTQuMzggNy43MUg3LjkyNGMtNC45NzMgMC02LjkzLTMuNDU4LTQuMzgtNy43MUwxNy4yMjIgOC4zNDV6IiBpZD0iYSIvPjwvZGVmcz48dXNlIHN0cm9rZT0iI0ZGRiIgZmlsbD0iI0ZGRiIgeGxpbms6aHJlZj0iI2EiIHRyYW5zZm9ybT0icm90YXRlKDkwIDIwLjg1IDIzLjAwMykiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTMgN2gxOGExIDEgMCAwIDAgMC0ySDNhMSAxIDAgMCAwIDAgMnptMCA0aDE0YTEgMSAwIDAgMCAwLTJIM2ExIDEgMCAwIDAgMCAyem0xOCAySDNhMSAxIDAgMCAwIDAgMmgxOGExIDEgMCAwIDAgMC0yem0tNCA0SDNhMSAxIDAgMCAwIDAgMmgxNGExIDEgMCAwIDAgMC0yeiIgZmlsbD0iIzg1NWNkNiIvPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/step.svg":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/step.svg ***!
-  \*****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/performance.svg":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/performance.svg ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjIuNjggMTIuMmExLjYgMS42IDAgMCAxLTEuMjcuNjNoLTcuNjlhMS41OSAxLjU5IDAgMCAxLTEuMTYtMi41OGwxLjEyLTEuNDFhNC44MiA0LjgyIDAgMCAwLTMuMTQtLjc3IDQuMzEgNC4zMSAwIDAgMC0yIC44QTQuMjUgNC4yNSAwIDAgMCA3LjIgMTAuNmE1LjA2IDUuMDYgMCAwIDAgLjU0IDQuNjJBNS41OCA1LjU4IDAgMCAwIDEyIDE3Ljc0YTIuMjYgMi4yNiAwIDAgMS0uMTYgNC41MkExMC4yNSAxMC4yNSAwIDAgMSAzLjc0IDE4YTEwLjE0IDEwLjE0IDAgMCAxLTEuNDktOS4yMiA5LjcgOS43IDAgMCAxIDIuODMtNC4xNEE5LjkyIDkuOTIgMCAwIDEgOS42NiAyLjVhMTAuNjYgMTAuNjYgMCAwIDEgNy43MiAxLjY4bDEuMDgtMS4zNWExLjU3IDEuNTcgMCAwIDEgMS4yNC0uNiAxLjYgMS42IDAgMCAxIDEuNTQgMS4yMWwxLjcgNy4zN2ExLjU3IDEuNTcgMCAwIDEtLjI2IDEuMzlaIiBzdHlsZT0iZmlsbDojZmZmIi8+PHBhdGggZD0iTTIxLjM4IDExLjgzaC03LjYxYS41OS41OSAwIDAgMS0uNDMtMWwxLjc1LTIuMTlhNS45IDUuOSAwIDAgMC00LjctMS41OCA1LjA3IDUuMDcgMCAwIDAtNC4xMSAzLjE3QTYgNiAwIDAgMCA3IDE1Ljc3YTYuNTEgNi41MSAwIDAgMCA1IDIuOTIgMS4zMSAxLjMxIDAgMCAxLS4wOCAyLjYyIDkuMyA5LjMgMCAwIDEtNy4zNS0zLjgyIDkuMTYgOS4xNiAwIDAgMS0xLjQtOC4zN0E4LjUxIDguNTEgMCAwIDEgNS43MSA1LjRhOC43NiA4Ljc2IDAgMCAxIDQuMTEtMS45MiA5LjcxIDkuNzEgMCAwIDEgNy43NSAyLjA3bDEuNjctMi4xYS41OS41OSAwIDAgMSAxIC4yMUwyMiAxMS4wOGEuNTkuNTkgMCAwIDEtLjYyLjc1WiIgc3R5bGU9ImZpbGw6I2ZmZiIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjxwYXRoIHN0cm9rZT0iIzg1NWNkNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik05IDE5di02YTIgMiAwIDAgMC0yLTJINWEyIDIgMCAwIDAtMiAydjZhMiAyIDAgMCAwIDIgMmgyYTIgMiAwIDAgMCAyLTJ6bTAgMFY5YTIgMiAwIDAgMSAyLTJoMmEyIDIgMCAwIDEgMiAydjEwbS02IDBhMiAyIDAgMCAwIDIgMmgyYTIgMiAwIDAgMCAyLTJtMCAwVjVhMiAyIDAgMCAxIDItMmgyYTIgMiAwIDAgMSAyIDJ2MTRhMiAyIDAgMCAxLTIgMmgtMmEyIDIgMCAwIDEtMi0yeiIvPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/subthread.svg":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/subthread.svg ***!
-  \**********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/play.svg":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/play.svg ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTIwLjkyIDEyLjYyYTEgMSAwIDAgMC0uMjEtLjMzbC0zLTNhMSAxIDAgMCAwLTEuNDIgMS40MmwxLjMgMS4yOUg4YTEgMSAwIDAgMS0xLTFWN2ExIDEgMCAwIDAtMiAwdjRhMyAzIDAgMCAwIDMgM2g5LjU5bC0xLjMgMS4yOWExIDEgMCAwIDAgMCAxLjQyIDEgMSAwIDAgMCAxLjQyIDBsMy0zYTEgMSAwIDAgMCAuMjEtLjMzIDEgMSAwIDAgMCAwLS43NnoiIGZpbGw9ImdyYXkiLz48L3N2Zz4=");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNTIiIHZpZXdCb3g9Ii01IDAgNDkgNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0xNy4yMjEgOC4zNDVjMi41NTYtNC4yNTkgNi43MDItNC4yNTIgOS4yNTQgMGwxMy42NzcgMjIuNzk2YzIuNTU1IDQuMjU4LjU5NyA3LjcxLTQuMzggNy43MUg3LjkyNGMtNC45NzMgMC02LjkzLTMuNDU4LTQuMzgtNy43MUwxNy4yMjIgOC4zNDV6IiBpZD0iYSIvPjwvZGVmcz48dXNlIHN0cm9rZT0iI0ZGRiIgZmlsbD0iI0ZGRiIgeGxpbms6aHJlZj0iI2EiIHRyYW5zZm9ybT0icm90YXRlKDkwIDIwLjg1IDIzLjAwMykiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/threads.svg":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/threads.svg ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/step.svg":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/step.svg ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTE5IDJIOWEzIDMgMCAwIDAtMyAzdjFINWEzIDMgMCAwIDAtMyAzdjEwYTMgMyAwIDAgMCAzIDNoMTBhMyAzIDAgMCAwIDMtM3YtMWgxYTMgMyAwIDAgMCAzLTNWNWEzIDMgMCAwIDAtMy0zem0tMyAxN2ExIDEgMCAwIDEtMSAxSDVhMSAxIDAgMCAxLTEtMXYtN2gxMnptMC05SDRWOWExIDEgMCAwIDEgMS0xaDEwYTEgMSAwIDAgMSAxIDF6bTQgNWExIDEgMCAwIDEtMSAxaC0xVjlhMyAzIDAgMCAwLS4xOC0xSDIwem0wLTlIOFY1YTEgMSAwIDAgMSAxLTFoMTBhMSAxIDAgMCAxIDEgMXoiIGZpbGw9IiM4NTVjZDYiLz48L3N2Zz4=");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjIuNjggMTIuMmExLjYgMS42IDAgMCAxLTEuMjcuNjNoLTcuNjlhMS41OSAxLjU5IDAgMCAxLTEuMTYtMi41OGwxLjEyLTEuNDFhNC44MiA0LjgyIDAgMCAwLTMuMTQtLjc3IDQuMzEgNC4zMSAwIDAgMC0yIC44QTQuMjUgNC4yNSAwIDAgMCA3LjIgMTAuNmE1LjA2IDUuMDYgMCAwIDAgLjU0IDQuNjJBNS41OCA1LjU4IDAgMCAwIDEyIDE3Ljc0YTIuMjYgMi4yNiAwIDAgMS0uMTYgNC41MkExMC4yNSAxMC4yNSAwIDAgMSAzLjc0IDE4YTEwLjE0IDEwLjE0IDAgMCAxLTEuNDktOS4yMiA5LjcgOS43IDAgMCAxIDIuODMtNC4xNEE5LjkyIDkuOTIgMCAwIDEgOS42NiAyLjVhMTAuNjYgMTAuNjYgMCAwIDEgNy43MiAxLjY4bDEuMDgtMS4zNWExLjU3IDEuNTcgMCAwIDEgMS4yNC0uNiAxLjYgMS42IDAgMCAxIDEuNTQgMS4yMWwxLjcgNy4zN2ExLjU3IDEuNTcgMCAwIDEtLjI2IDEuMzlaIiBzdHlsZT0iZmlsbDojZmZmIi8+PHBhdGggZD0iTTIxLjM4IDExLjgzaC03LjYxYS41OS41OSAwIDAgMS0uNDMtMWwxLjc1LTIuMTlhNS45IDUuOSAwIDAgMC00LjctMS41OCA1LjA3IDUuMDcgMCAwIDAtNC4xMSAzLjE3QTYgNiAwIDAgMCA3IDE1Ljc3YTYuNTEgNi41MSAwIDAgMCA1IDIuOTIgMS4zMSAxLjMxIDAgMCAxLS4wOCAyLjYyIDkuMyA5LjMgMCAwIDEtNy4zNS0zLjgyIDkuMTYgOS4xNiAwIDAgMS0xLjQtOC4zN0E4LjUxIDguNTEgMCAwIDEgNS43MSA1LjRhOC43NiA4Ljc2IDAgMCAxIDQuMTEtMS45MiA5LjcxIDkuNzEgMCAwIDEgNy43NSAyLjA3bDEuNjctMi4xYS41OS41OSAwIDAgMSAxIC4yMUwyMiAxMS4wOGEuNTkuNTkgMCAwIDEtLjYyLjc1WiIgc3R5bGU9ImZpbGw6I2ZmZiIvPjwvc3ZnPg=="
 
 /***/ }),
 
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/warning.svg":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/warning.svg ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/subthread.svg":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/subthread.svg ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTEyIDE2YTEgMSAwIDEgMCAxIDEgMSAxIDAgMCAwLTEtMXptMTAuNjcgMS40Ny04LjA1LTE0YTMgMyAwIDAgMC01LjI0IDBsLTggMTRBMyAzIDAgMCAwIDMuOTQgMjJoMTYuMTJhMyAzIDAgMCAwIDIuNjEtNC41M3ptLTEuNzMgMmExIDEgMCAwIDEtLjg4LjUxSDMuOTRhMSAxIDAgMCAxLS44OC0uNTEgMSAxIDAgMCAxIDAtMWw4LTE0YTEgMSAwIDAgMSAxLjc4IDBsOC4wNSAxNGExIDEgMCAwIDEgLjA1IDEuMDJ6TTEyIDhhMSAxIDAgMCAwLTEgMXY0YTEgMSAwIDAgMCAyIDBWOWExIDEgMCAwIDAtMS0xeiIgZmlsbD0iI2UwYmIwMCIvPjwvc3ZnPg==");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTIwLjkyIDEyLjYyYTEgMSAwIDAgMC0uMjEtLjMzbC0zLTNhMSAxIDAgMCAwLTEuNDIgMS40MmwxLjMgMS4yOUg4YTEgMSAwIDAgMS0xLTFWN2ExIDEgMCAwIDAtMiAwdjRhMyAzIDAgMCAwIDMgM2g5LjU5bC0xLjMgMS4yOWExIDEgMCAwIDAgMCAxLjQyIDEgMSAwIDAgMCAxLjQyIDBsMy0zYTEgMSAwIDAgMCAuMjEtLjMzIDEgMSAwIDAgMCAwLS43NnoiIGZpbGw9ImdyYXkiLz48L3N2Zz4="
+
+/***/ }),
+
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/threads.svg":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/threads.svg ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTE5IDJIOWEzIDMgMCAwIDAtMyAzdjFINWEzIDMgMCAwIDAtMyAzdjEwYTMgMyAwIDAgMCAzIDNoMTBhMyAzIDAgMCAwIDMtM3YtMWgxYTMgMyAwIDAgMCAzLTNWNWEzIDMgMCAwIDAtMy0zem0tMyAxN2ExIDEgMCAwIDEtMSAxSDVhMSAxIDAgMCAxLTEtMXYtN2gxMnptMC05SDRWOWExIDEgMCAwIDEgMS0xaDEwYTEgMSAwIDAgMSAxIDF6bTQgNWExIDEgMCAwIDEtMSAxaC0xVjlhMyAzIDAgMCAwLS4xOC0xSDIwem0wLTlIOFY1YTEgMSAwIDAgMSAxLTFoMTBhMSAxIDAgMCAxIDEgMXoiIGZpbGw9IiM4NTVjZDYiLz48L3N2Zz4="
+
+/***/ }),
+
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/variables.svg":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/variables.svg ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgc3R5bGU9Ii1tcy10cmFuc2Zvcm06cm90YXRlKDM2MGRlZyk7LXdlYmtpdC10cmFuc2Zvcm06cm90YXRlKDM2MGRlZyk7dHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTQuNjQ5IDMuMDg0QTEgMSAwIDAgMSA1LjE2MyA0LjQgMTMuOTUgMTMuOTUgMCAwIDAgNCAxMGMwIDEuOTkzLjQxNiAzLjg4NiAxLjE2NCA1LjZhMSAxIDAgMCAxLTEuODMyLjhBMTUuOTUgMTUuOTUgMCAwIDEgMiAxMGMwLTIuMjc0LjQ3NS00LjQ0IDEuMzMyLTYuNGExIDEgMCAwIDEgMS4zMTctLjUxNnpNMTIuOTYgN2EzIDMgMCAwIDAtMi4zNDIgMS4xMjZsLS4zMjguNDEtLjExMS0uMjc5QTIgMiAwIDAgMCA4LjMyMyA3SDhhMSAxIDAgMCAwIDAgMmguMzIzbC41MzIgMS4zMy0xLjAzNSAxLjI5NWExIDEgMCAwIDEtLjc4MS4zNzVIN2ExIDEgMCAxIDAgMCAyaC4wMzlhMyAzIDAgMCAwIDIuMzQyLTEuMTI2bC4zMjgtLjQxLjExMS4yNzlBMiAyIDAgMCAwIDExLjY3NyAxNEgxMmExIDEgMCAxIDAgMC0yaC0uMzIzbC0uNTMyLTEuMzMgMS4wMzUtMS4yOTVBMSAxIDAgMCAxIDEyLjk2MSA5SDEzYTEgMSAwIDEgMCAwLTJoLS4wMzl6bTEuODc0LTIuNmExIDEgMCAwIDEgMS44MzMtLjhBMTUuOTUgMTUuOTUgMCAwIDEgMTggMTBjMCAyLjI3NC0uNDc1IDQuNDQtMS4zMzIgNi40YTEgMSAwIDEgMS0xLjgzMi0uOEExMy45NDkgMTMuOTQ5IDAgMCAwIDE2IDEwYzAtMS45OTMtLjQxNi0zLjg4Ni0xLjE2NS01LjZ6IiBmaWxsPSIjODU1Y2Q2Ii8+PHBhdGggZmlsbD0icmdiYSgwLCAwLCAwLCAwKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvc3ZnPg=="
+
+/***/ }),
+
+/***/ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/warning.svg":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js?{"esModule":false}!./src/addons/addons/debugger/icons/warning.svg ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTEyIDE2YTEgMSAwIDEgMCAxIDEgMSAxIDAgMCAwLTEtMXptMTAuNjcgMS40Ny04LjA1LTE0YTMgMyAwIDAgMC01LjI0IDBsLTggMTRBMyAzIDAgMCAwIDMuOTQgMjJoMTYuMTJhMyAzIDAgMCAwIDIuNjEtNC41M3ptLTEuNzMgMmExIDEgMCAwIDEtLjg4LjUxSDMuOTRhMSAxIDAgMCAxLS44OC0uNTEgMSAxIDAgMCAxIDAtMWw4LTE0YTEgMSAwIDAgMSAxLjc4IDBsOC4wNSAxNGExIDEgMCAwIDEgLjA1IDEuMDJ6TTEyIDhhMSAxIDAgMCAwLTEgMXY0YTEgMSAwIDAgMCAyIDBWOWExIDEgMCAwIDAtMS0xeiIgZmlsbD0iI2UwYmIwMCIvPjwvc3ZnPg=="
 
 /***/ }),
 
@@ -206,21 +215,42 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
 /* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/debugger/userscript.js");
-/* harmony import */ var _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./style.css */ "./node_modules/css-loader/index.js!./src/addons/addons/debugger/style.css");
-/* harmony import */ var _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_style_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _url_loader_icons_close_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader!./icons/close.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/close.svg");
-/* harmony import */ var _url_loader_icons_debug_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! url-loader!./icons/debug.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/debug.svg");
-/* harmony import */ var _url_loader_icons_delete_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! url-loader!./icons/delete.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/delete.svg");
-/* harmony import */ var _url_loader_icons_download_white_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! url-loader!./icons/download-white.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/download-white.svg");
-/* harmony import */ var _url_loader_icons_error_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! url-loader!./icons/error.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/error.svg");
-/* harmony import */ var _url_loader_icons_logs_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! url-loader!./icons/logs.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/logs.svg");
-/* harmony import */ var _url_loader_icons_performance_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! url-loader!./icons/performance.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/performance.svg");
-/* harmony import */ var _url_loader_icons_play_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! url-loader!./icons/play.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/play.svg");
-/* harmony import */ var _url_loader_icons_step_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! url-loader!./icons/step.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/step.svg");
-/* harmony import */ var _url_loader_icons_subthread_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! url-loader!./icons/subthread.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/subthread.svg");
-/* harmony import */ var _url_loader_icons_threads_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! url-loader!./icons/threads.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/threads.svg");
-/* harmony import */ var _url_loader_icons_warning_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! url-loader!./icons/warning.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/debugger/icons/warning.svg");
+/* harmony import */ var _css_loader_esModule_false_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader?{"esModule":false}!./style.css */ "./node_modules/css-loader/index.js?{\"esModule\":false}!./src/addons/addons/debugger/style.css");
+/* harmony import */ var _css_loader_esModule_false_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_esModule_false_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _url_loader_esModule_false_icons_close_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/close.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/close.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_close_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_close_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _url_loader_esModule_false_icons_debug_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/debug.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/debug.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_debug_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_debug_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _url_loader_esModule_false_icons_delete_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/delete.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/delete.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_delete_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_delete_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _url_loader_esModule_false_icons_download_white_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/download-white.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/download-white.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_download_white_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_download_white_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _url_loader_esModule_false_icons_error_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/error.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/error.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_error_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_error_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _url_loader_esModule_false_icons_logs_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/logs.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/logs.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_logs_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_logs_svg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _url_loader_esModule_false_icons_performance_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/performance.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/performance.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_performance_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_performance_svg__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _url_loader_esModule_false_icons_play_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/play.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/play.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_play_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_play_svg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _url_loader_esModule_false_icons_step_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/step.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/step.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_step_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_step_svg__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _url_loader_esModule_false_icons_subthread_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/subthread.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/subthread.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_subthread_svg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_subthread_svg__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _url_loader_esModule_false_icons_threads_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/threads.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/threads.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_threads_svg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_threads_svg__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _url_loader_esModule_false_icons_warning_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/warning.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/warning.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_warning_svg__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_warning_svg__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _url_loader_esModule_false_icons_variables_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/variables.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/variables.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_variables_svg__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_variables_svg__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _url_loader_esModule_false_icons_favorites_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/favorites.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/favorites.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_favorites_svg__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_favorites_svg__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _url_loader_esModule_false_icons_favorited_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! url-loader?{"esModule":false}!./icons/favorited.svg */ "./node_modules/url-loader/dist/cjs.js?{\"esModule\":false}!./src/addons/addons/debugger/icons/favorited.svg");
+/* harmony import */ var _url_loader_esModule_false_icons_favorited_svg__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_url_loader_esModule_false_icons_favorited_svg__WEBPACK_IMPORTED_MODULE_16__);
 /* generated by pull.js */
+
+
+
 
 
 
@@ -237,19 +267,22 @@ __webpack_require__.r(__webpack_exports__);
 
 const resources = {
   "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  "style.css": _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1___default.a,
-  "icons/close.svg": _url_loader_icons_close_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-  "icons/debug.svg": _url_loader_icons_debug_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
-  "icons/delete.svg": _url_loader_icons_delete_svg__WEBPACK_IMPORTED_MODULE_4__["default"],
-  "icons/download-white.svg": _url_loader_icons_download_white_svg__WEBPACK_IMPORTED_MODULE_5__["default"],
-  "icons/error.svg": _url_loader_icons_error_svg__WEBPACK_IMPORTED_MODULE_6__["default"],
-  "icons/logs.svg": _url_loader_icons_logs_svg__WEBPACK_IMPORTED_MODULE_7__["default"],
-  "icons/performance.svg": _url_loader_icons_performance_svg__WEBPACK_IMPORTED_MODULE_8__["default"],
-  "icons/play.svg": _url_loader_icons_play_svg__WEBPACK_IMPORTED_MODULE_9__["default"],
-  "icons/step.svg": _url_loader_icons_step_svg__WEBPACK_IMPORTED_MODULE_10__["default"],
-  "icons/subthread.svg": _url_loader_icons_subthread_svg__WEBPACK_IMPORTED_MODULE_11__["default"],
-  "icons/threads.svg": _url_loader_icons_threads_svg__WEBPACK_IMPORTED_MODULE_12__["default"],
-  "icons/warning.svg": _url_loader_icons_warning_svg__WEBPACK_IMPORTED_MODULE_13__["default"]
+  "style.css": _css_loader_esModule_false_style_css__WEBPACK_IMPORTED_MODULE_1___default.a,
+  "icons/close.svg": _url_loader_esModule_false_icons_close_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
+  "icons/debug.svg": _url_loader_esModule_false_icons_debug_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
+  "icons/delete.svg": _url_loader_esModule_false_icons_delete_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+  "icons/download-white.svg": _url_loader_esModule_false_icons_download_white_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+  "icons/error.svg": _url_loader_esModule_false_icons_error_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+  "icons/logs.svg": _url_loader_esModule_false_icons_logs_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
+  "icons/performance.svg": _url_loader_esModule_false_icons_performance_svg__WEBPACK_IMPORTED_MODULE_8___default.a,
+  "icons/play.svg": _url_loader_esModule_false_icons_play_svg__WEBPACK_IMPORTED_MODULE_9___default.a,
+  "icons/step.svg": _url_loader_esModule_false_icons_step_svg__WEBPACK_IMPORTED_MODULE_10___default.a,
+  "icons/subthread.svg": _url_loader_esModule_false_icons_subthread_svg__WEBPACK_IMPORTED_MODULE_11___default.a,
+  "icons/threads.svg": _url_loader_esModule_false_icons_threads_svg__WEBPACK_IMPORTED_MODULE_12___default.a,
+  "icons/warning.svg": _url_loader_esModule_false_icons_warning_svg__WEBPACK_IMPORTED_MODULE_13___default.a,
+  "icons/variables.svg": _url_loader_esModule_false_icons_variables_svg__WEBPACK_IMPORTED_MODULE_14___default.a,
+  "icons/favorites.svg": _url_loader_esModule_false_icons_favorites_svg__WEBPACK_IMPORTED_MODULE_15___default.a,
+  "icons/favorited.svg": _url_loader_esModule_false_icons_favorited_svg__WEBPACK_IMPORTED_MODULE_16___default.a
 };
 
 /***/ }),
@@ -262,6 +295,17 @@ const resources = {
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSItbXMtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpOy13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKSI+PHBhdGggZD0iTTEyIDE0YTEuMjUgMS4yNSAwIDEgMCAxLjI1IDEuMjVBMS4yNSAxLjI1IDAgMCAwIDEyIDE0em0wLTEuNWExIDEgMCAwIDAgMS0xdi0zYTEgMSAwIDAgMC0yIDB2M2ExIDEgMCAwIDAgMSAxek0xMiAyYTEwIDEwIDAgMSAwIDEwIDEwQTEwLjAxMSAxMC4wMTEgMCAwIDAgMTIgMnptMCAxOGE4IDggMCAxIDEgOC04IDguMDEgOC4wMSAwIDAgMS04IDh6IiBmaWxsPSJyZWQiLz48L3N2Zz4="
+
+/***/ }),
+
+/***/ "./src/addons/addons/debugger/icons/search.svg":
+/*!*****************************************************!*\
+  !*** ./src/addons/addons/debugger/icons/search.svg ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZD0iTTE1LjUgMTRoLS43OWwtLjI4LS4yN0E2LjQ3MSA2LjQ3MSAwIDAgMCAxNiA5LjUgNi41IDYuNSAwIDEgMCA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIgZmlsbD0iI0QzRDNEMyIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4="
 
 /***/ }),
 
@@ -940,7 +984,7 @@ async function createThreadsTab(_ref) {
   logView.canAutoScrollToEnd = false;
   logView.outerElement.classList.add("sa-debugger-threads");
   logView.placeholderElement.textContent = msg("no-threads-running");
-  const highlighter = new _editor_stepping_highlighter_js__WEBPACK_IMPORTED_MODULE_2__["default"](10, "#ff0000");
+  const highlighter = new _editor_stepping_highlighter_js__WEBPACK_IMPORTED_MODULE_2__["default"](10, "#ff1111");
   logView.generateRow = row => {
     const root = document.createElement("div");
     root.className = "sa-debugger-log";
@@ -1164,8 +1208,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _logs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logs.js */ "./src/addons/addons/debugger/logs.js");
 /* harmony import */ var _threads_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./threads.js */ "./src/addons/addons/debugger/threads.js");
 /* harmony import */ var _performance_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./performance.js */ "./src/addons/addons/debugger/performance.js");
-/* harmony import */ var _find_bar_blockly_Utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../find-bar/blockly/Utils.js */ "./src/addons/addons/find-bar/blockly/Utils.js");
-/* harmony import */ var _libraries_common_cs_small_stage_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../libraries/common/cs/small-stage.js */ "./src/addons/libraries/common/cs/small-stage.js");
+/* harmony import */ var _variables_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./variables.js */ "./src/addons/addons/debugger/variables.js");
+/* harmony import */ var _find_bar_blockly_Utils_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../find-bar/blockly/Utils.js */ "./src/addons/addons/find-bar/blockly/Utils.js");
+/* harmony import */ var _libraries_common_cs_small_stage_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../libraries/common/cs/small-stage.js */ "./src/addons/libraries/common/cs/small-stage.js");
+
 
 
 
@@ -1285,7 +1331,7 @@ const removeAllChildren = element => {
     });
   });
   compilerWarning.className = "sa-debugger-log sa-debugger-compiler-warning";
-  compilerWarning.textContent = "The debugger works best when the compiler is disabled.";
+  compilerWarning.textContent = msg("compiler-warning");
   const updateCompilerWarningVisibility = () => {
     compilerWarning.hidden = !vm.runtime.compilerOptions.enabled;
   };
@@ -1301,10 +1347,11 @@ const removeAllChildren = element => {
       activeTab.hide();
     }
   };
-  let mouseOffsetX = 0;
-  let mouseOffsetY = 0;
-  let lastX = 0;
-  let lastY = 0;
+  let mouseOffsetX = 50;
+  let mouseOffsetY = 50;
+  let lastX = window.innerWidth / 2;
+  let lastY = window.innerHeight / 2;
+  let hasBeenDragged = false;
   const handleStartDrag = e => {
     e.preventDefault();
     mouseOffsetX = e.clientX - interfaceContainer.offsetLeft;
@@ -1330,10 +1377,13 @@ const removeAllChildren = element => {
   };
   const handleDragInterface = e => {
     e.preventDefault();
+    hasBeenDragged = true;
     moveInterface(e.clientX, e.clientY);
   };
   window.addEventListener("resize", () => {
-    moveInterface(lastX, lastY);
+    if (hasBeenDragged) {
+      moveInterface(lastX, lastY);
+    }
   });
   interfaceHeader.addEventListener("mousedown", handleStartDrag);
   interfaceHeader.append(tabListElement, buttonContainerElement);
@@ -1481,7 +1531,7 @@ const removeAllChildren = element => {
 
     // Don't scroll to blocks in the flyout
     if (block.workspace.isFlyout) return;
-    new _find_bar_blockly_Utils_js__WEBPACK_IMPORTED_MODULE_4__["default"](addon).scrollBlockIntoView(blockId);
+    new _find_bar_blockly_Utils_js__WEBPACK_IMPORTED_MODULE_5__["default"](addon).scrollBlockIntoView(blockId);
   };
 
   /**
@@ -1649,7 +1699,8 @@ const removeAllChildren = element => {
   logsTab = await Object(_logs_js__WEBPACK_IMPORTED_MODULE_1__["default"])(api);
   const threadsTab = await Object(_threads_js__WEBPACK_IMPORTED_MODULE_2__["default"])(api);
   const performanceTab = await Object(_performance_js__WEBPACK_IMPORTED_MODULE_3__["default"])(api);
-  const allTabs = [logsTab, threadsTab, performanceTab];
+  const variablesTab = await Object(_variables_js__WEBPACK_IMPORTED_MODULE_4__["default"])(api);
+  const allTabs = [logsTab, threadsTab, performanceTab, variablesTab];
   for (const message of messagesLoggedBeforeLogsTabLoaded) {
     logsTab.addLog(...message);
   }
@@ -1683,7 +1734,7 @@ const removeAllChildren = element => {
     tabListElement.appendChild(tab.tab.element);
   }
   setActiveTab(allTabs[0]);
-  Object(_libraries_common_cs_small_stage_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  Object(_libraries_common_cs_small_stage_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
   const ogGreenFlag = vm.runtime.greenFlag;
   vm.runtime.greenFlag = function () {
     if (addon.settings.get("log_clear_greenflag")) {
@@ -1744,6 +1795,387 @@ const removeAllChildren = element => {
     }
   }
 });
+
+/***/ }),
+
+/***/ "./src/addons/addons/debugger/variables.js":
+/*!*************************************************!*\
+  !*** ./src/addons/addons/debugger/variables.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return createVariablesTab; });
+async function createVariablesTab(_ref) {
+  let debug = _ref.debug,
+    addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
+  const vm = addon.tab.traps.vm;
+  const tab = debug.createHeaderTab({
+    text: msg("tab-variables"),
+    icon: addon.self.getResource("/icons/variables.svg") /* rewritten by pull.js */
+  });
+
+  // 收藏状态管理
+  const STORAGE_KEY = "tw:debugger-favorites";
+  const getFavorites = () => {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      try {
+        return JSON.parse(stored);
+      } catch (e) {
+        return [];
+      }
+    }
+    return [];
+  };
+  const setFavorites = favorites => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
+  };
+  const isFavorite = variableId => getFavorites().includes(variableId);
+  const toggleFavorite = variableId => {
+    const favorites = getFavorites();
+    const index = favorites.indexOf(variableId);
+    if (index === -1) {
+      favorites.push(variableId);
+    } else {
+      favorites.splice(index, 1);
+    }
+    setFavorites(favorites);
+    return index === -1;
+  };
+  const content = document.createElement("div");
+  content.className = "sa-debugger-variables";
+  const searchBox = document.createElement("input");
+  searchBox.placeholder = msg("search");
+  searchBox.className = "sa-debugger-variables-searchbox";
+  searchBox.addEventListener("input", e => {
+    for (const variable of localVariables) {
+      variable.handleSearch(searchBox.value);
+    }
+    for (const variable of globalVariables) {
+      variable.handleSearch(searchBox.value);
+    }
+    updateHeadingVisibility();
+  });
+  content.appendChild(searchBox);
+  const localVars = document.createElement("div");
+  const localHeading = document.createElement("span");
+  const localList = document.createElement("table");
+  localHeading.className = "sa-debugger-variables-heading";
+  localHeading.innerText = msg("for-this-sprite");
+  localVars.appendChild(localHeading);
+  localVars.appendChild(localList);
+  const globalVars = document.createElement("div");
+  const globalHeading = document.createElement("span");
+  const globalList = document.createElement("table");
+  globalHeading.className = "sa-debugger-variables-heading";
+  globalHeading.innerText = msg("for-all-sprites");
+  globalVars.appendChild(globalHeading);
+  globalVars.appendChild(globalList);
+  content.appendChild(localVars);
+  content.appendChild(globalVars);
+  let localVariables = [];
+  let globalVariables = [];
+  let preventUpdate = false;
+  function updateHeadingVisibility() {
+    let filteredLocals = localVariables.filter(v => v.row.style.display !== "none");
+    let filteredGlobals = globalVariables.filter(v => v.row.style.display !== "none");
+    localHeading.style.display = filteredLocals.length === 0 ? "none" : "";
+    globalHeading.style.display = filteredGlobals.length === 0 ? "none" : "";
+  }
+  const rowToVariableMap = new WeakMap();
+  const observer = new IntersectionObserver(changes => {
+    for (const change of changes) {
+      const variable = rowToVariableMap.get(change.target);
+      variable.setVisible(change.isIntersecting);
+    }
+  }, {
+    rootMargin: "100px"
+  });
+  class WrappedVariable {
+    constructor(scratchVariable, target) {
+      this.scratchVariable = scratchVariable;
+      this.target = target;
+      this.visible = false;
+      this.ignoreTooBig = false;
+      this.buildDOM();
+    }
+    updateValue(force) {
+      if (!this.visible && !force) return;
+      let newValue;
+      let maxSafeLength;
+      if (this.scratchVariable.type === "list") {
+        newValue = this.scratchVariable.value.join("\n");
+        maxSafeLength = 5000000;
+      } else {
+        newValue = this.scratchVariable.value;
+        maxSafeLength = 1000000;
+      }
+      if (!this.ignoreTooBig && newValue.length > maxSafeLength) {
+        this.input.value = "";
+        this.row.dataset.tooBig = true;
+        return;
+      }
+      this.row.dataset.tooBig = false;
+      if (newValue !== this.input.value) {
+        this.input.disabled = false;
+        this.input.value = newValue;
+      }
+    }
+    handleSearch(search) {
+      if (this.scratchVariable.name.toLowerCase().includes(search.toLowerCase()) || !search) {
+        this.row.style.display = "";
+        this.updateValue(true);
+      } else {
+        this.row.style.display = "none";
+      }
+    }
+    resizeInputIfList() {
+      if (this.scratchVariable.type === "list") {
+        this.input.style.height = "auto";
+        const height = Math.min(1000, this.input.scrollHeight);
+        if (height > 0) {
+          this.input.style.height = height + "px";
+        }
+      }
+    }
+    setVisible(visible) {
+      if (this.visible === visible) return;
+      this.visible = visible;
+      if (visible) {
+        this.updateValue();
+      }
+    }
+    buildDOM() {
+      const id = "sa-debugger-variables-".concat(this.scratchVariable.id);
+      const row = document.createElement("tr");
+      this.row = row;
+      const labelCell = document.createElement("td");
+      labelCell.className = "sa-debugger-variables-name";
+      const favoriteButton = document.createElement("button");
+      favoriteButton.className = "sa-debugger-variables-favorite";
+      favoriteButton.title = msg("favorite");
+      favoriteButton.style.cssText = "background: none; border: none; cursor: pointer; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px;";
+      const favoriteIcon = document.createElement("img");
+      favoriteIcon.className = "sa-debugger-variables-favorite-icon";
+      favoriteIcon.src = addon.self.getResource("/icons/favorites.svg");
+      favoriteIcon.style.cssText = "width: 16px; height: 16px;";
+      favoriteButton.appendChild(favoriteIcon);
+      labelCell.appendChild(favoriteButton);
+      const label = document.createElement("input");
+      label.value = this.scratchVariable.name;
+      label.htmlFor = id;
+
+      // 变量名修改功能
+      const onLabelOut = e => {
+        e.preventDefault();
+        const workspace = Blockly.getMainWorkspace();
+        let newName = label.value;
+        if (newName === this.scratchVariable.name) {
+          return;
+        }
+        const CLOUD_SYMBOL = "☁";
+        const CLOUD_PREFIX = CLOUD_SYMBOL + " ";
+        if (this.scratchVariable.isCloud) {
+          if (newName.startsWith(CLOUD_SYMBOL)) {
+            if (!newName.startsWith(CLOUD_PREFIX)) {
+              newName = newName.substring(0, 1) + " " + newName.substring(1);
+            }
+          } else {
+            newName = CLOUD_PREFIX + newName;
+          }
+        }
+        let nameAlreadyUsed = false;
+        if (this.target.isStage) {
+          const existingNames = vm.runtime.getAllVarNamesOfType(this.scratchVariable.type);
+          nameAlreadyUsed = existingNames.includes(newName);
+        } else {
+          nameAlreadyUsed = !!workspace.getVariable(newName, this.scratchVariable.type);
+        }
+        const isEmpty = !newName.trim();
+        if (isEmpty || nameAlreadyUsed) {
+          label.value = this.scratchVariable.name;
+        } else {
+          workspace.renameVariableById(this.scratchVariable.id, newName);
+          if (label.value !== newName) {
+            label.value = newName;
+          }
+        }
+      };
+      label.addEventListener("keydown", e => {
+        if (e.key === "Enter") e.target.blur();
+      });
+      label.addEventListener("focusout", onLabelOut);
+      label.addEventListener("focus", e => {
+        preventUpdate = true;
+        content.classList.add("freeze");
+      });
+      label.addEventListener("blur", e => {
+        preventUpdate = false;
+        content.classList.remove("freeze");
+      });
+      labelCell.appendChild(label);
+      rowToVariableMap.set(row, this);
+      observer.observe(row);
+      const valueCell = document.createElement("td");
+      valueCell.className = "sa-debugger-variables-value";
+      const tooBigElement = document.createElement("button");
+      this.tooBigElement = tooBigElement;
+      tooBigElement.textContent = msg("too-big");
+      tooBigElement.className = "sa-debugger-variables-too-big";
+      tooBigElement.addEventListener("click", () => {
+        this.ignoreTooBig = true;
+        this.updateValue(true);
+      });
+      let input;
+      if (this.scratchVariable.type === "list") {
+        input = document.createElement("textarea");
+      } else {
+        input = document.createElement("input");
+      }
+      input.className = "sa-debugger-variables-value-input";
+      input.id = id;
+      this.input = input;
+      this.updateValue(true);
+      if (this.scratchVariable.type === "list") {
+        this.input.addEventListener("input", () => this.resizeInputIfList(), false);
+      }
+      const onInputOut = e => {
+        e.preventDefault();
+        if (this.scratchVariable.type === "list") {
+          vm.setVariableValue(this.target.id, this.scratchVariable.id, input.value.split("\n"));
+        } else {
+          vm.setVariableValue(this.target.id, this.scratchVariable.id, input.value);
+        }
+        input.blur();
+      };
+      input.addEventListener("keydown", e => {
+        if (e.target.nodeName === "INPUT" && e.key === "Enter") e.target.blur();
+      });
+      input.addEventListener("focusout", onInputOut);
+      input.addEventListener("focus", e => {
+        preventUpdate = true;
+        content.classList.add("freeze");
+      });
+      input.addEventListener("blur", e => {
+        preventUpdate = false;
+        content.classList.remove("freeze");
+      });
+
+      // 收藏按钮功能
+      const updateFavoriteIcon = () => {
+        const favorited = isFavorite(this.scratchVariable.id);
+        favoriteIcon.src = favorited ? addon.self.getResource("/icons/favorited.svg") : addon.self.getResource("/icons/favorites.svg");
+      };
+      favoriteButton.addEventListener("click", () => {
+        const favorited = toggleFavorite(this.scratchVariable.id);
+        updateFavoriteIcon();
+
+        // 将变量移到最前面
+        if (favorited) {
+          const parentList = this.row.parentNode;
+          if (parentList && parentList.firstChild) {
+            parentList.insertBefore(this.row, parentList.firstChild);
+          }
+        }
+      });
+
+      // 初始化收藏状态
+      updateFavoriteIcon();
+      valueCell.appendChild(input);
+      valueCell.appendChild(tooBigElement);
+      row.appendChild(labelCell);
+      row.appendChild(valueCell);
+      this.handleSearch(searchBox.value);
+    }
+  }
+  function fullReload() {
+    if (preventUpdate) return;
+    const editingTarget = vm.runtime.getEditingTarget();
+    const stage = vm.runtime.getTargetForStage();
+    localVariables = editingTarget.isStage ? [] : Object.values(editingTarget.variables).filter(i => i.type === "" || i.type === "list").map(i => new WrappedVariable(i, editingTarget));
+    globalVariables = Object.values(stage.variables).filter(i => i.type === "" || i.type === "list").map(i => new WrappedVariable(i, stage));
+
+    // 排序：收藏的变量放在前面
+    const sortVariables = variables => {
+      return variables.sort((a, b) => {
+        const aFavorite = isFavorite(a.scratchVariable.id);
+        const bFavorite = isFavorite(b.scratchVariable.id);
+        if (aFavorite && !bFavorite) return -1;
+        if (!aFavorite && bFavorite) return 1;
+        return 0;
+      });
+    };
+    sortVariables(localVariables);
+    sortVariables(globalVariables);
+    updateHeadingVisibility();
+    while (localList.firstChild) {
+      localList.removeChild(localList.firstChild);
+    }
+    while (globalList.firstChild) {
+      globalList.removeChild(globalList.firstChild);
+    }
+    for (const variable of localVariables) {
+      localList.appendChild(variable.row);
+      variable.resizeInputIfList();
+    }
+    for (const variable of globalVariables) {
+      globalList.appendChild(variable.row);
+      variable.resizeInputIfList();
+    }
+  }
+  function quickReload() {
+    if (preventUpdate) return;
+    for (const variable of localVariables) {
+      variable.updateValue();
+    }
+    for (const variable of globalVariables) {
+      variable.updateValue();
+    }
+  }
+  function cleanup() {
+    localVariables = [];
+    globalVariables = [];
+  }
+  debug.addAfterStepCallback(() => {
+    quickReload();
+  });
+
+  // 监听项目重载和变量变化事件
+  vm.runtime.on("PROJECT_LOADED", () => {
+    try {
+      fullReload();
+    } catch (e) {
+      console.error(e);
+    }
+  });
+  vm.runtime.on("TOOLBOX_EXTENSIONS_NEED_UPDATE", () => {
+    try {
+      fullReload();
+    } catch (e) {
+      console.error(e);
+    }
+  });
+  const show = () => {
+    content.style.display = "";
+    fullReload();
+  };
+  const hide = () => {
+    content.style.display = "none";
+    cleanup();
+  };
+  return {
+    tab,
+    content,
+    buttons: [],
+    show,
+    hide
+  };
+}
 
 /***/ }),
 
