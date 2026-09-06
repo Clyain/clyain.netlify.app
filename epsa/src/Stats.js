@@ -139,7 +139,7 @@ function Stats(ProjectData, ToplevelBlockOPs, MenuOPs, datadisplayway) {
                     }
                 });
             } else {
-                CanMatchWithCblock = true;
+                CanMatchWithCblock = false;
             }
 
             if ((currentBlockId !== parentBlock?.next) && (CanMatchWithCblock === false)) {
